@@ -71,6 +71,8 @@ Survey paper
 *   [A Survey on 3D-aware Image Synthesis](https://arxiv.org/abs/2210.14267)  
     Weihao Xia and Jing-Hao Xue. _arXiv: 2210.14267_, 2022.
     
+*   [Deep Generative Models on 3D Representations: A Survey](https://arxiv.org/abs/2210.15663)  
+    Zifan Shi, Sida Peng, Yinghao Xu, Yiyi Liao, Yujun Shen. _arXiv: 2210.15663_, 2022.
 
 Datasets
 ------------------
