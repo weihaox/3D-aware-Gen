@@ -63,7 +63,7 @@ Table of contents
 Introduction
 ------------
 
-This homepage lists some representative papers/codes/datasets all about **[3D-aware image synthesis](https://weihaox.github.io/awesome-3D-aware-synthesis/)**. We aim to constantly update the latest relevant papers and help the community track this topic. Please feel free to join us and [contribute](https://github.com/weihaox/awesome-3D-aware-synthesis/blob/main/CONTRIBUTE.md) to the project. If you have any questions, please feel free to contact [Weihao Xia](http://weihaox.github.io).
+This homepage lists some representative papers/codes/datasets all about **[3D-aware image synthesis](https://weihaox.github.io/awesome-3D-aware-synthesis/)**. We aim to constantly update the latest relevant papers and help the community track this topic. Please feel free to join us and [contribute](https://github.com/weihaox/awesome-3D-aware-synthesis/blob/main/CONTRIBUTING.md) to the project. If you have any questions, please feel free to contact [Weihao Xia](http://weihaox.github.io).
 
 Survey paper
 ------------
@@ -83,7 +83,7 @@ The images are rendered or collected according to different experimental setting
 
 Examples of multi-view image datasets.
 
-| **dataset**       | **published in**     |     **# scene**       |   **# samples per scene**   |   **range (m × m)}**.  |   **resolution**    |   **keyword**          |
+| **dataset**       | **published in**     |     **# scene**       |   **# samples per scene**   |   **range (m × m)**.  |   **resolution**    |   **keyword**          |
 |:-----------------:|:--------------------:|:---------------------:|:---------------------------:|:----------------------:|:-------------------:|:-----------------------:|
 | DeepVoxels        | CVPR 2019            | 4 simple objects      | 479 / 1,000                 | \                      | 512 × 512           | synthetic, 360 degree   |
 | NeRF Synthetics   | ECCV 2020            | 8 complex objects     | 100 / 200                   | \                      | 800 ×800            | synthetic, 360 degree   |
