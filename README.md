@@ -347,6 +347,10 @@ NeurIPS 2022. [[PDF](https://arxiv.org/abs/2210.08936)] [[Project](https://ywq.g
 
 **Dynamic scene**
 
+* **NeRFPlayer: A Streamable Dynamic Scene Representation with Decomposed Neural Radiance Fields.**<br>
+*Liangchen Song, Anpei Chen, Zhong Li, Zhang Chen, Lele Chen, Junsong Yuan, Yi Xu, Andreas Geiger.*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2210.15947)] [[Project](https://lsongx.github.io/projects/nerfplayer.html)]
+
 * **D-NeRF: Neural Radiance Fields for Dynamic Scenes.**<br>
 *[Albert Pumarola](https://www.albertpumarola.com/), [Enric Corona](https://www.iri.upc.edu/people/ecorona/), [Gerard Pons-Moll](http://virtualhumans.mpi-inf.mpg.de/), [Francesc Moreno-Noguer](http://www.iri.upc.edu/people/fmoreno/).*<br>
 CVPR 2021. [[PDF](https://arxiv.org/abs/2011.13961)] [[Project](https://www.albertpumarola.com/research/D-NeRF/index.html)] [[Github](https://github.com/albertpumarola/D-NeRF)] [[Data](https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip?dl=0)]
@@ -522,6 +526,10 @@ ECCV 2022. [[PDF](https://arxiv.org/abs/2203.10821)] [[Project](https://donydche
 * **IDE-3D: Interactive Disentangled Editing for High-Resolution 3D-aware Portrait Synthesis.**<br>
 *[Jingxiang Sun](https://github.com/MrTornado24), [Xuan Wang](https://mrtornado24.github.io/IDE-3D/), [Yichun Shi](https://seasonsh.github.io/), [Lizhen Wang](https://lizhenwangt.github.io/), [Jue Wang](https://juewang725.github.io/), [Yebin Liu](https://liuyebin.com/).*<br>
 SIGGRAPH Asia 2022. [[PDF](https://arxiv.org/abs/2205.15517)] [[Project](https://mrtornado24.github.io/IDE-3D/)] [[Github](https://github.com/MrTornado24/IDE-3D)]
+
+* **NeRFFaceEditing: Disentangled Face Editing in Neural Radiance Fields.**<br>
+*Kaiwen Jiang, [Shu-Yu Chen](http://people.geometrylearning.com/csy/), [Feng-Lin Liu](http://people.geometrylearning.com/lfl/), [Hongbo Fu](http://sweb.cityu.edu.hk/hongbofu/), [Lin Gao](http://www.geometrylearning.com/cn/).*<br>
+SIGGRAPH Asia 2022. [[Project](http://geometrylearning.com/NeRFFaceEditing/)] 
 
 * **GANcraft: Unsupervised 3D Neural Rendering of Minecraft Worlds.**<br>
 *Zekun Hao, Arun Mallya, Serge Belongie, Ming-Yu Liu.*<br>
