@@ -71,7 +71,6 @@ Survey paper
 *   [A Survey on 3D-aware Image Synthesis](https://arxiv.org/abs/2210.14267)  
     Weihao Xia and Jing-Hao Xue. _arXiv: 2210.14267_, 2022.
     
-
 Datasets
 ------------------
 
@@ -535,6 +534,20 @@ SIGGRAPH Asia 2022. [[Project](http://geometrylearning.com/NeRFFaceEditing/)]
 *Zekun Hao, Arun Mallya, Serge Belongie, Ming-Yu Liu.*<br>
 ICCV 2021. [[PDF](https://arxiv.org/abs/2104.07659)] [[Project](https://nvlabs.github.io/GANcraft/)]
 
+## 3D-aware Diffusion Models
+
+* **LatentSwap3D: Semantic Edits on 3D Image GANs.**<br>
+*Enis Simsar, Alessio Tonioni, Evin Pınar Örnek, Federico Tombari.*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01381)]
+
+* **3D-LDM: Neural Implicit 3D Shape Generation with Latent Diffusion Models.**<br>
+*Gimin Nam, Mariem Khlifi, Andrew Rodriguez, Alberto Tono, Linqi Zhou, Paul Guerrero.*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2212.00842)]
+
+* **3DiM: Novel View Synthesis with Diffusion Models.**<br>
+*Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
+
 ## 3D-aware Video Synthesis
 
 * **Streaming Radiance Fields for 3D Video Synthesis.**<br>
@@ -544,7 +557,6 @@ NeurIPS 2022. [[PDF](https://arxiv.org/abs/2210.14831)]
 * **3D-Aware Video Generation.**<br>
 *[Sherwin Bahmani](https://sherwinbahmani.github.io/), [Jeong Joon Park](https://jjparkcv.github.io/), [Despoina Paschalidou](https://paschalidoud.github.io/), [Hao Tang](https://scholar.google.com/citations?user=9zJkeEMAAAAJ&hl=en/), [Gordon Wetzstein](https://stanford.edu/~gordonwz/), [Leonidas Guibas](https://geometry.stanford.edu/member/guibas/), [Luc Van Gool](https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html/), [Radu Timofte](https://ee.ethz.ch/the-department/people-a-z/person-detail.MjAxNjc4.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html/).*<br>
 arxiv 2022. [[PDF](https://arxiv.org/abs/2206.14797)] [[Project](https://sherwinbahmani.github.io/3dvidgen/)] [[Github](https://github.com/sherwinbahmani/3dvideogeneration/)]
-
 
 <br>The following papers are not directly related to 3D-aware image synthesis. But it would be beneficial to pay attention to those works.
 For example, the inverse rendering papers are not classified as 3D-aware image synthesis methods in this survey as they are not deliberately
