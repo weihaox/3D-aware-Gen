@@ -10,7 +10,7 @@
   <h1 align="center">Awesome 3D-aware Image Synthesis &ndash; Papers, Codes and Datasets</h1>
 </div>
 
-Table of contents
+<!-- Table of contents
 -----------------
 
 1.  **Introduction**
@@ -58,7 +58,7 @@ Table of contents
     2.  Conditional 3D Generative Models
         
 7.  **3D-aware Video Synthesis**
-    
+     -->
 
 Introduction
 ------------
@@ -543,6 +543,10 @@ arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01381)]
 * **3D-LDM: Neural Implicit 3D Shape Generation with Latent Diffusion Models.**<br>
 *Gimin Nam, Mariem Khlifi, Andrew Rodriguez, Alberto Tono, Linqi Zhou, Paul Guerrero.*<br> 
 arXiv 2022. [[PDF](https://arxiv.org/abs/2212.00842)]
+
+* **DiffRF: Rendering-guided 3D Radiance Field Diffusion.**<br>
+*[Norman Müller](https://niessnerlab.org/members/norman_mueller/profile.html), [Yawar Siddiqui](https://niessnerlab.org/members/yawar_siddiqui/profile.html), [Lorenzo Porzi](https://scholar.google.com/citations?user=vW1gaVEAAAAJ), [Samuel Rota Bulò](https://scholar.google.com/citations?hl=de&user=484sccEAAAAJ), [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ&hl=en), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html).*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01206)] [[Project](https://sirwyver.github.io/DiffRF/)]
 
 * **3DiM: Novel View Synthesis with Diffusion Models.**<br>
 *Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
