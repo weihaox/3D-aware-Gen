@@ -206,7 +206,7 @@ CVPR 2019 (Oral). [[Project](http://vsitzmann.github.io/deepvoxels/)] [[PDF](htt
 NeurIPS 2019 (Oral, Honorable Mention "Outstanding New Directions").
 [[PDF](http://arxiv.org/abs/1906.01618)] [[Project](https://github.com/vsitzmann/scene-representation-networks)] [[Github](https://github.com/vsitzmann/scene-representation-networks)] [[Dataset](https://drive.google.com/drive/folders/1OkYgeRcIcLOFu1ft5mRODWNQaPJ0ps90?usp=sharing)]
 
-**LLFF: Local Light Field Fusion: Practical View Synthesis with Prescriptive Sampling Guidelines.**<br>
+* **LLFF: Local Light Field Fusion: Practical View Synthesis with Prescriptive Sampling Guidelines.**<br>
 *[Ben Mildenhall](http://people.eecs.berkeley.edu/~bmild/), Pratul Srinivasan, Rodrigo Ortiz-Cayon, Nima Khademi Kalantari, Ravi Ramamoorthi, Ren Ng, Abhishek Kar.*<br>
 SIGGRAPH 2019. [[PDF](https://arxiv.org/abs/1905.00889)] [[Project](https://people.eecs.berkeley.edu/~bmild/llff/)] [[Github](https://github.com/Fyusion/LLFF)]
 
@@ -386,15 +386,15 @@ CVPR 2022 (Oral). [[PDF](https://arxiv.org/abs/2202.08614)] [[Project](https://a
 *Kacper Kania, Kwang Moo Yi, Marek Kowalski, Tomasz Trzciński, Andrea Taliasacchi.*<br>
 CVPR 2022. [[PDF](https://arxiv.org/abs/2112.01983)] [[Project](https://conerf.github.io/)]
 
-**Generative Deformable Radiance Fields for Disentangled Image Synthesis of Topology-Varying Objects.**<br>
+* **Generative Deformable Radiance Fields for Disentangled Image Synthesis of Topology-Varying Objects.**<br>
 *Ziyu Wang, Yu Deng, Jiaolong Yang, Jingyi Yu, Xin Tong.*<br>
 Pacific Graphics & CGF 2022. [[PDF](https://arxiv.org/abs/2209.04183)] [[Github](https://ziyuwang98.github.io/GDRF/)]
 
-**LoRD: Local 4D Implicit Representation for High-Fidelity Dynamic Human Modeling.**<br>
+* **LoRD: Local 4D Implicit Representation for High-Fidelity Dynamic Human Modeling.**<br>
 *Boyan Jiang, Xinlin Ren, Mingsong Dou, Xiangyang Xue, Yanwei Fu, Yinda Zhang.*<br>
 ECCV 2022. [[PDF](https://arxiv.org/abs/2208.08622)] [[Github](https://boyanjiang.github.io/LoRD/)]
 
-**Neural Surface Reconstruction of Dynamic Scenes with Monocular RGB-D Camera.**<br>
+* **Neural Surface Reconstruction of Dynamic Scenes with Monocular RGB-D Camera.**<br>
 *[Hongrui Cai](https://rainbowrui.github.io/), [Wanquan Feng](https://github.com/WanquanF), [Xuetao Feng](https://scholar.google.com/citations?hl=en&user=5G-2EFcAAAAJ), [Yan Wang](), [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/).*<br>
 NeurIPS 2022. [[PDF](https://arxiv.org/abs/2206.15258)] [[Project](https://ustc3dv.github.io/ndr/)] [[Github](https://github.com/USTC3DV/NDR-code)]
 
