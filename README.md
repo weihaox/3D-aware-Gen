@@ -536,6 +536,18 @@ ICCV 2021. [[PDF](https://arxiv.org/abs/2104.07659)] [[Project](https://nvlabs.g
 
 ## 3D-aware Diffusion Models
 
+* **Rodin: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion.**<br>
+*Tengfei Wang, Bo Zhang, Ting Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong Chen, Fang Wen, Qifeng Chen, Baining Guo.*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2212.06135)] [[Project](https://3d-avatar-diffusion.microsoft.com/)]
+
+* **RenderDiffusion: Image Diffusion for 3D Reconstruction, Inpainting and Generation.**<br>
+*Titas Anciukevičius, Zexiang Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul Guerrero.*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2211.09869)] [[Github](https://github.com/Anciukevicius/RenderDiffusion)]
+
+* **GAUDI: A Neural Architect for Immersive 3D Scene Generation.**<br>
+*Miguel Angel Bautista, Pengsheng Guo, Samira Abnar, Walter Talbott, Alexander Toshev, Zhuoyuan Chen, Laurent Dinh, Shuangfei Zhai, Hanlin Goh, Daniel Ulbricht, Afshin Dehghan, Josh Susskind.*<br> 
+arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01381)] [[Project](https://github.com/apple/ml-gaudi)]
+
 * **LatentSwap3D: Semantic Edits on 3D Image GANs.**<br>
 *Enis Simsar, Alessio Tonioni, Evin Pınar Örnek, Federico Tombari.*<br> 
 arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01381)]
