@@ -578,7 +578,15 @@ arxiv 2022. [[PDF](https://arxiv.org/abs/2206.14797)] [[Project](https://sherwin
 For example, the inverse rendering papers are not classified as 3D-aware image synthesis methods in this survey as they are not deliberately
 designed for this purpose. But with the inferred underlying intrinsic components of a scene, photorealistic images can be rendered. 3D shape reconstruction methods model geometry only with no appearance information, meaning them not able to render images with photorealistic textures. But these representations can also be used for the 3D-aware image synthesis task. They can be introduced as the geometric representation along with a textural representation (e.g., Texture Field) for 3D image synthesis.
 
-## Shape Representation
+## 3D Representations
+
+* **K-Planes: Explicit Radiance Fields in Space, Time, and Appearance.**<br>
+*[Sara Fridovich-Keil](https://people.eecs.berkeley.edu/~sfk/), [Giacomo Meanti](https://www.iit.it/web/iit-mit-usa/people-details/-/people/giacomo-meanti), [Frederik Warburg](https://frederikwarburg.github.io/), [Benjamin Recht](https://people.eecs.berkeley.edu/~brecht/), [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/).*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2301.10241)] [[Project](https://sarafridov.github.io/K-Planes/)] [[Github](https://github.com/sarafridov/K-Planes)]
+
+* **HexPlane: A Fast Representation for Dynamic Scenes.**<br>
+*[Ang Cao](https://caoang327.github.io/), [Justin Johnson](https://web.eecs.umich.edu/~justincj).*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2301.09632)] [[Project](https://caoang327.github.io/HexPlane/)] [[Github](https://caoang327.github.io/HexPlane/)]
 
 * **Neural Volumes: Learning Dynamic Renderable Volumes from Images.**<br>
 *Stephen Lombardi, Tomas Simon, Jason Saragih, Gabriel Schwartz, Andreas Lehrmann, Yaser Sheikh.*<br>
