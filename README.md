@@ -398,8 +398,6 @@ ECCV 2022. [[PDF](https://arxiv.org/abs/2208.08622)] [[Github](https://boyanjian
 *[Hongrui Cai](https://rainbowrui.github.io/), [Wanquan Feng](https://github.com/WanquanF), [Xuetao Feng](https://scholar.google.com/citations?hl=en&user=5G-2EFcAAAAJ), [Yan Wang](), [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/).*<br>
 NeurIPS 2022. [[PDF](https://arxiv.org/abs/2206.15258)] [[Project](https://ustc3dv.github.io/ndr/)] [[Github](https://github.com/USTC3DV/NDR-code)]
 
-
-
 ## 3D Generative Models from Single Views
 
 ### Unconditional 3D Generative Models
@@ -534,11 +532,29 @@ SIGGRAPH Asia 2022. [[Project](http://geometrylearning.com/NeRFFaceEditing/)]
 *Zekun Hao, Arun Mallya, Serge Belongie, Ming-Yu Liu.*<br>
 ICCV 2021. [[PDF](https://arxiv.org/abs/2104.07659)] [[Project](https://nvlabs.github.io/GANcraft/)]
 
+## 3D-Aware Generative Model on ImageNet
+
+* **3D Generation on ImageNet.**<br>
+*Ivan Skorokhodov, Aliaksandr Siarohin, Yinghao Xu, Jian Ren, Hsin-Ying Lee, Peter Wonka, Sergey Tulyakov.*<br>
+ICLR 2023 (Oral). [[PDF](https://openreview.net/forum?id=U2WjB9xxZ9q)] [[Project](https://u2wjb9xxz9q.github.io/)] [[Github](https://justimyhxu.github.io/pub.html)]
+
+* **VQ3D: Learning a 3D-Aware Generative Model on ImageNet.**<br>
+*Kyle Sargent, Jing Yu Koh, Han Zhang, Huiwen Chang, Charles Herrmann, Pratul Srinivasan, Jiajun Wu, Deqing Sun.*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2302.06833)] [[Project](http://kylesargent.github.io/vq3d)]
+
 ## 3D-aware Diffusion Models
 
 * **Rodin: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion.**<br>
 *Tengfei Wang, Bo Zhang, Ting Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong Chen, Fang Wen, Qifeng Chen, Baining Guo.*<br>
-arxiv 2022. [[PDF](https://arxiv.org/abs/2212.06135)] [[Project](https://3d-avatar-diffusion.microsoft.com/)]
+CVPR 2023. [[PDF](https://arxiv.org/abs/2212.06135)] [[Project](https://3d-avatar-diffusion.microsoft.com/)]
+
+* **DiffRF: Rendering-guided 3D Radiance Field Diffusion.**<br>
+*[Norman Müller](https://niessnerlab.org/members/norman_mueller/profile.html), [Yawar Siddiqui](https://niessnerlab.org/members/yawar_siddiqui/profile.html), [Lorenzo Porzi](https://scholar.google.com/citations?user=vW1gaVEAAAAJ), [Samuel Rota Bulò](https://scholar.google.com/citations?hl=de&user=484sccEAAAAJ), [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ&hl=en), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html).*<br> 
+CVPR 2023 (Highlight). [[PDF](https://arxiv.org/abs/2212.01206)] [[Project](https://sirwyver.github.io/DiffRF/)]
+
+* **3DiM: Novel View Synthesis with Diffusion Models.**<br>
+*Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
+ICLR 2023. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
 
 * **RenderDiffusion: Image Diffusion for 3D Reconstruction, Inpainting and Generation.**<br>
 *Titas Anciukevičius, Zexiang Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul Guerrero.*<br> 
@@ -555,14 +571,6 @@ arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01381)]
 * **3D-LDM: Neural Implicit 3D Shape Generation with Latent Diffusion Models.**<br>
 *Gimin Nam, Mariem Khlifi, Andrew Rodriguez, Alberto Tono, Linqi Zhou, Paul Guerrero.*<br> 
 arXiv 2022. [[PDF](https://arxiv.org/abs/2212.00842)]
-
-* **DiffRF: Rendering-guided 3D Radiance Field Diffusion.**<br>
-*[Norman Müller](https://niessnerlab.org/members/norman_mueller/profile.html), [Yawar Siddiqui](https://niessnerlab.org/members/yawar_siddiqui/profile.html), [Lorenzo Porzi](https://scholar.google.com/citations?user=vW1gaVEAAAAJ), [Samuel Rota Bulò](https://scholar.google.com/citations?hl=de&user=484sccEAAAAJ), [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ&hl=en), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html).*<br> 
-arXiv 2022. [[PDF](https://arxiv.org/abs/2212.01206)] [[Project](https://sirwyver.github.io/DiffRF/)]
-
-* **3DiM: Novel View Synthesis with Diffusion Models.**<br>
-*Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
-arXiv 2022. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
 
 ## 3D-aware Video Synthesis
 
