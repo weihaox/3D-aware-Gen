@@ -556,6 +556,14 @@ CVPR 2023 (Highlight). [[PDF](https://arxiv.org/abs/2212.01206)] [[Project](http
 *Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
 ICLR 2023. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
 
+* **Generative Novel View Synthesis with 3D-Aware Diffusion Models.**<br>
+*Eric R. Chan, Koki Nagano, Matthew A. Chan, Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini De Mello, Tero Karras, Gordon Wetzstein.*<br> 
+arXiv 2023. [[PDF](2304.02602)] [[Project](https://nvlabs.github.io/genvs/)] [[Github](https://github.com/NVlabs/genvs)]
+
+* **3D-aware Image Generation using 2D Diffusion Models.**<br>
+*[Jianfeng Xiang](https://jeffreyxiang.github.io/), Jiaolong Yang, Binbin Huang, Xin Tong.*<br> 
+arXiv 2023. [[PDF](https://arxiv.org/abs/2303.17905)] [[Project](https://jeffreyxiang.github.io/ivid/)] [[Github](https://github.com/JeffreyXiang/ivid)]
+
 * **RenderDiffusion: Image Diffusion for 3D Reconstruction, Inpainting and Generation.**<br>
 *Titas Anciukevičius, Zexiang Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul Guerrero.*<br> 
 arXiv 2022. [[PDF](https://arxiv.org/abs/2211.09869)] [[Github](https://github.com/Anciukevicius/RenderDiffusion)]
