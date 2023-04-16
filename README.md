@@ -426,13 +426,17 @@ CVPR 2021 (Best Paper). [[PDF](https://arxiv.org/abs/2011.12100)] [[Project](htt
 *Xingang Pan, Xudong Xu, Chen Change Loy, Christian Theobalt, Bo Dai.*<br>
 NeurIPS 2021. [[PDF](https://arxiv.org/abs/2110.15678)]
 
+* **BallGAN: 3D-aware Image Synthesis with a Spherical Background.**<br>
+*Minjung Shin, Yunji Seo, Jeongmin Bae, Young Sun Choi, Hyunsu Kim, Hyeran Byun, Youngjung Uh.*<br>
+arxiv 2023. [[PDF](https://arxiv.org/abs/2301.09091)] [[Project](https://minjung-s.github.io/ballgan/)] [[Github](https://github.com/minjung-s/BallGAN)]
+
+**Mimic3D: Thriving 3D-Aware GANs via 3D-to-2D Imitation.**<br>
+*Xingyu Chen, Yu Deng, Baoyuan Wang.*<br>
+arxiv 2022. [[PDF](https://arxiv.org/abs/2303.09036)] [[Project](https://seanchenxy.github.io/Mimic3DWeb/)]
+
 * **GRAM-HD: 3D-Consistent Image Generation at High Resolution with Generative Radiance Manifolds.**<br>
 *Jianfeng Xiang, Jiaolong Yang, Yu Deng, Xin Tong.*<br>
 arxiv 2022. [[PDF](https://arxiv.org/abs/2206.07255)] [[Project](https://jeffreyxiang.github.io/GRAM-HD/)]
-
-* **VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel Grids.**<br>
-*Katja Schwarz, Axel Sauer, Michael Niemeyer, Yiyi Liao, Andreas Geiger.*<br>
-arxiv 2022. [[PDF](https://arxiv.org/pdf/2206.07695.pdf)] [[Github](https://github.com/autonomousvision/voxgraf)]
 
 * **CIPS-3D: A 3D-Aware Generator of GANs Based on Conditionally-Independent Pixel Synthesis.**<br>
 *Peng Zhou, Lingxi Xie, Bingbing Ni, Qi Tian.*<br>
@@ -502,6 +506,10 @@ ECCV 2022. [[PDF](https://arxiv.org/abs/2207.10642)] [[Project](https://xiaoming
 *[Yuchen Liu](https://lychenyoko.github.io/), Zhixin Shu, Yijun Li, Zhe Lin, Richard Zhang, and Sun-Yuan Kung.*<br>
 ECCV 2022. [[PDF](https://arxiv.org/abs/2208.11257)] [[Project](https://lychenyoko.github.io/3D-FM-GAN-Webpage/)]
 
+* **VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel Grids.**<br>
+*Katja Schwarz, Axel Sauer, Michael Niemeyer, Yiyi Liao, Andreas Geiger.*<br>
+NeurIPS 2022. [[PDF](https://arxiv.org/pdf/2206.07695.pdf)] [[Github](https://github.com/autonomousvision/voxgraf)]
+
 * **GeoD: Improving 3D-aware Image Synthesis with A Geometry-aware Discriminator.**<br>
 *Zifan Shi, Yinghao Xu, Yujun Shen, Deli Zhao, Qifeng Chen, Dit-Yan Yeung.*<br>
 NeurIPS 2022. [[PDF](https://arxiv.org/abs/2209.15637)] [[Project](https://vivianszf.github.io/geod)]
@@ -552,21 +560,29 @@ CVPR 2023. [[PDF](https://arxiv.org/abs/2212.06135)] [[Project](https://3d-avata
 *[Norman Müller](https://niessnerlab.org/members/norman_mueller/profile.html), [Yawar Siddiqui](https://niessnerlab.org/members/yawar_siddiqui/profile.html), [Lorenzo Porzi](https://scholar.google.com/citations?user=vW1gaVEAAAAJ), [Samuel Rota Bulò](https://scholar.google.com/citations?hl=de&user=484sccEAAAAJ), [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ&hl=en), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html).*<br> 
 CVPR 2023 (Highlight). [[PDF](https://arxiv.org/abs/2212.01206)] [[Project](https://sirwyver.github.io/DiffRF/)]
 
+* **RenderDiffusion: Image Diffusion for 3D Reconstruction, Inpainting and Generation.**<br>
+*Titas Anciukevičius, Zexiang Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul Guerrero.*<br> 
+CVPR 2023. [[PDF](https://arxiv.org/abs/2211.09869)] [[Project](https://holodiffusion.github.io/)]
+
+* **SparseFusion: Distilling View-conditioned Diffusion for 3D Reconstruction.**<br>
+*[Zhizhuo Zhou](https://www.zhiz.dev/), [Shubham Tulsiani](https://shubhtuls.github.io/).*<br> 
+CVPR 2023. [[PDF](https://arxiv.org/abs/2212.00792)] [[Project](https://sparsefusion.github.io/)] [[Github](https://github.com/zhizdev/sparsefusion)]
+
+* **HOLODIFFUSION: Training a 3D Diffusion Model using 2D Images.**<br>
+*Animesh Karnewar, Andrea Vedaldi, David Novotny, Niloy Mitra.*<br> 
+CVPR 2023. [[PDF](https://arxiv.org/abs/2303.16509)] [[Project](https://3d-diffusion.github.io/)]
+
 * **3DiM: Novel View Synthesis with Diffusion Models.**<br>
 *Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
 ICLR 2023. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
 
 * **Generative Novel View Synthesis with 3D-Aware Diffusion Models.**<br>
 *Eric R. Chan, Koki Nagano, Matthew A. Chan, Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini De Mello, Tero Karras, Gordon Wetzstein.*<br> 
-arXiv 2023. [[PDF](2304.02602)] [[Project](https://nvlabs.github.io/genvs/)] [[Github](https://github.com/NVlabs/genvs)]
+arXiv 2023. [[PDF](https://arxiv.org/abs/2304.02602)] [[Project](https://nvlabs.github.io/genvs/)] [[Github](https://github.com/NVlabs/genvs)]
 
 * **3D-aware Image Generation using 2D Diffusion Models.**<br>
 *[Jianfeng Xiang](https://jeffreyxiang.github.io/), Jiaolong Yang, Binbin Huang, Xin Tong.*<br> 
 arXiv 2023. [[PDF](https://arxiv.org/abs/2303.17905)] [[Project](https://jeffreyxiang.github.io/ivid/)] [[Github](https://github.com/JeffreyXiang/ivid)]
-
-* **RenderDiffusion: Image Diffusion for 3D Reconstruction, Inpainting and Generation.**<br>
-*Titas Anciukevičius, Zexiang Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul Guerrero.*<br> 
-arXiv 2022. [[PDF](https://arxiv.org/abs/2211.09869)] [[Github](https://github.com/Anciukevicius/RenderDiffusion)]
 
 * **GAUDI: A Neural Architect for Immersive 3D Scene Generation.**<br>
 *Miguel Angel Bautista, Pengsheng Guo, Samira Abnar, Walter Talbott, Alexander Toshev, Zhuoyuan Chen, Laurent Dinh, Shuangfei Zhai, Hanlin Goh, Daniel Ulbricht, Afshin Dehghan, Josh Susskind.*<br> 
