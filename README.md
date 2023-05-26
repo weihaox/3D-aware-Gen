@@ -319,6 +319,10 @@ CVPR 2022. [[PDF](https://arxiv.org/abs/2111.15234)] [[Project](https://bennyguo
 
 **Large-scale scene**
 
+* **Grid-guided Neural Radiance Fields for Large Urban Scenes.**<br>
+*Linning Xu, Yuanbo Xiangli, Sida Peng, Xingang Pan, Nanxuan Zhao, Christian Theobalt, Bo Dai, Dahua Lin.*<br> 
+CVPR 2023. [[PDF](https://arxiv.org/abs/2303.14001)] [[Project](https://city-super.github.io/gridnerf/)]
+
 * **Shadow Neural Radiance Fields for Multi-view Satellite Photogrammetry.**<br>
 *Dawa Derksen, Dario Izzo.*<br> 
 CVPR 2021. [[PDF](https://arxiv.org/abs/2104.09877)]
@@ -401,6 +405,10 @@ NeurIPS 2022. [[PDF](https://arxiv.org/abs/2206.15258)] [[Project](https://ustc3
 ## 3D Generative Models from Single Views
 
 ### Unconditional 3D Generative Models
+
+* **Live 3D Portrait: Real-Time Radiance Fields for Single-Image Portrait View Synthesis.**<br>
+*Alex Trevithick, Matthew Chan, Michael Stengel, Eric R. Chan, Chao Liu, Zhiding Yu, Sameh Khamis, Manmohan Chandraker, Ravi Ramamoorthi, Koki Nagano.*<br>
+SIGGRAPH 2023 (ACM Transactions on Graphics). [[PDF](https://research.nvidia.com/labs/nxp/lp3d//media/paper.pdf)] [[Project](https://research.nvidia.com/labs/nxp/lp3d//)] [[Github]()]
 
 * **HoloGAN: Unsupervised learning of 3D representations from natural images.**<br>
 *[Thu Nguyen-Phuoc](https://monkeyoverflow.com/about/),  [Chuan Li](https://lambdalabs.com/blog/author/chuan/), Lucas Theis, [Christian Richardt]( https://richardt.name/), [Yong-liang Yang](http://yongliangyang.net/).*<br>
@@ -550,7 +558,15 @@ ICLR 2023 (Oral). [[PDF](https://openreview.net/forum?id=U2WjB9xxZ9q)] [[Project
 *Kyle Sargent, Jing Yu Koh, Han Zhang, Huiwen Chang, Charles Herrmann, Pratul Srinivasan, Jiajun Wu, Deqing Sun.*<br>
 arxiv 2022. [[PDF](https://arxiv.org/abs/2302.06833)] [[Project](http://kylesargent.github.io/vq3d)]
 
-## 3D-aware Diffusion Models
+## 3D-aware Diffusion Models 
+
+* **3DShape2VecSet: A 3D Shape Representation for Neural Fields and Generative Diffusion Models.**<br>
+*[Biao Zhang](https://1zb.github.io/), [Jiapeng Tang](https://tangjiapeng.github.io/), [Matthias Niessner](https://www.niessnerlab.org/), [Peter Wonka](http://peterwonka.net/).*<br>
+SIGGRAPH 2023. [[PDF](https://arxiv.org/abs/2301.11445)] [[Project](https://1zb.github.io/3DShape2VecSet/)] [[Github](https://github.com/1zb/3DShape2VecSet)]
+
+* **NeuralField-LDM: Scene Generation with Hierarchical Latent Diffusion Models.**<br>
+*Seung Wook Kim, Bradley Brown, Kangxue Yin, Karsten Kreis, Katja Schwarz, Daiqing Li, Robin Rombach, Antonio Torralba, Sanja Fidler.*<br>
+CVPR 2023. [[PDF](https://arxiv.org/abs/2304.09787)]
 
 * **Rodin: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion.**<br>
 *Tengfei Wang, Bo Zhang, Ting Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong Chen, Fang Wen, Qifeng Chen, Baining Guo.*<br>
@@ -568,13 +584,17 @@ CVPR 2023. [[PDF](https://arxiv.org/abs/2211.09869)] [[Project](https://holodiff
 *[Zhizhuo Zhou](https://www.zhiz.dev/), [Shubham Tulsiani](https://shubhtuls.github.io/).*<br> 
 CVPR 2023. [[PDF](https://arxiv.org/abs/2212.00792)] [[Project](https://sparsefusion.github.io/)] [[Github](https://github.com/zhizdev/sparsefusion)]
 
-* **HOLODIFFUSION: Training a 3D Diffusion Model using 2D Images.**<br>
+* **HoloDiffusion: Training a 3D Diffusion Model using 2D Images.**<br>
 *Animesh Karnewar, Andrea Vedaldi, David Novotny, Niloy Mitra.*<br> 
 CVPR 2023. [[PDF](https://arxiv.org/abs/2303.16509)] [[Project](https://3d-diffusion.github.io/)]
 
 * **3DiM: Novel View Synthesis with Diffusion Models.**<br>
 *Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
 ICLR 2023. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
+
+**Learning a Diffusion Prior for NeRFs.**<br>
+*Guandao Yang, Abhijit Kundu, Leonidas J. Guibas, Jonathan T. Barron, Ben Poole.*<br> 
+arXiv 2023. [[PDF](https://arxiv.org/abs/2304.14473)] 
 
 * **Generative Novel View Synthesis with 3D-Aware Diffusion Models.**<br>
 *Eric R. Chan, Koki Nagano, Matthew A. Chan, Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini De Mello, Tero Karras, Gordon Wetzstein.*<br> 
