@@ -592,9 +592,17 @@ CVPR 2023. [[PDF](https://arxiv.org/abs/2303.16509)] [[Project](https://3d-diffu
 *Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi.*<br> 
 ICLR 2023. [[PDF](https://arxiv.org/abs/2210.04628)] [[Project](https://3d-diffusion.github.io/)]
 
-**Learning a Diffusion Prior for NeRFs.**<br>
+* **Learning a Diffusion Prior for NeRFs.**<br>
 *Guandao Yang, Abhijit Kundu, Leonidas J. Guibas, Jonathan T. Barron, Ben Poole.*<br> 
 arXiv 2023. [[PDF](https://arxiv.org/abs/2304.14473)] 
+
+* **Adding 3D Geometry Control to Diffusion Models.**<br>
+*[Wufei Ma](https://wufeim.github.io/), [Qihao Liu](https://qihao067.github.io/), [Jiahao Wang](https://jiahaoplus.github.io/), Angtian Wang, [Yaoyao Liu](https://www.cs.jhu.edu/~yyliu/), [Adam Kortylewski](https://adamkortylewski.com/), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/).*<br>
+arXiv 2023. [[PDF](https://arxiv.org/abs/2306.08103)]
+
+* **HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion.**<br>
+*[Ziya Erkoç](https://ziyaerkoc.com/), [Fangchang Ma](https://fangchangma.github.io/), [Qi Shan](http://shanqi.github.io/), [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html), [Angela Dai](https://www.3dunderstanding.org/team.html).*<br>
+arXiv 2023. [[PDF](https://arxiv.org/abs/2303.17015)] [[Project](https://ziyaerkoc.com/hyperdiffusion/)] 
 
 * **Generative Novel View Synthesis with 3D-Aware Diffusion Models.**<br>
 *Eric R. Chan, Koki Nagano, Matthew A. Chan, Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini De Mello, Tero Karras, Gordon Wetzstein.*<br> 
