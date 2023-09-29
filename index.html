@@ -4,77 +4,1198 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
 </head>
-<body>
-<div id="layout-content">
+<!-- <div id="layout-content">
 <div id="toptitle">
+  <h1 align="center">3D-aware Image Synthesis &ndash; Papers, Codes and Datasets</h1>
+</div> -->
+<div id="layout-content">
+<!-- <div id="toptitle"> -->
+<p align="center">
 <h1 align="center">
-Awesome 3D-aware Image Synthesis – Papers, Codes and Datasets
+A Survey on Deep Generative 3D-aware Image Synthesis
 </h1>
-</div>
-<!-- Table of contents
------------------
-
-1.  **Introduction**
-    
-2.  **Survey paper**
-    
-3.  **Datasets**
-    
-    1.  multi-view image collections
-        
-    2.  Single-view image collections
-        
-4.  **3D Control of 2D Generative Models**
-    
-    1.  3D Control Latent Directions
-        
-    2.  3D Parameters as Controls
-        
-    3.  3D Prior Knowledge as Constraints
-        
-5.  **3D Novel View Synthesis from Multiple Views**
-    
-    1.  Neural Scene Representation
-        
-    2.  Generalization
-        
-    3.  Speed up
-        
-    4.  From Constrained Environmental Conditions to In-the-wild
-        
-        1.  Few images
-            
-        2.  Pose-free
-            
-        3.  Varying appearance
-            
-        4.  Large-scale scene
-            
-        5.  Dynamic scene
-            
-6.  **3D Generative Models from Single Views**
-    
-    1.  Unconditional 3D Generative Models
-        
-    2.  Conditional 3D Generative Models
-        
-7.  **3D-aware Video Synthesis**
-     -->
+<p align="center">
+ACM Computing Surveys, 2023 <br />
+<a href="https://weihaox.github.io/"><strong>Weihao Xia</strong></a> ·
+<a href="http://www.homepages.ucl.ac.uk/~ucakjxu/"><strong>Jing-Hao
+Xue</strong></a>
+</p>
+<p align="center">
+<a href='https://arxiv.org/abs/2210.14267'>
+<img src='https://img.shields.io/badge/Paper-Paper-green?style=flat&logo=arxiv&logoColor=green' alt='arxiv Paper'>
+</a>
+<a href='https://weihaox.github.io/3D-aware-Gen/' style='padding-left: 0.5rem;'>
+<img src='https://img.shields.io/badge/Project-Page-blue?style=flat&logo=Google%20chrome&logoColor=blue' alt='Project Page'>
+</a> <a href='' style='padding-left: 0.5rem;'>
+<img src='https://img.shields.io/badge/CSUR-Paper-red?style=flat&logoColor=red' alt='CSUR Paper'>
+</a>
+</p>
+</p>
+<!-- </div> -->
 <h2 id="introduction">Introduction</h2>
 <p>This homepage lists some representative papers/codes/datasets all
-about <strong><a
-href="https://weihaox.github.io/awesome-3D-aware-synthesis/">3D-aware
-image synthesis</a></strong>. We aim to constantly update the latest
-relevant papers and help the community track this topic. Please feel
-free to join us and <a
-href="https://github.com/weihaox/awesome-3D-aware-synthesis/blob/main/CONTRIBUTING.md">contribute</a>
-to the project. If you have any questions, please feel free to contact
-<a href="http://weihaox.github.io">Weihao Xia</a>.</p>
+about deep <strong><a
+href="https://weihaox.github.io/3D-aware-Gen">3D-aware image
+synthesis</a></strong>. Besides the deep generative 3D-aware models
+(GANs and Diffusion Models) discussed in the <a
+href="https://arxiv.org/abs/2210.14267">survey</a>, this project
+additionally covers novel view synthesis studies, especially those based
+on <a
+href="https://github.com/weihaox/awesome-neural-rendering#implicit-neural-representation-and-rendering">implicit
+neural representations</a> such as NeRF.</p>
+<p>We aim to constantly update the latest relevant papers and help the
+community track this topic. Please feel free to join us and <a
+href="https://github.com/weihaox/3D-aware-Gen/blob/main/CONTRIBUTING.md">contribute</a>
+to the project. Please do not hesitate to reach out if you have any
+questions or suggestions.</p>
 <h2 id="survey-paper">Survey paper</h2>
 <ul>
-<li><a href="https://arxiv.org/abs/2210.14267">A Survey on 3D-aware
-Image Synthesis</a><br />
-Weihao Xia and Jing-Hao Xue. <em>arXiv: 2210.14267</em>, 2022.</li>
+<li><a href="https://arxiv.org/abs/2210.14267">A Survey on Deep
+Generative 3D-aware Image Synthesis</a><br />
+Weihao Xia and Jing-Hao Xue. <em>ACM Computing Surveys</em>, 2023.</li>
+</ul>
+<h2 id="d-control-of-2d-gans">3D Control of 2D GANs</h2>
+<h3 id="d-control-latent-directions">3D Control Latent Directions</h3>
+<p>For 3D control over diffusion models simiar to <a
+href="https://github.com/weihaox/GAN-Inversion#gan-latent-space-editing">GAN</a>,
+please refer to <a
+href="https://github.com/weihaox/GAN-Inversion#semantic-editing-in-diffusion-latent-spaces">semantic
+manipulation in diffusion latent spaces</a>.</p>
+<ul>
+<li><p><strong>SeFa: Closed-Form Factorization of Latent Semantics in
+GANs.</strong><br> <em>Yujun Shen, Bolei Zhou.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2007.06600">Paper</a>] [<a
+href="https://genforce.github.io/sefa/">Project</a>] [<a
+href="https://github.com/genforce/sefa">Code</a>]</p></li>
+<li><p><strong>GANSpace: Discovering Interpretable GAN
+Controls.</strong><br> <em>Erik Härkönen, Aaron Hertzmann, Jaakko
+Lehtinen, Sylvain Paris.</em><br> NeurIPS 2020. [<a
+href="https://arxiv.org/abs/2004.02546">Paper</a>] [<a
+href="https://github.com/harskish/ganspace">Code</a>]</p></li>
+<li><p><strong>Interpreting the Latent Space of GANs for Semantic Face
+Editing.</strong><br> <em><a href="http://shenyujun.github.io/">Yujun
+Shen</a>, <a href="http://www.jasongt.com/">Jinjin Gu</a>, <a
+href="http://www.ie.cuhk.edu.hk/people/xotang.shtml">Xiaoou Tang</a>, <a
+href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>.</em><br> CVPR 2020.
+[<a href="https://arxiv.org/abs/1907.10786">Paper</a>] [<a
+href="https://genforce.github.io/interfacegan/">Project</a>] [<a
+href="https://github.com/genforce/interfacegan">Code</a>]</p></li>
+<li><p><strong>Unsupervised Discovery of Interpretable Directions in the
+GAN Latent Space.</strong><br> <em>Andrey Voynov, Artem
+Babenko.</em><br> ICML 2020. [<a
+href="https://arxiv.org/abs/2002.03754">Paper</a>] [<a
+href="https://github.com/anvoynov/GANLatentDiscovery">Code</a>]</p></li>
+<li><p><strong>On the “steerability” of generative adversarial
+networks.</strong><br> <em>Ali Jahanian, Lucy Chai, Phillip
+Isola.</em><br> ICLR 2020. [<a
+href="https://arxiv.org/abs/1907.07171">Paper</a>] [<a
+href="https://ali-design.github.io/gan_steerability/">Project</a>] [<a
+href="https://github.com/ali-design/gan_steerability">Code</a>]</p></li>
+</ul>
+<h3 id="d-parameters-as-controls">3D Parameters as Controls</h3>
+<ul>
+<li><p><strong>3D-FM GAN: Towards 3D-Controllable Face
+Manipulation.</strong><br> <em><a
+href="https://lychenyoko.github.io/">Yuchen Liu</a>, Zhixin Shu, Yijun
+Li, Zhe Lin, Richard Zhang, and Sun-Yuan Kung.</em><br> ECCV 2022. [<a
+href="https://arxiv.org/abs/2208.11257">Paper</a>] [<a
+href="https://lychenyoko.github.io/3D-FM-GAN-Webpage/">Project</a>]</p></li>
+<li><p><strong>GAN-Control: Explicitly Controllable GANs.</strong><br>
+<em>Alon Shoshan, Nadav Bhonker, Igor Kviatkovsky, Gerard
+Medioni.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2101.02477">Paper</a>] [<a
+href="https://alonshoshan10.github.io/gan_control/">Project</a>] [<a
+href="https://github.com/amazon-science/gan-control">Code</a>]</p></li>
+<li><p><strong>CONFIG: Controllable Neural Face Image
+Generation.</strong><br> <em>Marek Kowalski, Stephan J. Garbin, Virginia
+Estellers, Tadas Baltrušaitis, Matthew Johnson, Jamie Shotton.</em><br>
+ECCV 2020. [<a href="https://arxiv.org/abs/2005.02671">Paper</a>] [<a
+href="https://github.com/microsoft/ConfigNet">Code</a>]</p></li>
+<li><p><strong>DiscoFaceGAN: Disentangled and Controllable Face Image
+Generation via 3D Imitative-Contrastive Learning.</strong><br> <em>Yu
+Deng, Jiaolong Yang, Dong Chen, Fang Wen, Xin Tong.</em><br> CVPR 2020.
+[<a href="https://arxiv.org/Paper/2004.11660.Paper">Paper</a>] [<a
+href="https://github.com/microsoft/DiscoFaceGAN">Code</a>]</p></li>
+<li><p><strong>StyleRig: Rigging StyleGAN for 3D Control over Portrait
+Images.</strong><br> <em>Ayush Tewari, Mohamed Elgharib, Gaurav Bharaj,
+Florian Bernard, Hans-Peter Seidel, Patrick Pérez, Michael Zollhöfer,
+Christian Theobalt.</em><br> CVPR 2020 (oral). [<a
+href="https://arxiv.org/abs/2004.00121">Paper</a>] [<a
+href="https://gvv.mpi-inf.mpg.de/projects/StyleRig/">Project</a>]</p></li>
+<li><p><strong>PIE: Portrait Image Embedding for Semantic
+Control.</strong><br> <em><a
+href="http://people.mpi-inf.mpg.de/~atewari/">Ayush Tewari</a>, Mohamed
+Elgharib, Mallikarjun B R., Florian Bernard, Hans-Peter Seidel, Patrick
+Pérez, Michael Zollhöfer, Christian Theobalt.</em><br> TOG (SIGGRAPH
+Asia) 2020. [<a
+href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.Paper">Paper</a>]
+[<a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">Project</a>]</p></li>
+</ul>
+<h3 id="d-prior-knowledge-as-constraints">3D Prior Knowledge as
+Constraints</h3>
+<ul>
+<li><p><strong>3D-Aware Indoor Scene Synthesis with Depth
+Priors.</strong><br> <em>Zifan Shi, Yujun Shen, Jiapeng Zhu, Dit-Yan
+Yeung, Qifeng Chen.</em><br> ECCV 2022 (oral). [<a
+href="https://arxiv.org/abs/2202.08553">Paper</a>] [<a
+href="https://vivianszf.github.io/depthgan/">Project</a>] [<a
+href="https://github.com/vivianszf/depthgan">Code</a>]</p></li>
+<li><p><strong>NGP: Towards a Neural Graphics Pipeline for Controllable
+Image Generation.</strong><br> <em>Xuelin Chen, Daniel Cohen-Or, Baoquan
+Chen, Niloy J. Mitra.</em><br> Eurographics 2021. [<a
+href="https://arxiv.org/abs/2006.10569">Paper</a>] [<a
+href="http://geometry.cs.ucl.ac.uk/projects/2021/ngp">Code</a>]</p></li>
+<li><p><strong>Lifting 2D StyleGAN for 3D-Aware Face
+Generation.</strong><br> <em><a
+href="https://seasonsh.github.io/">Yichun Shi</a>, Divyansh Aggarwal, <a
+href="http://www.cse.msu.edu/~jain/">Anil K. Jain</a>.</em><br> CVPR
+2021. [<a href="https://arxiv.org/abs/2011.13126">Paper</a>] [<a
+href="https://github.com/seasonSH/LiftedGAN">Code</a>]</p></li>
+<li><p><strong>RGBD-GAN: Unsupervised 3D Representation Learning From
+Natural Image Datasets via RGBD Image Synthesis.</strong><br>
+<em>Atsuhiro Noguchi, Tatsuya Harada.</em><br> ICLR 2020. [<a
+href="https://arxiv.org/abs/1909.12573">Paper</a>] [<a
+href="https://github.com/nogu-atsu/RGBD-GAN">Code</a>]</p></li>
+<li><p><strong>Visual Object Networks: Image Generation with
+Disentangled 3D Representation.</strong><br> <em>Jun-Yan Zhu, Zhoutong
+Zhang, Chengkai Zhang, Jiajun Wu, Antonio Torralba, Joshua B. Tenenbaum,
+William T. Freeman.</em><br> NeurIPS 2018. [<a
+href="https://arxiv.org/abs/1812.02725">Paper</a>] [<a
+href="http://von.csail.mit.edu/">Project</a>] [<a
+href="https://github.com/junyanz/VON">Code</a>]</p></li>
+<li><p><strong>3D Shape Induction from 2D Views of Multiple
+Objects.</strong><br> <em>Matheus Gadelha, Subhransu Maji, Rui
+Wang.</em><br> 3DV 2017. [<a
+href="https://arxiv.org/abs/1612.05872">Paper</a>] [<a
+href="http://mgadelha.me/prgan/index.html">Project</a>] [<a
+href="https://github.com/matheusgadelha/PrGAN">Code</a>]</p></li>
+<li><p><strong>Generative Image Modeling using Style and Structure
+Adversarial Networks.</strong><br> <em>Xiaolong Wang, Abhinav
+Gupta.</em><br> ECCV 2016. [<a
+href="https://arxiv.org/abs/1603.05631">Paper</a>] [<a
+href="https://github.com/facebook/eyescream">Project</a>] [<a
+href="https://github.com/xiaolonw/ss-gan">Code</a>]</p></li>
+</ul>
+<h2 id="d-aware-gans-for-a-single-image-category">3D-aware GANs for a
+Single Image Category</h2>
+<h3 id="unconditional-3d-generative-models">Unconditional 3D Generative
+Models</h3>
+<ul>
+<li><p><strong>BallGAN: 3D-aware Image Synthesis with a Spherical
+Background.</strong><br> <em>Minjung Shin, Yunji Seo, Jeongmin Bae,
+Young Sun Choi, Hyunsu Kim, Hyeran Byun, Youngjung Uh.</em><br> ICCV
+2023. [<a href="https://arxiv.org/abs/2301.09091">Paper</a>] [<a
+href="https://minjung-s.github.io/ballgan/">Project</a>] [<a
+href="https://github.com/minjung-s/BallGAN">Code</a>]</p></li>
+<li><p><strong>Mimic3D: Thriving 3D-Aware GANs via 3D-to-2D
+Imitation.</strong><br> <em>Xingyu Chen, Yu Deng, Baoyuan Wang.</em><br>
+ICCV 2023. [<a href="https://arxiv.org/abs/2303.09036">Paper</a>] [<a
+href="https://seanchenxy.github.io/Mimic3DWeb/">Project</a>]</p></li>
+<li><p><strong>GRAM-HD: 3D-Consistent Image Generation at High
+Resolution with Generative Radiance Manifolds.</strong><br> <em>Jianfeng
+Xiang, Jiaolong Yang, Yu Deng, Xin Tong.</em><br> ICCV 2023. [<a
+href="https://arxiv.org/abs/2206.07255">Paper</a>] [<a
+href="https://jeffreyxiang.github.io/GRAM-HD/">Project</a>]</p></li>
+<li><p><strong>Live 3D Portrait: Real-Time Radiance Fields for
+Single-Image Portrait View Synthesis.</strong><br> <em>Alex Trevithick,
+Matthew Chan, Michael Stengel, Eric R. Chan, Chao Liu, Zhiding Yu, Sameh
+Khamis, Manmohan Chandraker, Ravi Ramamoorthi, Koki Nagano.</em><br> TOG
+(SIGGRAPH) 2023. [<a
+href="https://research.nvidia.com/labs/nxp/lp3d//media/paper.Paper">Paper</a>]
+[<a
+href="https://research.nvidia.com/labs/nxp/lp3d//">Project</a>]</p></li>
+<li><p><strong>VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel
+Grids.</strong><br> <em>Katja Schwarz, Axel Sauer, Michael Niemeyer,
+Yiyi Liao, Andreas Geiger.</em><br> NeurIPS 2022. [<a
+href="https://arxiv.org/Paper/2206.07695.Paper">Paper</a>] [<a
+href="https://github.com/autonomousvision/voxgraf">Code</a>]</p></li>
+<li><p><strong>GeoD: Improving 3D-aware Image Synthesis with A
+Geometry-aware Discriminator.</strong><br> <em>Zifan Shi, Yinghao Xu,
+Yujun Shen, Deli Zhao, Qifeng Chen, Dit-Yan Yeung.</em><br> NeurIPS
+2022. [<a href="https://arxiv.org/abs/2209.15637">Paper</a>] [<a
+href="https://vivianszf.github.io/geod">Project</a>]</p></li>
+<li><p><strong>EpiGRAF: Rethinking training of 3D GANs.</strong><br>
+<em><a href="https://universome.github.io/">Ivan Skorokhodov</a>, <a
+href="http://www.stulyakov.com/">Sergey Tulyakov</a>, <a
+href="https://sites.google.com/view/yiqun-wang/home">Yiqun Wang</a>, <a
+href="https://peterwonka.net/">Peter Wonka</a>.</em><br> NeurIPS 2022.
+[<a href="https://arxiv.org/abs/2206.10535">Paper</a>] [<a
+href="https://universome.github.io/epigraf">Project</a>] [<a
+href="https://github.com/universome/epigraf">Code</a>]</p></li>
+<li><p><strong>VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel
+Grids.</strong><br> <em>Schwarz, Katja, Sauer, Axel, Niemeyer, Michael,
+Liao, Yiyi, and Geiger, Andreas.</em><br> NeurIPS 2022. [<a
+href="https://arxiv.org/Paper/2206.07695.Paper">Paper</a>] [<a
+href="https://katjaschwarz.github.io/voxgraf">Project</a>]</p></li>
+<li><p><strong>Injecting 3D Perception of Controllable NeRF-GAN into
+StyleGAN for Editable Portrait Image Synthesis.</strong><br>
+<em>Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, Donghyeon Kim, David Han,
+Hanseok Ko.</em><br> ECCV 2022. [<a
+href="https://arxiv.org/abs/2207.10257">Paper</a>] [<a
+href="https://jgkwak95.github.io/surfgan/">Project</a>] [<a
+href="https://github.com/jgkwak95/SURF-GAN">Code</a>]</p></li>
+<li><p><strong>Generative Multiplane Images: Making a 2D GAN
+3D-Aware.</strong><br> <em><a href="https://xiaoming-zhao.com/">Xiaoming
+Zhao</a>, <a href="https://fangchangma.github.io/">Fangchang Ma</a>, <a
+href="https://scholar.google.com/citations?user=bckYvFkAAAAJ&amp;hl=en">David
+Güera</a>, <a href="https://jrenzhile.com/">Zhile Ren</a>, <a
+href="https://www.alexander-schwing.de/">Alexander G. Schwing</a>, <a
+href="https://www.colburn.org/">Alex Colburn</a>.</em><br> ECCV 2022.
+[<a href="https://arxiv.org/abs/2207.10642">Paper</a>] [<a
+href="https://xiaoming-zhao.github.io/projects/gmpi/">Project</a>] [<a
+href="https://github.com/apple/ml-gmpi">Code</a>]</p></li>
+<li><p><strong>3D-FM GAN: Towards 3D-Controllable Face
+Manipulation.</strong><br> <em><a
+href="https://lychenyoko.github.io/">Yuchen Liu</a>, Zhixin Shu, Yijun
+Li, Zhe Lin, Richard Zhang, and Sun-Yuan Kung.</em><br> ECCV 2022. [<a
+href="https://arxiv.org/abs/2208.11257">Paper</a>] [<a
+href="https://lychenyoko.github.io/3D-FM-GAN-Webpage/">Project</a>]</p></li>
+<li><p><strong>EG3D: Efficient Geometry-aware 3D Generative Adversarial
+Networks.</strong><br> <em><a
+href="https://ericryanchan.github.io/">Eric R. Chan</a>, <a
+href="https://connorzlin.com/">Connor Z. Lin</a>, <a
+href="https://matthew-a-chan.github.io/">Matthew A. Chan</a>, <a
+href="https://luminohope.org/">Koki Nagano</a>, <a
+href="https://cs.stanford.edu/~bxpan/">Boxiao Pan</a>, <a
+href="https://research.nvidia.com/person/shalini-gupta">Shalini De
+Mello</a>, <a href="https://oraziogallo.github.io/">Orazio Gallo</a>, <a
+href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a>,
+<a href="https://research.nvidia.com/person/jonathan-tremblay">Jonathan
+Tremblay</a>, <a href="https://www.samehkhamis.com/">Sameh Khamis</a>,
+<a href="https://research.nvidia.com/person/tero-karras">Tero
+Karras</a>, <a href="https://stanford.edu/~gordonwz/">Gordon
+Wetzstein</a>.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2112.07945">Paper</a>] [<a
+href="https://matthew-a-chan.github.io/EG3D">Project</a>] [<a
+href="https://github.com/NVlabs/eg3d">Code</a>]</p></li>
+<li><p><strong>StylizedNeRF: Consistent 3D Scene Stylization as Stylized
+NeRF via 2D-3D Mutual Learning.</strong><br> <em>Yi-Hua Huang, Yue He,
+Yu-Jie Yuan, Yu-Kun Lai, Lin Gao.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2205.12183">Paper</a>]</p></li>
+<li><p><strong>Multi-View Consistent Generative Adversarial Networks for
+3D-aware Image Synthesis.</strong><br> <em>Xuanmeng Zhang, Zhedong
+Zheng, Daiheng Gao, Bang Zhang, Pan Pan, Yi Yang.</em><br> CVPR 2022.
+[<a href="https://arxiv.org/abs/2204.06307">Paper</a>] [<a
+href="https://github.com/Xuanmeng-Zhang/MVCGAN">Code</a>]</p></li>
+<li><p><strong>Disentangled3D: Learning a 3D Generative Model with
+Disentangled Geometry and Appearance from Monocular Images.</strong><br>
+<em><a href="https://ayushtewari.com/">Ayush Tewari</a>, Mallikarjun B
+R, Xingang Pan, Ohad Fried, Maneesh Agrawala, Christian
+Theobalt.</em><br> CVPR 2022. [<a
+href="https://people.mpi-inf.mpg.de/~atewari/projects/D3D/data/paper.Paper">Paper</a>]
+[<a
+href="https://people.mpi-inf.mpg.de/~atewari/projects/D3D/">Project</a>]</p></li>
+<li><p><strong>GIRAFFE HD: A High-Resolution 3D-aware Generative
+Model.</strong><br> <em>Yang Xue, Yuheng Li, Krishna Kumar Singh, Yong
+Jae Lee.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2203.14954">Paper</a>] [<a
+href="https://github.com/AustinXY/GIRAFFEHD">Code</a>]</p></li>
+<li><p><strong>StyleSDF: High-Resolution 3D-Consistent Image and
+Geometry Generation.</strong><br> <em><a
+href="https://homes.cs.washington.edu/~royorel/">Roy Or-El</a>, <a
+href="https://roxanneluo.github.io/">Xuan Luo</a>, Mengyi Shan, Eli
+Shechtman, Jeong Joon Park, Ira Kemelmacher-Shlizerman.</em><br> CVPR
+2022. [<a href="https://arxiv.org/abs/2112.11427">Paper</a>] [<a
+href="https://stylesdf.github.io/">Project</a>] [<a
+href="https://github.com/royorel/StyleSDF">Code</a>]</p></li>
+<li><p><strong>FENeRF: Face Editing in Neural Radiance
+Fields.</strong><br> <em>Jingxiang Sun, Xuan Wang, Yong Zhang, Xiaoyu
+Li, Qi Zhang, Yebin Liu, Jue Wang.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2111.15490">Paper</a>] [<a
+href="https://github.com/MrTornado24/FENeRF">Code</a>]</p></li>
+<li><p><strong>LOLNeRF: Learn from One Look.</strong><br> <em><a
+href="https://vision.cs.ubc.ca/team/">Daniel Rebain</a>, Mark Matthews,
+Kwang Moo Yi, Dmitry Lagun, Andrea Tagliasacchi.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2111.09996">Paper</a>] [<a
+href="https://ubc-vision.github.io/lolnerf/">Project</a>]</p></li>
+<li><p><strong>GRAM: Generative Radiance Manifolds for 3D-Aware Image
+Generation.</strong><br> <em><a href="https://yudeng.github.io/">Yu
+Deng</a>, <a href="https://jlyang.org/">Jiaolong Yang</a>, <a
+href="http://www.xtong.info/">Jianfeng Xiang</a>, <a href="">Xin
+Tong</a>.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2112.08867">Paper</a>] [<a
+href="https://yudeng.github.io/GRAM/">Project</a>] [<a
+href="https://yudeng.github.io/GRAM/">Code</a>]</p></li>
+<li><p><strong>VolumeGAN: 3D-aware Image Synthesis via Learning
+Structural and Textural Representations.</strong><br> <em>Yinghao Xu,
+Sida Peng, Ceyuan Yang, Yujun Shen, Bolei Zhou.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2112.10759">Paper</a>] [<a
+href="https://genforce.github.io/volumegan/">Project</a>] [<a
+href="https://github.com/genforce/VolumeGAN">Code</a>]</p></li>
+<li><p><strong>Generating Videos with Dynamics-aware Implicit Generative
+Adversarial Networks.</strong><br> <em>Sihyun Yu, Jihoon Tack, Sangwoo
+Mo, Hyunsu Kim, Junho Kim, Jung-Woo Ha, Jinwoo Shin.</em><br> ICLR 2022.
+[<a href="https://openreview.net/forum?id=Czsdv-S4-w9">Paper</a>] [<a
+href="https://sihyun-yu.github.io/digan/">Project</a>] [<a
+href="https://github.com/sihyun-yu/digan">Code</a>]</p></li>
+<li><p><strong>StyleNeRF: A Style-based 3D-Aware Generator for
+High-resolution Image Synthesis.</strong><br> <em><a
+href="http://jiataogu.me/">Jiatao Gu</a>, <a
+href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a
+href="https://totoro97.github.io/about.html">Peng Wang</a>, <a
+href="http://people.mpi-inf.mpg.de/~theobalt/">Christian
+Theobalt</a>.</em><br> ICLR 2022. [<a
+href="https://arxiv.org/abs/2110.08985">Paper</a>] [<a
+href="http://jiataogu.me/style_nerf/">Project</a>]</p></li>
+<li><p><strong>MOST-GAN: 3D Morphable StyleGAN for Disentangled Face
+Image Manipulation.</strong><br> <em>Safa C. Medin, Bernhard Egger,
+Anoop Cherian, Ye Wang, Joshua B. Tenenbaum, Xiaoming Liu, Tim K.
+Marks.</em><br> AAAI 2022. [<a
+href="https://arxiv.org/abs/2111.01048">Paper</a>]</p></li>
+<li><p><strong>A Shading-Guided Generative Implicit Model for
+Shape-Accurate 3D-Aware Image Synthesis.</strong><br> <em>Xingang Pan,
+Xudong Xu, Chen Change Loy, Christian Theobalt, Bo Dai.</em><br> NeurIPS
+2021. [<a href="https://arxiv.org/abs/2110.15678">Paper</a>]</p></li>
+<li><p><strong>pi-GAN: Periodic Implicit Generative Adversarial Networks
+for 3D-Aware Image Synthesis.</strong><br> <em><a
+href="https://ericryanchan.github.io/">Eric R. Chan</a>, <a
+href="https://marcoamonteiro.github.io/pi-GAN-website/">Marco
+Monteiro</a>, <a href="https://kellnhofer.xyz/">Petr Kellnhofer</a>, <a
+href="https://jiajunwu.com/">Jiajun Wu</a>, <a
+href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>.</em><br>
+CVPR 2021. [<a href="https://arxiv.org/abs/2012.00926">Paper</a>] [<a
+href="https://marcoamonteiro.github.io/pi-GAN-website/">Project</a>] [<a
+href="https://github.com/lucidrains/pi-GAN-pytorch">Code</a>]</p></li>
+<li><p><strong>GIRAFFE: Representing Scenes as Compositional Generative
+Neural Feature Fields.</strong><br> <em>Michael Niemeyer, Andreas
+Geiger.</em><br> CVPR 2021 (Best Paper). [<a
+href="https://arxiv.org/abs/2011.12100">Paper</a>] [<a
+href="https://m-niemeyer.github.io/project-pages/giraffe/index.html">Project</a>]
+[<a
+href="https://github.com/autonomousvision/giraffe">Code</a>]</p></li>
+<li><p><strong>BlockGAN: Learning 3D Object-aware Scene Representations
+from Unlabelled Images.</strong><br> <em>Thu Nguyen-Phuoc, Christian
+Richardt, Long Mai, Yong-Liang Yang, Niloy Mitra.</em><br> NeurIPS 2020.
+[<a href="https://arxiv.org/abs/2002.08988">Paper</a>] [<a
+href="https://www.monkeyoverflow.com/#/blockgan/">Project</a>] [<a
+href="https://github.com/thunguyenphuoc/BlockGAN">Code</a>]</p></li>
+<li><p><strong>GRAF: Generative Radiance Fields for 3D-Aware Image
+Synthesis.</strong><br> <em><a
+href="https://katjaschwarz.github.io/">Katja Schwarz</a>, <a
+href="https://yiyiliao.github.io/">Yiyi Liao</a>, <a
+href="https://m-niemeyer.github.io/">Michael Niemeyer</a>, <a
+href="http://www.cvlibs.net/">Andreas Geiger</a>.</em><br> NeurIPS 2020.
+[<a href="https://arxiv.org/abs/2007.02442">Paper</a>] [<a
+href="https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips">Project</a>]
+[<a href="https://github.com/autonomousvision/graf">Code</a>]</p></li>
+<li><p><strong>HoloGAN: Unsupervised learning of 3D representations from
+natural images.</strong><br> <em><a
+href="https://monkeyoverflow.com/about/">Thu Nguyen-Phuoc</a>, <a
+href="https://lambdalabs.com/blog/author/chuan/">Chuan Li</a>, Lucas
+Theis, <a href="https://richardt.name/">Christian Richardt</a>, <a
+href="http://yongliangyang.net/">Yong-liang Yang</a>.</em><br> ICCV
+2019. [<a href="https://arxiv.org/abs/1904.01326">Paper</a>] [<a
+href="https://www.monkeyoverflow.com/hologan-unsupervised-learning-of-3d-representations-from-natural-images/">Project</a>]
+[<a href="https://github.com/thunguyenphuoc/HoloGAN">Code</a>]</p></li>
+</ul>
+<h3 id="conditional-3d-generative-models">Conditional 3D Generative
+Models</h3>
+<ul>
+<li><p><strong>Sem2NeRF: Converting Single-View Semantic Masks to Neural
+Radiance Fields.</strong><br> <em><a
+href="https://donydchen.github.io/">Yuedong Chen</a>, <a
+href="https://wuqianyi.top/">Qianyi Wu</a>, <a
+href="https://www.chuanxiaz.com/">Chuanxia Zheng</a>, <a
+href="https://personal.ntu.edu.sg/astjcham/">Tat-Jen Cham</a>, <a
+href="https://jianfei-cai.github.io/">Jianfei Cai</a>.</em><br> ECCV
+2022. [<a href="https://arxiv.org/abs/2203.10821">Paper</a>] [<a
+href="https://donydchen.github.io/sem2nerf">Project</a>] [<a
+href="https://github.com/donydchen/sem2nerf">Code</a>]</p></li>
+<li><p><strong>IDE-3D: Interactive Disentangled Editing for
+High-Resolution 3D-aware Portrait Synthesis.</strong><br> <em><a
+href="https://github.com/MrTornado24">Jingxiang Sun</a>, <a
+href="https://mrtornado24.github.io/IDE-3D/">Xuan Wang</a>, <a
+href="https://seasonsh.github.io/">Yichun Shi</a>, <a
+href="https://lizhenwangt.github.io/">Lizhen Wang</a>, <a
+href="https://juewang725.github.io/">Jue Wang</a>, <a
+href="https://liuyebin.com/">Yebin Liu</a>.</em><br> SIGGRAPH Asia 2022.
+[<a href="https://arxiv.org/abs/2205.15517">Paper</a>] [<a
+href="https://mrtornado24.github.io/IDE-3D/">Project</a>] [<a
+href="https://github.com/MrTornado24/IDE-3D">Code</a>]</p></li>
+<li><p><strong>NeRFFaceEditing: Disentangled Face Editing in Neural
+Radiance Fields.</strong><br> <em>Kaiwen Jiang, <a
+href="http://people.geometrylearning.com/csy/">Shu-Yu Chen</a>, <a
+href="http://people.geometrylearning.com/lfl/">Feng-Lin Liu</a>, <a
+href="http://sweb.cityu.edu.hk/hongbofu/">Hongbo Fu</a>, <a
+href="http://www.geometrylearning.com/cn/">Lin Gao</a>.</em><br>
+SIGGRAPH Asia 2022. [<a
+href="https://arxiv.org/abs/2211.07968">Paper</a>] [<a
+href="http://geometrylearning.com/NeRFFaceEditing/">Project</a>]</p></li>
+<li><p><strong>GANcraft: Unsupervised 3D Neural Rendering of Minecraft
+Worlds.</strong><br> <em>Zekun Hao, Arun Mallya, Serge Belongie, Ming-Yu
+Liu.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2104.07659">Paper</a>] [<a
+href="https://nvlabs.github.io/GANcraft/">Project</a>] [<a
+href="https://github.com/NVlabs/imaginaire">Code</a>]</p></li>
+</ul>
+<h2 id="d-aware-diffusion-models-for-a-single-image-category">3D-aware
+Diffusion Models for a Single Image Category</h2>
+<ul>
+<li><p><strong>3D-aware Image Generation using 2D Diffusion
+Models.</strong><br> <em><a
+href="https://jeffreyxiang.github.io/">Jianfeng Xiang</a>, Jiaolong
+Yang, Binbin Huang, Xin Tong.</em><br> ICCV 2023. [<a
+href="https://arxiv.org/abs/2303.17905">Paper</a>] [<a
+href="https://jeffreyxiang.github.io/ivid/">Project</a>] [<a
+href="https://github.com/JeffreyXiang/ivid">Code</a>]</p></li>
+<li><p><strong>HoloFusion: Towards Photo-realistic 3D Generative
+Modeling.</strong><br> <em>Animesh Karnewar, Niloy J. Mitra, Andrea
+Vedaldi, David Novotny.</em><br> ICCV 2023. [<a
+href="http://arxiv.org/abs/2308.14244">Paper</a>] [<a
+href="https://holodiffusion.github.io/holofusion">Project</a>]</p></li>
+<li><p><strong>HyperDiffusion: Generating Implicit Neural Fields with
+Weight-Space Diffusion.</strong><br> <em><a
+href="https://ziyaerkoc.com/">Ziya Erkoç</a>, <a
+href="https://fangchangma.github.io/">Fangchang Ma</a>, <a
+href="http://shanqi.github.io/">Qi Shan</a>, <a
+href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias
+Nießner</a>, <a href="https://www.3dunderstanding.org/team.html">Angela
+Dai</a>.</em><br> ICCV 2023. [<a
+href="https://arxiv.org/abs/2303.17015">Paper</a>] [<a
+href="https://ziyaerkoc.com/hyperdiffusion/">Project</a>]</p></li>
+<li><p><strong>LatentSwap3D: Semantic Edits on 3D Image
+GANs.</strong><br> <em>Enis Simsar, Alessio Tonioni, Evin Pınar Örnek,
+Federico Tombari.</em><br> ICCV 2023 Workshop on AI3DCC. [<a
+href="https://arxiv.org/abs/2212.01381">Paper</a>]</p></li>
+<li><p><strong>DiffusioNeRF: Regularizing Neural Radiance Fields with
+Denoising Diffusion Models.</strong><br> <em><a
+href="https://scholar.google.com/citations?user=ASP-uu4AAAAJ&amp;hl=en&amp;oi=ao">Jamie
+Wynn</a> and <a
+href="https://scholar.google.com/citations?user=ELFm0CgAAAAJ&amp;hl=en&amp;oi=ao">Daniyar
+Turmukhambetov</a>.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2302.12231">Paper</a>] [<a
+href="https://storage.googleapis.com/niantic-lon-static/research/diffusionerf/diffusionerf_supplemental.Paper">Supplementary
+material</a>] [<a
+href="https://github.com/nianticlabs/diffusionerf">COde</a>]</p></li>
+<li><p><strong>NeuralField-LDM: Scene Generation with Hierarchical
+Latent Diffusion Models.</strong><br> <em>Seung Wook Kim, Bradley Brown,
+Kangxue Yin, Karsten Kreis, Katja Schwarz, Daiqing Li, Robin Rombach,
+Antonio Torralba, Sanja Fidler.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2304.09787">Paper</a>] [<a
+href="https://research.nvidia.com/labs/toronto-ai/NFLDM/">Project</a>]</p></li>
+<li><p><strong>Rodin: A Generative Model for Sculpting 3D Digital
+Avatars Using Diffusion.</strong><br> <em>Tengfei Wang, Bo Zhang, Ting
+Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong
+Chen, Fang Wen, Qifeng Chen, Baining Guo.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2212.06135">Paper</a>] [<a
+href="https://3d-avatar-diffusion.microsoft.com/">Project</a>]</p></li>
+<li><p><strong>DiffRF: Rendering-guided 3D Radiance Field
+Diffusion.</strong><br> <em><a
+href="https://niessnerlab.org/members/norman_mueller/profile.html">Norman
+Müller</a>, <a
+href="https://niessnerlab.org/members/yawar_siddiqui/profile.html">Yawar
+Siddiqui</a>, <a
+href="https://scholar.google.com/citations?user=vW1gaVEAAAAJ">Lorenzo
+Porzi</a>, <a
+href="https://scholar.google.com/citations?hl=de&amp;user=484sccEAAAAJ">Samuel
+Rota Bulò</a>, <a
+href="https://scholar.google.com/citations?user=CxbDDRMAAAAJ&amp;hl=en">Peter
+Kontschieder</a>, <a
+href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias
+Nießner</a>.</em><br> CVPR 2023 (Highlight). [<a
+href="https://arxiv.org/abs/2212.01206">Paper</a>] [<a
+href="https://sirwyver.github.io/DiffRF/">Project</a>]</p></li>
+<li><p><strong>RenderDiffusion: Image Diffusion for 3D Reconstruction,
+Inpainting and Generation.</strong><br> <em>Titas Anciukevičius, Zexiang
+Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul
+Guerrero.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2211.09869">Paper</a>] [<a
+href="https://holodiffusion.github.io/">Project</a>] [<a
+href="https://github.com/Anciukevicius/RenderDiffusion">Code</a>]</p></li>
+<li><p><strong>SparseFusion: Distilling View-conditioned Diffusion for
+3D Reconstruction.</strong><br> <em><a
+href="https://www.zhiz.dev/">Zhizhuo Zhou</a>, <a
+href="https://shubhtuls.github.io/">Shubham Tulsiani</a>.</em><br> CVPR
+2023. [<a href="https://arxiv.org/abs/2212.00792">Paper</a>] [<a
+href="https://sparsefusion.github.io/">Project</a>] [<a
+href="https://github.com/zhizdev/sparsefusion">Code</a>]</p></li>
+<li><p><strong>HoloDiffusion: Training a 3D Diffusion Model using 2D
+Images.</strong><br> <em>Animesh Karnewar, Andrea Vedaldi, David
+Novotny, Niloy Mitra.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2303.16509">Paper</a>] [<a
+href="https://3d-diffusion.github.io/">Project</a>]</p></li>
+<li><p><strong>3DiM: Novel View Synthesis with Diffusion
+Models.</strong><br> <em>Daniel Watson, William Chan, Ricardo
+Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad
+Norouzi.</em><br> ICLR 2023. [<a
+href="https://arxiv.org/abs/2210.04628">Paper</a>] [<a
+href="https://3d-diffusion.github.io/">Project</a>]</p></li>
+<li><p><strong>3DShape2VecSet: A 3D Shape Representation for Neural
+Fields and Generative Diffusion Models.</strong><br> <em><a
+href="https://1zb.github.io/">Biao Zhang</a>, <a
+href="https://tangjiapeng.github.io/">Jiapeng Tang</a>, <a
+href="https://www.niessnerlab.org/">Matthias Niessner</a>, <a
+href="http://peterwonka.net/">Peter Wonka</a>.</em><br> SIGGRAPH 2023.
+[<a href="https://arxiv.org/abs/2301.11445">Paper</a>] [<a
+href="https://1zb.github.io/3DShape2VecSet/">Project</a>] [<a
+href="https://github.com/1zb/3DShape2VecSet">Code</a>]</p></li>
+<li><p><strong>GAUDI: A Neural Architect for Immersive 3D Scene
+Generation.</strong><br> <em>Miguel Angel Bautista, Pengsheng Guo,
+Samira Abnar, Walter Talbott, Alexander Toshev, Zhuoyuan Chen, Laurent
+Dinh, Shuangfei Zhai, Hanlin Goh, Daniel Ulbricht, Afshin Dehghan, Josh
+Susskind.</em><br> NeurIPS 2022. [<a
+href="https://arxiv.org/abs/2212.01381">Paper</a>] [<a
+href="https://github.com/apple/ml-gaudi">Project</a>]</p></li>
+<li><p><strong>Learning a Diffusion Prior for NeRFs.</strong><br>
+<em>Guandao Yang, Abhijit Kundu, Leonidas J. Guibas, Jonathan T. Barron,
+Ben Poole.</em><br> arxiv 2023. [<a
+href="https://arxiv.org/abs/2304.14473">Paper</a>]</p></li>
+<li><p><strong>Adding 3D Geometry Control to Diffusion
+Models.</strong><br> <em><a href="https://wufeim.github.io/">Wufei
+Ma</a>, <a href="https://qihao067.github.io/">Qihao Liu</a>, <a
+href="https://jiahaoplus.github.io/">Jiahao Wang</a>, Angtian Wang, <a
+href="https://www.cs.jhu.edu/~yyliu/">Yaoyao Liu</a>, <a
+href="https://adamkortylewski.com/">Adam Kortylewski</a>, <a
+href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>.</em><br> arxiv
+2023. [<a href="https://arxiv.org/abs/2306.08103">Paper</a>]</p></li>
+<li><p><strong>Generative Novel View Synthesis with 3D-Aware Diffusion
+Models.</strong><br> <em>Eric R. Chan, Koki Nagano, Matthew A. Chan,
+Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini
+De Mello, Tero Karras, Gordon Wetzstein.</em><br> arxiv 2023. [<a
+href="https://arxiv.org/abs/2304.02602">Paper</a>] [<a
+href="https://nvlabs.github.io/genvs/">Project</a>] [<a
+href="https://github.com/NVlabs/genvs">Code</a>]</p></li>
+<li><p><strong>3D-LDM: Neural Implicit 3D Shape Generation with Latent
+Diffusion Models.</strong><br> <em>Gimin Nam, Mariem Khlifi, Andrew
+Rodriguez, Alberto Tono, Linqi Zhou, Paul Guerrero.</em><br> arxiv 2022.
+[<a href="https://arxiv.org/abs/2212.00842">Paper</a>]</p></li>
+</ul>
+<h2 id="d-aware-generative-models-on-imagenet">3D-Aware Generative
+Models on ImageNet</h2>
+<ul>
+<li><p><strong>VQ3D: Learning a 3D-Aware Generative Model on
+ImageNet.</strong><br> <em>Kyle Sargent, Jing Yu Koh, Han Zhang, Huiwen
+Chang, Charles Herrmann, Pratul Srinivasan, Jiajun Wu, Deqing
+Sun.</em><br> ICCV 2023 (Oral). [<a
+href="https://arxiv.org/abs/2302.06833">Paper</a>] [<a
+href="http://kylesargent.github.io/vq3d">Project</a>]</p></li>
+<li><p><strong>3D Generation on ImageNet.</strong><br> <em>Ivan
+Skorokhodov, Aliaksandr Siarohin, Yinghao Xu, Jian Ren, Hsin-Ying Lee,
+Peter Wonka, Sergey Tulyakov.</em><br> ICLR 2023 (Oral). [<a
+href="https://openreview.net/forum?id=U2WjB9xxZ9q">Paper</a>] [<a
+href="https://u2wjb9xxz9q.github.io/">Project</a>] [<a
+href="https://justimyhxu.github.io/pub.html">Code</a>]</p></li>
+</ul>
+<h2 id="d-aware-video-synthesis">3D-aware Video Synthesis</h2>
+<ul>
+<li><p><strong>3D-Aware Video Generation.</strong><br> <em><a
+href="https://sherwinbahmani.github.io/">Sherwin Bahmani</a>, <a
+href="https://jjparkcv.github.io/">Jeong Joon Park</a>, <a
+href="https://paschalidoud.github.io/">Despoina Paschalidou</a>, <a
+href="https://scholar.google.com/citations?user=9zJkeEMAAAAJ&amp;hl=en/">Hao
+Tang</a>, <a href="https://stanford.edu/~gordonwz/">Gordon
+Wetzstein</a>, <a
+href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a>,
+<a
+href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html/">Luc
+Van Gool</a>, <a
+href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjAxNjc4.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html/">Radu
+Timofte</a>.</em><br> TMLR 2023. [<a
+href="https://arxiv.org/abs/2206.14797">Paper</a>] [<a
+href="https://sherwinbahmani.github.io/3dvidgen/">Project</a>] [<a
+href="https://github.com/sherwinbahmani/3dvideogeneration/">Code</a>]</p></li>
+<li><p><strong>Streaming Radiance Fields for 3D Video
+Synthesis.</strong><br> <em>Lingzhi Li, Zhen Shen, Zhongshu Wang, Li
+Shen, Ping Tan.</em><br> NeurIPS 2022. [<a
+href="https://arxiv.org/abs/2210.14831">Paper</a>] [<a
+href="https://github.com/AlgoHunt/StreamRF">Code</a>]</p></li>
+</ul>
+<h2 id="inr-based-3d-novel-view-synthesis">INR-based 3D Novel View
+Synthesis</h2>
+<h3 id="neural-scene-representations">Neural Scene Representations</h3>
+<ul>
+<li><p><strong>Scene Representation Transformer: Geometry-Free Novel
+View Synthesis Through Set-Latent Scene Representations.</strong><br>
+<em>Mehdi S. M. Sajjadi, Henning Meyer, Etienne Pot, Urs Bergmann, Klaus
+Greff, Noha Radwan, Suhani Vora, Mario Lucic, Daniel Duckworth, Alexey
+Dosovitskiy, Jakob Uszkoreit, Thomas Funkhouser, Andrea
+Tagliasacchi.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2111.13152">Paper</a>] [<a
+href="https://srt-paper.github.io/">Project</a>] [<a
+href="https://github.com/stelzner/srt">Code</a>]</p></li>
+<li><p><strong>Light Field Networks: Neural Scene Representations with
+Single-Evaluation Rendering.</strong><br> <em>Vincent Sitzmann, Semon
+Rezchikov, William T. Freeman, Joshua B. Tenenbaum, Fredo
+Durand.</em><br> NeurIPS 2021 (Spotlight). [<a
+href="https://arxiv.org/abs/2106.02634">Paper</a>] [<a
+href="https://vsitzmann.github.io/lfns/">Project</a>] [<a
+href="https://github.com/vsitzmann/light-field-networks">Code</a>]</p></li>
+<li><p><strong>Mip-NeRF: A Multiscale Representation for Anti-Aliasing
+Neural Radiance Fields.</strong><br> <em><a
+href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
+href="https://bmild.github.io/">Ben Mildenhall</a>, <a
+href="https://www.matthewtancik.com/">Matthew Tancik</a>, <a
+href="https://phogzone.com/cv.html">Peter Hedman</a>, <a
+href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a
+href="https://pratulsrinivasan.github.io/">Pratul P.
+Srinivasan</a>.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2103.13415">Paper</a>] [<a
+href="http://jonbarron.info/mipnerf">Project</a>] [<a
+href="https://github.com/google/mipnerf">Github</a>]</p></li>
+<li><p><strong>NeRF: Representing Scenes as Neural Radiance Fields for
+View Synthesis.</strong><br> <em><a
+href="http://people.eecs.berkeley.edu/~bmild/">Ben Mildenhall</a>, <a
+href="https://people.eecs.berkeley.edu/~pratul/">Pratul P.
+Srinivasan</a>, <a href="http://www.matthewtancik.com/">Matthew
+Tancik</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
+href="http://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>, <a
+href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren
+Ng</a>.</em><br> ECCV 2020. [<a
+href="https://arxiv.org/abs/2003.08934">Paper</a>] [<a
+href="http://tancik.com/nerf">Project</a>] [<a
+href="https://github.com/bmild/nerf">Gtihub-Tensorflow</a>] [<a
+href="https://github.com/krrish94/nerf-pytorch">krrish94-PyTorch</a>]
+[<a
+href="https://github.com/yenchenlin/nerf-pytorch">yenchenlin-PyTorch</a>]</p></li>
+<li><p><strong>Differentiable Volumetric Rendering: Learning Implicit 3D
+Representations without 3D Supervision.</strong><br> <em>Michael
+Niemeyer, Lars Mescheder, Michael Oechsle, Andreas Geiger.</em><br> CVPR
+2020. [<a
+href="http://www.cvlibs.net/publications/Niemeyer2020CVPR.Paper">Paper</a>]
+[<a
+href="https://github.com/autonomousvision/differentiable_volumetric_rendering">Code</a>]</p></li>
+<li><p><strong>Scene Representation Networks: Continuous
+3D-Structure-Aware Neural Scene Representations.</strong><br> <em><a
+href="https://vsitzmann.github.io/">Vincent Sitzmann</a>, Michael
+Zollhöfer, Gordon Wetzstein.</em><br> NeurIPS 2019 (Oral, Honorable
+Mention “Outstanding New Directions”). [<a
+href="http://arxiv.org/abs/1906.01618">Paper</a>] [<a
+href="https://github.com/vsitzmann/scene-representation-networks">Project</a>]
+[<a
+href="https://github.com/vsitzmann/scene-representation-networks">Code</a>]
+[<a
+href="https://drive.google.com/drive/folders/1OkYgeRcIcLOFu1ft5mRODWNQaPJ0ps90?usp=sharing">Dataset</a>]</p></li>
+<li><p><strong>LLFF: Local Light Field Fusion: Practical View Synthesis
+with Prescriptive Sampling Guidelines.</strong><br> <em><a
+href="http://people.eecs.berkeley.edu/~bmild/">Ben Mildenhall</a>,
+Pratul Srinivasan, Rodrigo Ortiz-Cayon, Nima Khademi Kalantari, Ravi
+Ramamoorthi, Ren Ng, Abhishek Kar.</em><br> SIGGRAPH 2019. [<a
+href="https://arxiv.org/abs/1905.00889">Paper</a>] [<a
+href="https://people.eecs.berkeley.edu/~bmild/llff/">Project</a>] [<a
+href="https://github.com/Fyusion/LLFF">Code</a>]</p></li>
+<li><p><strong>DeepVoxels: Learning Persistent 3D Feature
+Embeddings.</strong><br> <em>Vincent Sitzmann, Justus Thies, Felix
+Heide, Matthias Nießner, Gordon Wetzstein, Michael Zollhöfer.</em><br>
+CVPR 2019 (Oral). [<a href="https://arxiv.org/abs/1812.01024">Paper</a>]
+[<a href="http://vsitzmann.github.io/deepvoxels/">Project</a>] [<a
+href="https://github.com/vsitzmann/deepvoxels">Code</a>]</p></li>
+</ul>
+<h3 id="acceleration">Acceleration</h3>
+<ul>
+<li><p><strong>Instant Neural Graphics Primitives with a Multiresolution
+Hash Encoding.</strong><br> <em><a href="https://tom94.net/">Thomas
+Müller</a>, <a href="https://research.nvidia.com/person/alex-evans">Alex
+Evans</a>, <a
+href="https://research.nvidia.com/person/christoph-schied">Christoph
+Schied</a>, <a
+href="https://research.nvidia.com/person/alex-keller">Alexander
+Keller</a>.</em><br> SIGGRAPH (TOG) 2022. [<a
+href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.Paper">Paper</a>]
+[<a href="https://nvlabs.github.io/instant-ngp">Project</a>] [<a
+href="https://github.com/NVlabs/instant-ngp">Code</a>]</p></li>
+<li><p><strong>DIVeR: Real-time and Accurate Neural Radiance Fields with
+Deterministic Integration for Volume Rendering.</strong><br> <em><a
+href="https://lwwu2.github.io/">Liwen Wu</a>, <a
+href="https://jyl.kr/">Jae Yong Lee</a>, <a
+href="https://anandbhattad.github.io/">Anand Bhattad</a>, <a
+href="https://yxw.web.illinois.edu/">Yuxiong Wang</a>, <a
+href="http://luthuli.cs.uiuc.edu/~daf/">David A. Forsyth</a>.</em><br>
+CVPR 2022. [<a href="https://arxiv.org/abs/2111.10427">Paper</a>] [<a
+href="https://lwwu2.github.io/diver/">Project</a>] [<a
+href="https://github.com/lwwu2/diver">Code</a>]</p></li>
+<li><p><strong>KiloNeRF: Speeding up Neural Radiance Fields with
+Thousands of Tiny MLPs.</strong><br> <em>Christian Reiser, Songyou Peng,
+Yiyi Liao, Andreas Geiger.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2103.13744">Paper</a>] [<a
+href="https://github.com/creiser/kilonerf">Code</a>]</p></li>
+<li><p><strong>FastNeRF: High-Fidelity Neural Rendering at
+200FPS.</strong><br> <em>Stephan J. Garbin, Marek Kowalski, Matthew
+Johnson, Jamie Shotton, Julien Valentin.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2103.10380">Paper</a>]</p></li>
+<li><p><strong>PlenOctrees for Real-time Rendering of Neural Radiance
+Fields.</strong><br> <em><a href="https://alexyu.net/">Alex Yu</a>, <a
+href="https://www.liruilong.cn/">Ruilong Li</a>, <a
+href="https://www.matthewtancik.com/">Matthew Tancik</a>, <a
+href="https://www.hao-li.com/">Hao Li</a>, <a
+href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren
+Ng</a>, <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo
+Kanazawa</a>.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2103.14024">Paper</a>] [<a
+href="https://alexyu.net/plenoctrees/">Project</a>] [<a
+href="https://github.com/sxyu/plenoctree">Code</a>]</p></li>
+<li><p><strong>Baking Neural Radiance Fields for Real-Time View
+Synthesis.</strong><br> <em><a href="https://phogzone.com/">Peter
+Hedman</a>, <a href="https://pratulsrinivasan.github.io/">Pratul P.
+Srinivasan</a>, <a href="https://bmild.github.io/">Ben Mildenhall</a>,
+<a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
+href="https://www.pauldebevec.com/">Paul Debevec</a>.</em><br> ICCV 2021
+(oral). [<a href="https://arxiv.org/abs/2103.14645">Paper</a>] [<a
+href="https://nerf.live/">Project</a>] [<a
+href="https://github.com/google-research/google-research/tree/master/snerg">Code</a>]</p></li>
+<li><p><strong>AutoInt: Automatic Integration for Fast Neural Volume
+Rendering.</strong><br> <em>David B. Lindell, Julien N. P. Martel,
+Gordon Wetzstein.</em><br> CVPR 2021 (oral). [<a
+href="https://arxiv.org/abs/2012.01714">Paper</a>] [<a
+href="http://www.computationalimaging.org/publications/automatic-integration/">Project</a>]
+[<a
+href="https://github.com/computational-imaging/automatic-integration">Code</a>]</p></li>
+<li><p><strong>NSVF: Neural Sparse Voxel Fields.</strong><br> <em><a
+href="https://lingjie0206.github.io/">Lingjie Liu</a>, Jiatao Gu, Kyaw
+Zaw Lin, Tat-Seng Chua, Christian Theobalt.</em><br> NeurIPS 2020. [<a
+href="https://arxiv.org/abs/2007.11571">Paper</a>] [<a
+href="https://lingjie0206.github.io/papers/NSVF/">Project</a>] [<a
+href="https://github.com/facebookresearch/NSVF">Code</a>]</p></li>
+</ul>
+<h3 id="from-constrained-to-in-the-wild-conditions">From Constrained to
+In-the-wild Conditions</h3>
+<h4 id="few-images">Few Images</h4>
+<ul>
+<li><p><strong>GRF: Learning a General Radiance Field for 3D
+Representation and Rendering.</strong><br> <em>Alex Trevithick, Bo
+Yang.</em><br> ICCV 2021. [<a
+href="https://openaccess.thecvf.com/content/ICCV2021/html/Trevithick_GRF_Learning_a_General_Radiance_Field_for_3D_Representation_and_ICCV_2021_paper.html">Paper</a>]
+[<a href="https://github.com/alextrevithick/GRF">Code</a>]</p></li>
+<li><p><strong>MVSNeRF: Fast Generalizable Radiance Field Reconstruction
+from Multi-View Stereo.</strong><br> <em><a
+href="https://apchenstu.github.io/">Anpei Chen</a>, <a
+href="http://cseweb.ucsd.edu/~zex014/">Zexiang Xu</a>, Fuqiang Zhao,
+Xiaoshuai Zhang, <a href="https://www.fbxiang.com/">Fanbo Xiang</a>, <a
+href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a>, <a
+href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>.</em><br> ICCV 2021.
+[<a href="https://arxiv.org/abs/2103.15595">Paper</a>] [<a
+href="https://apchenstu.github.io/mvsnerf/">Project</a>] [<a
+href="https://github.com/apchenstu/mvsnerf">Code</a>]</p></li>
+<li><p><strong>CodeNeRF: Disentangled Neural Radiance Fields for Object
+Categories.</strong><br> <em>Wonbong Jang, Lourdes Agapito.</em><br>
+ICCV 2021. [<a href="https://arxiv.org/abs/2109.01750">Paper</a>] [<a
+href="https://sites.google.com/view/wbjang/home/codenerf">Project</a>]
+[<a href="https://github.com/wayne1123/code-nerf">Code</a>]</p></li>
+<li><p><strong>pixelNeRF: Neural Radiance Fields from One or Few
+Images.</strong><br> <em><a href="https://alexyu.net/">Alex Yu</a>,
+Vickie Ye, Matthew Tancik, Angjoo Kanazawa.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2012.02190">Paper</a>] [<a
+href="https://alexyu.net/pixelnerf">Project</a>] [<a
+href="https://github.com/sxyu/pixel-nerf">Code</a>]</p></li>
+<li><p><strong>IBRNet: Learning Multi-View Image-Based
+Rendering.</strong><br> <em>Qianqian Wang, Zhicheng Wang, Kyle Genova,
+Pratul Srinivasan, Howard Zhou, Jonathan T. Barron, Ricardo
+Martin-Brualla, Noah Snavely, Thomas Funkhouser.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2102.13090">Paper</a>] [<a
+href="https://ibrnet.github.io/">Project</a>] [<a
+href="https://github.com/googleinterns/IBRNet">Code</a>]</p></li>
+<li><p><strong>NeRF-VAE: A Geometry Aware 3D Scene Generative
+Model.</strong><br> <em>Adam R. Kosiorek, Heiko Strathmann, Daniel
+Zoran, Pol Moreno, Rosalia Schneider, Soňa Mokrá, Danilo J.
+Rezende.</em><br> ICML 2021. [<a
+href="https://arxiv.org/abs/2104.00587">Paper</a>]</p></li>
+</ul>
+<h4 id="pose-free">Pose-free</h4>
+<ul>
+<li><p><strong>Self-Calibrating Neural Radiance Fields.</strong><br>
+<em>Yoonwoo Jeong, Seokjun Ahn, Christopher Choy, Animashree Anandkumar,
+Minsu Cho, Jaesik Park.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2108.13826">Paper</a>] [<a
+href="https://postech-cvlab.github.io/SCNeRF/">Project</a>] [<a
+href="https://github.com/POSTECH-CVLab/SCNeRF">Code</a>]</p></li>
+<li><p><strong>BARF: Bundle-Adjusting Neural Radiance
+Fields.</strong><br> <em><a
+href="https://chenhsuanlin.bitbucket.io/">Chen-Hsuan Lin</a>, <a
+href="http://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>, Antonio
+Torralba, Simon Lucey.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2104.06405">Paper</a>] [<a
+href="https://github.com/chenhsuanlin/bundle-adjusting-NeRF">Code</a>]</p></li>
+<li><p><strong>NeRF–: Neural Radiance Fields Without Known Camera
+Parameters.</strong><br> <em><a
+href="https://scholar.google.com/citations?user=zCBKqa8AAAAJ&amp;hl=en">Zirui
+Wang</a>, <a href="http://elliottwu.com">Shangzhe Wu</a>, <a
+href="https://weidixie.github.io/weidi-personal-webpage/">Weidi Xie</a>,
+<a href="https://sites.google.com/site/drminchen/home">Min Chen</a>, <a
+href="https://eng.ox.ac.uk/people/victor-prisacariu/">Victor Adrian
+Prisacariu</a>.</em><br> arxiv 2021. [<a
+href="https://arxiv.org/abs/2102.07064">Paper</a>] [<a
+href="http://nerfmm.active.vision/">Project</a>] [<a
+href="https://github.com/ActiveVisionLab/nerfmm">Code</a>]</p></li>
+</ul>
+<h4 id="varying-appearance">Varying Appearance</h4>
+<ul>
+<li><p><strong>NeRFReN: Neural Radiance Fields with
+Reflections.</strong><br> <em>Yuan-Chen Guo, Di Kang, Linchao Bao, Yu
+He, Song-Hai Zhang.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2111.15234">Paper</a>]
+[[Project](https://bennyguo.github.io/nerfren/]</p></li>
+<li><p><strong>NeRF in the Wild: Neural Radiance Fields for
+Unconstrained Photo Collections.</strong><br> <em><a
+href="http://www.ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>,
+<a
+href="https://scholar.google.com/citations?user=g98QcZUAAAAJ&amp;hl=en">Noha
+Radwan</a>, <a href="https://research.google/people/105804/">Mehdi S. M.
+Sajjadi</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>,
+<a
+href="https://scholar.google.com/citations?user=FXNJRDoAAAAJ&amp;hl=en">Alexey
+Dosovitskiy</a>, <a
+href="http://www.stronglyconvex.com/about.html">Daniel
+Duckworth</a>.</em><br> CVPR 2021 (oral). [<a
+href="https://arxiv.org/abs/2008.02268">Paper</a>] [<a
+href="https://nerf-w.github.io/">Code</a>]</p></li>
+</ul>
+<h4 id="large-scale-scene">Large-scale Scene</h4>
+<ul>
+<li><p><strong>Grid-guided Neural Radiance Fields for Large Urban
+Scenes.</strong><br> <em>Linning Xu, Yuanbo Xiangli, Sida Peng, Xingang
+Pan, Nanxuan Zhao, Christian Theobalt, Bo Dai, Dahua Lin.</em><br> CVPR
+2023. [<a href="https://arxiv.org/abs/2303.14001">Paper</a>] [<a
+href="https://city-super.github.io/gridnerf/">Project</a>]</p></li>
+<li><p><strong>S3-NeRF: Neural Reflectance Field from Shading and Shadow
+under a Single Viewpoint.</strong><br> <em><a
+href="https://ywq.github.io/">Wenqi Yang</a>, <a
+href="https://guanyingc.github.io/">Guanying Chen</a>, <a
+href="http://chaofengc.github.io/">Chaofeng Chen</a>, <a
+href="https://zfchenunique.github.io/">Zhenfang Chen</a>, <a
+href="http://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong</a>.</em><br>
+NeurIPS 2022. [<a href="https://arxiv.org/abs/2210.08936">Paper</a>] [<a
+href="https://ywq.github.io/s3nerf">Project</a>]</p></li>
+<li><p><strong>BungeeNeRF: Progressive Neural Radiance Field for Extreme
+Multi-scale Scene Rendering.</strong><br> <em>Yuanbo Xiangli, Linning
+Xu, Xingang Pan, Nanxuan Zhao, Anyi Rao, Christian Theobalt, Bo Dai,
+Dahua Lin.</em><br> ECCV 2022. [<a
+href="https://arxiv.org/abs/2112.05504">Paper</a>] [<a
+href="https://city-super.github.io/citynerf">Project</a>]</p></li>
+<li><p><strong>Block-NeRF: Scalable Large Scene Neural View
+Synthesis.</strong><br> <em>Matthew Tancik, Vincent Casser, Xinchen Yan,
+Sabeek Pradhan, Ben Mildenhall, Pratul P. Srinivasan, Jonathan T.
+Barron, Henrik Kretzschmar.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2202.05263">Paper</a>] [<a
+href="https://waymo.com/research/block-nerf/">Project</a>]</p></li>
+<li><p><strong>Urban Radiance Fields.</strong><br> <em><a
+href="http://www.krematas.com/">Konstantinos Rematas</a>, Andrew Liu,
+Pratul P. Srinivasan, Jonathan T. Barron, Andrea Tagliasacchi, Thomas
+Funkhouser, Vittorio Ferrari.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2111.14643">Paper</a>] [<a
+href="https://urban-radiance-fields.github.io/">Project</a>]</p></li>
+<li><p><strong>Mega-NERF: Scalable Construction of Large-Scale NeRFs for
+Virtual Fly-Throughs.</strong><br> <em>Haithem Turki, Deva Ramanan,
+Mahadev Satyanarayanan.</em><br> CVPR 2022. [<a
+href="https://openaccess.thecvf.com/content/CVPR2022/html/Turki_Mega-NERF_Scalable_Construction_of_Large-Scale_NeRFs_for_Virtual_Fly-Throughs_CVPR_2022_paper.html">Paper</a>]
+[<a href="https://github.com/cmusatyalab/mega-nerf">Code</a>]</p></li>
+<li><p><strong>Shadow Neural Radiance Fields for Multi-view Satellite
+Photogrammetry.</strong><br> <em>Dawa Derksen, Dario Izzo.</em><br> CVPR
+2021. [<a href="https://arxiv.org/abs/2104.09877">Paper</a>] [<a
+href="https://github.com/esa/snerf">Code</a>]</p></li>
+</ul>
+<h4 id="dynamic-scene">Dynamic Scene</h4>
+<ul>
+<li><p><strong>NeRFPlayer: A Streamable Dynamic Scene Representation
+with Decomposed Neural Radiance Fields.</strong><br> <em>Liangchen Song,
+Anpei Chen, Zhong Li, Zhang Chen, Lele Chen, Junsong Yuan, Yi Xu,
+Andreas Geiger.</em><br> TVCG 2023. [<a
+href="https://arxiv.org/abs/2210.15947">Paper</a>] [<a
+href="https://lsongx.github.io/projects/nerfplayer.html">Project</a>]</p></li>
+<li><p><strong>Generative Deformable Radiance Fields for Disentangled
+Image Synthesis of Topology-Varying Objects.</strong><br> <em>Ziyu Wang,
+Yu Deng, Jiaolong Yang, Jingyi Yu, Xin Tong.</em><br> Pacific Graphics
+2022. [<a href="https://arxiv.org/abs/2209.04183">Paper</a>] [<a
+href="https://ziyuwang98.github.io/GDRF/">Code</a>]</p></li>
+<li><p><strong>Neural Surface Reconstruction of Dynamic Scenes with
+Monocular RGB-D Camera.</strong><br> <em><a
+href="https://rainbowrui.github.io/">Hongrui Cai</a>, <a
+href="https://github.com/WanquanF">Wanquan Feng</a>, <a
+href="https://scholar.google.com/citations?hl=en&amp;user=5G-2EFcAAAAJ">Xuetao
+Feng</a>, <a href="">Yan Wang</a>, <a
+href="http://staff.ustc.edu.cn/~juyong/">Juyong Zhang</a>.</em><br>
+NeurIPS 2022. [<a href="https://arxiv.org/abs/2206.15258">Paper</a>] [<a
+href="https://ustc3dv.github.io/ndr/">Project</a>] [<a
+href="https://github.com/USTC3DV/NDR-code">Code</a>]</p></li>
+<li><p><strong>LoRD: Local 4D Implicit Representation for High-Fidelity
+Dynamic Human Modeling.</strong><br> <em>Boyan Jiang, Xinlin Ren,
+Mingsong Dou, Xiangyang Xue, Yanwei Fu, Yinda Zhang.</em><br> ECCV 2022.
+[<a href="https://arxiv.org/abs/2208.08622">Paper</a>] [<a
+href="https://boyanjiang.github.io/LoRD/">Code</a>]</p></li>
+<li><p><strong>Fourier PlenOctrees for Dynamic Radiance Field Rendering
+in Real-time.</strong><br> <em><a
+href="https://aoliao12138.github.io/">Liao Wang</a>, <a
+href="https://jiakai-zhang.github.io/">Jiakai Zhang</a>, Xinhang Liu,
+Fuqiang Zhao, Yanshun Zhang, Yingliang Zhang, Minye Wu, Lan Xu, Jingyi
+Yu.</em><br> CVPR 2022 (Oral). [<a
+href="https://arxiv.org/abs/2202.08614">Paper</a>] [<a
+href="https://aoliao12138.github.io/FPO/">Project</a>]</p></li>
+<li><p><strong>CoNeRF: Controllable Neural Radiance Fields.</strong><br>
+<em>Kacper Kania, Kwang Moo Yi, Marek Kowalski, Tomasz Trzciński, Andrea
+Taliasacchi.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2112.01983">Paper</a>] [<a
+href="https://conerf.github.io/">Project</a>]</p></li>
+<li><p><strong>Non-Rigid Neural Radiance Fields: Reconstruction and
+Novel View Synthesis of a Deforming Scene from Monocular
+Video.</strong><br> <em>Edgar Tretschk, Ayush Tewari, Vladislav
+Golyanik, Michael Zollhöfer, Christoph Lassner, Christian
+Theobalt.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2012.12247">Paper</a>] [<a
+href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">Project</a>]
+[<a
+href="https://github.com/facebookresearch/nonrigid_nerf">Code</a>]</p></li>
+<li><p><strong>NeRFlow: Neural Radiance Flow for 4D View Synthesis and
+Video Processing.</strong><br> <em>Yilun Du, Yinan Zhang, Hong-Xing Yu,
+Joshua B. Tenenbaum, Jiajun Wu.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2012.09790">Paper</a>] [<a
+href="https://yilundu.github.io/nerflow/">Project</a>]</p></li>
+<li><p><strong>Nerfies: Deformable Neural Radiance Fields.</strong><br>
+<em><a href="https://keunhong.com/">Keunhong Park</a>, <a
+href="https://utkarshsinha.com/">Utkarsh Sinha</a>, <a
+href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
+href="http://sofienbouaziz.com/">Sofien Bouaziz</a>, <a
+href="https://www.danbgoldman.com/">Dan B Goldman</a>, <a
+href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>, <a
+href="http://www.ricardomartinbrualla.com/">Ricardo-Martin
+Brualla</a>.</em><br> ICCV 2021. [<a
+href="https://arxiv.org/abs/2011.12948">Paper</a>] [<a
+href="https://nerfies.github.io/">Project</a>] [<a
+href="https://github.com/google/nerfies">Code</a>]</p></li>
+<li><p><strong>D-NeRF: Neural Radiance Fields for Dynamic
+Scenes.</strong><br> <em><a
+href="https://www.albertpumarola.com/">Albert Pumarola</a>, <a
+href="https://www.iri.upc.edu/people/ecorona/">Enric Corona</a>, <a
+href="http://virtualhumans.mpi-inf.mpg.de/">Gerard Pons-Moll</a>, <a
+href="http://www.iri.upc.edu/people/fmoreno/">Francesc
+Moreno-Noguer</a>.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2011.13961">Paper</a>] [<a
+href="https://www.albertpumarola.com/research/D-NeRF/index.html">Project</a>]
+[<a href="https://github.com/albertpumarola/D-NeRF">Code</a>] [<a
+href="https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip?dl=0">Data</a>]</p></li>
+<li><p><strong>Dynamic Neural Radiance Fields for Monocular 4D Facial
+Avatar Reconstruction.</strong><br> <em>Guy Gafni, Justus Thies, Michael
+Zollhöfer, Matthias Nießner.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2012.03065">Paper</a>] [<a
+href="https://gafniguy.github.io/4D-Facial-Avatars/">Project</a>] [<a
+href="https://youtu.be/m7oROLdQnjk">Video</a>]</p></li>
+<li><p><strong>NSFF: Neural Scene Flow Fields for Space-Time View
+Synthesis of Dynamic Scenes.</strong><br> <em><a
+href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a>, <a
+href="https://sniklaus.com/welcome">Simon Niklaus</a>, <a
+href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>, <a
+href="https://research.adobe.com/person/oliver-wang/">Oliver
+Wang</a>.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2011.13084">Paper</a>] [<a
+href="http://www.cs.cornell.edu/~zl548/NSFF">Project</a>] [<a
+href="https://github.com/zhengqili/Neural-Scene-Flow-Fields">Code</a>]</p></li>
+<li><p><strong>Space-time Neural Irradiance Fields for Free-Viewpoint
+Video.</strong><br> <em><a
+href="https://www.cs.cornell.edu/~wenqixian/">Wenqi Xian</a>, <a
+href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>, <a
+href="https://johanneskopf.de/">Johannes Kopf</a>, <a
+href="https://changilkim.com/">Changil Kim</a>.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2011.12950">Paper</a>] [<a
+href="https://video-nerf.github.io/">Project</a>]</p></li>
+</ul>
+<p>The following papers are not directly related to 3D-aware image
+synthesis. But it would be beneficial to pay attention to those works.
+For example, in our survey, inverse rendering are not classified as
+3D-aware image synthesis as they are not deliberately designed for this
+purpose. But with the inferred intrinsic components, photorealistic
+images can be rendered. 3D reconstruction models geometry only with no
+appearance information, meaning them not able to render images with
+photorealistic textures. But these representations have been introduced
+as the geometric representation along with a textural representation
+(e.g., Texture Field) for 3D-aware image synthesis.</p>
+<h2 id="d-representations">3D Representations</h2>
+<ul>
+<li><p><strong>K-Planes: Explicit Radiance Fields in Space, Time, and
+Appearance.</strong><br> <em><a
+href="https://people.eecs.berkeley.edu/~sfk/">Sara Fridovich-Keil</a>,
+<a
+href="https://www.iit.it/web/iit-mit-usa/people-details/-/people/giacomo-meanti">Giacomo
+Meanti</a>, <a href="https://frederikwarburg.github.io/">Frederik
+Warburg</a>, <a
+href="https://people.eecs.berkeley.edu/~brecht/">Benjamin Recht</a>, <a
+href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo
+Kanazawa</a>.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2301.10241">Paper</a>] [<a
+href="https://sarafridov.github.io/K-Planes/">Project</a>] [<a
+href="https://github.com/sarafridov/K-Planes">Code</a>]</p></li>
+<li><p><strong>HexPlane: A Fast Representation for Dynamic
+Scenes.</strong><br> <em><a href="https://caoang327.github.io/">Ang
+Cao</a>, <a href="https://web.eecs.umich.edu/~justincj">Justin
+Johnson</a>.</em><br> CVPR 2023. [<a
+href="https://arxiv.org/abs/2301.09632">Paper</a>] [<a
+href="https://caoang327.github.io/HexPlane/">Project</a>] [<a
+href="https://caoang327.github.io/HexPlane/">Code</a>]</p></li>
+<li><p><strong>GIFS: Neural Implicit Function for General Shape
+Representation.</strong><br> <em>Jianglong Ye, Yuntao Chen, Naiyan Wang,
+Xiaolong Wang.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2204.07126">Paper</a>] [<a
+href="https://jianglongye.com/gifs">Project</a>] [<a
+href="https://github.com/jianglongye/gifs">Code</a>]</p></li>
+<li><p><strong>Geometry-Consistent Neural Shape Representation with
+Implicit Displacement Fields.</strong><br> <em><a
+href="https://yifita.github.io/">Wang Yifan</a>, Lukas Rahmann, <a
+href="https://igl.ethz.ch/people/sorkine/">Olga
+Sorkine-Hornung</a>.</em><br> ICLR 2022. [<a
+href="https://arxiv.org/abs/2106.05187">Paper</a>] [<a
+href="https://yifita.github.io/publication/idf/">Project</a>] [<a
+href="https://github.com/yifita/idf">Code</a>]</p></li>
+<li><p><strong>Neural Volumes: Learning Dynamic Renderable Volumes from
+Images.</strong><br> <em>Stephen Lombardi, Tomas Simon, Jason Saragih,
+Gabriel Schwartz, Andreas Lehrmann, Yaser Sheikh.</em><br> TOG 2019. [<a
+href="https://arxiv.org/abs/1906.07751">Paper</a>] [<a
+href="https://github.com/facebookresearch/neuralvolumes">Code</a>]</p></li>
+<li><p><strong>DeepSDF: Learning Continuous Signed Distance Functions
+for Shape Representation.</strong><br> <em>eong Joon Park, Peter
+Florence, Julian Straub, Richard Newcombe, Steven Lovegrove.</em><br>
+CVPR 2019. [<a
+href="http://openaccess.thecvf.com/content_CVPR_2019/html/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.html">Paper</a>]
+[<a
+href="https://github.com/facebookresearch/DeepSDF">Code</a>]</p></li>
+<li><p><strong>Occupancy Networks: Learning 3D Reconstruction in
+Function Space.</strong><br> <em>Lars Mescheder, Michael Oechsle,
+Michael Niemeyer, Sebastian Nowozin, Andreas Geiger.</em><br> CVPR 2019.
+[<a href="https://arxiv.org/abs/1812.03828">Paper</a>] [<a
+href="https://avg.is.mpg.de/publications/occupancy-networks">Project</a>]
+[<a
+href="http://avg.is.tuebingen.mpg.de/publications/occupancy-networks">Code</a>]</p></li>
+</ul>
+<h2 id="neural-inverse-rendering-neural-de-rendering">Neural Inverse
+Rendering (Neural De-rendering)</h2>
+<p><a
+href="https://github.com/weihaox/awesome-neural-rendering/blob/master/docs/NEURAL-INVERSE-RENDERING.md">Inverse
+rendering</a> is to infer underlying intrinsic components of a scene
+from rendered 2D images. These properties include shape (surface, depth,
+normal), material (albedo, reflectivity, shininess), and lighting
+(direction, intensity), which can be further used to render
+photorealistic images.</p>
+<ul>
+<li><p><strong>NeRFactor: Neural Factorization of Shape and Reflectance
+Under an Unknown Illumination.</strong><br> <em><a
+href="http://people.csail.mit.edu/xiuming/">Xiuming Zhang</a>, <a
+href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>, <a
+href="https://boyangdeng.com/">Boyang Deng</a>, <a
+href="http://www.pauldebevec.com/">Paul Debevec</a>, <a
+href="http://billf.mit.edu/">William T. Freeman</a>, <a
+href="https://jonbarron.info/">Jonathan T. Barron</a>.</em><br> SIGGRAPH
+Asia 2021. [<a href="https://arxiv.org/abs/2106.01970">Paper</a>] [<a
+href="http://people.csail.mit.edu/xiuming/projects/nerfactor/">Project</a>]
+[<a href="https://github.com/google/nerfactor">Code</a>]</p></li>
+<li><p><strong>Extracting Triangular 3D Models, Materials, and Lighting
+From Images.</strong><br> <em><a
+href="https://research.nvidia.com/person/jacob-munkberg">Jacob
+Munkberg</a>, <a
+href="https://research.nvidia.com/person/jon-hasselgren">Jon
+Hasselgren</a>, <a href="http://www.cs.toronto.edu/~shenti11/">Tianchang
+Shen</a>, <a href="http://www.cs.toronto.edu/~jungao/">Jun Gao</a>, <a
+href="http://www.cs.toronto.edu/~wenzheng/">Wenzheng Chen</a>, <a
+href="https://research.nvidia.com/person/alex-evans">Alex Evans</a>, <a
+href="https://research.nvidia.com/person/thomas-mueller">Thomas
+Müller</a>, <a href="https://www.cs.toronto.edu/~fidler/">Sanja
+Fidler</a>.</em><br> CVPR 2022. [<a
+href="http://arxiv.org/abs/2111.12503">Paper</a>] [<a
+href="https://github.com/NVlabs/nvdiffrec">Code</a>] [<a
+href="https://nvlabs.github.io/nvdiffrec/">Project</a>]</p></li>
+<li><p><strong>Modeling Indirect Illumination for Inverse
+Rendering.</strong><br> <em>Yuanqing Zhang, Jiaming Sun, Xingyi He, Huan
+Fu, Rongfei Jia, Xiaowei Zhou.</em><br> CVPR 2022. [<a
+href="https://arxiv.org/abs/2204.06837">Paper</a>]</p></li>
+<li><p><strong>IRISformer: Dense Vision Transformers for Single-Image
+Inverse Rendering in Indoor Scenes.</strong><br> <em>Rui Zhu, Zhengqin
+Li, Janarbek Matai, Fatih Porikli, Manmohan Chandraker.</em><br> CVPR
+2022. [<a
+href="https://openaccess.thecvf.com/content/CVPR2022/html/Zhu_IRISformer_Dense_Vision_Transformers_for_Single-Image_Inverse_Rendering_in_Indoor_CVPR_2022_paper.html">Paper</a>]</p></li>
+<li><p><strong>De-rendering 3D Objects in the Wild.</strong><br> <em><a
+href="https://www.linkedin.com/in/felixwimbauer/">Felix Wimbauer</a>, <a
+href="https://elliottwu.com/">Shangzhe Wu</a>, <a
+href="https://chrirupp.github.io/">Christian Rupprecht</a>.</em><br>
+CVPR 2022. [<a href="https://arxiv.org/abs/2201.02279">Paper</a>] [<a
+href="https://www.robots.ox.ac.uk/~vgg/research/derender3d/">Project</a>]
+[<a href="https://github.com/Brummi/derender3d">Code</a>]</p></li>
+<li><p><strong>GAN2X: Non-Lambertian Inverse Rendering of Image
+GANs.</strong><br> <em><a href="https://xingangpan.github.io/">Xingang
+Pan</a>, <a href="https://ayushtewari.com/">Ayush Tewari</a>, <a
+href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a
+href="http://www.mpi-inf.mpg.de/~theobalt/">Christian
+Theobalt</a>.</em><br> 3DV 2022. [<a
+href="https://arxiv.org/abs/2206.09244">Paper</a>] [<a
+href="https://people.mpi-inf.mpg.de/~xpan/GAN2X/">Project</a>]</p></li>
+<li><p><strong>PhySG: Inverse Rendering with Spherical Gaussians for
+Physics-based Material Editing and Relighting.</strong><br> <em>Kai
+Zhang, Fujun Luan, Qianqian Wang, Kavita Bala, Noah Snavely.</em><br>
+CVPR 2021. [<a href="https://arxiv.org/abs/2104.00674">Paper</a>] [<a
+href="https://kai-46.github.io/PhySG-website/">Project</a>]</p></li>
+<li><p><strong>Unified Shape and SVBRDF Recovery using Differentiable
+Monte Carlo Rendering.</strong><br> <em><a
+href="https://www.cs.cornell.edu/~fujun/">Fujun Luan</a>, <a
+href="https://www.shuangz.com/">Shuang Zhao</a>, <a
+href="https://www.cs.cornell.edu/~kb/">Kavita Bala</a>, <a
+href="http://flycooler.com/">Zhao Dong</a>.</em><br> EGSR 2021. [<a
+href="https://www.cs.cornell.edu/~fujun/files/egsr2021/paper.Paper">Paper</a>]
+[<a href="https://luanfujun.github.io/InverseMeshSVBRDF/">Project</a>]
+[<a href="https://youtu.be/u9HqKGqvJhQ?t=8404">Video</a>]</p></li>
+<li><p><strong>Invertible Neural BRDF for Object Inverse
+Rendering.</strong><br> <em>Zhe Chen, Shohei Nobuhara, Ko
+Nishino.</em><br> ECCV 2020. [<a
+href="https://arxiv.org/abs/2008.04030">Paper</a>] [<a
+href="https://github.com/chenzhekl/iBRDF">Code</a>]</p></li>
+<li><p><strong>Polarimetric Multi-View Inverse Rendering.</strong><br>
+<em>Jinyu Zhao, Yusuke Monno, Masatoshi Okutomi.</em><br> ECCV 2020. [<a
+href="https://arxiv.org/abs/2007.08830">Paper</a>]</p></li>
+<li><p><strong>Inverse Rendering for Complex Indoor Scenes: Shape,
+Spatially-Varying Lighting and SVBRDF From a Single Image.</strong><br>
+<em><a
+href="http://sites.google.com/a/eng.ucsd.edu/zhengqinli/">Zhengqin
+Li</a>, <a href="https://www.linkedin.com/in/mohammadshafiei/">Mohammad
+Shafiei</a>, <a href="http://cseweb.ucsd.edu/~ravir/">Ravi
+Ramamoorthi</a>, <a href="http://www.kalyans.org/">Kalyan
+Sunkavalli</a>, <a href="http://cseweb.ucsd.edu/~mkchandraker/">Manmohan
+Chandraker</a>.</em><br> CVPR 2020.[<a
+href="https://drive.google.com/file/d/18zG1kzVpL9XsEVBK95hbpnB-FMlChRXP/view?usp=sharing">Paper</a>]
+[<a
+href="http://cseweb.ucsd.edu/~viscomp/projects/CVPR20InverseIndoor/">Project</a>]
+[<a
+href="https://github.com/lzqsd/InverseRenderingOfIndoorScene">Code</a>]</p></li>
+<li><p><strong>DRWR: A Differentiable Renderer without Rendering for
+Unsupervised 3D Structure Learning from Silhouette Images.</strong><br>
+<em>Zhizhong Han, Chao Chen, Yu-Shen Liu, Matthias Zwicker.</em><br>
+ICML 2020. [<a
+href="https://arxiv.org/abs/2007.06127">Paper</a>]</p></li>
+<li><p><strong>Learning to Predict 3D Objects with an
+Interpolation-based Differentiable Renderer.</strong><br> <em>Wenzheng
+Chen, Jun Gao, Huan Ling, Edward J. Smith, Jaakko Lehtinen, Alec
+Jacobson, Sanja Fidler.</em><br> NeurIPS 2019. [<a
+href="https://arxiv.org/abs/1908.01210">Paper</a>] [<a
+href="https://github.com/nv-tlabs/DIB-R">Code</a>]</p></li>
+<li><p><strong>InverseRenderNet: Learning Single Image Inverse
+Rendering.</strong><br> <em>Ye Yu, William A. P. Smith.</em><br> CVPR
+2019. [<a
+href="http://openaccess.thecvf.com/content_CVPR_2019/html/Yu_InverseRenderNet_Learning_Single_Image_Inverse_Rendering_CVPR_2019_paper.html">Paper</a>]
+[<a href="https://github.com/YeeU/InverseRenderNet">Code</a>] [<a
+href="http://opensurfaces.cs.cornell.edu/publications/intrinsic/#download">IIW
+Dataset</a>]</p></li>
+</ul>
+<h2 id="neural-rerendering">Neural Rerendering</h2>
+<ul>
+<li><p><strong>Hybrid Neural Fusion for Full-frame Video
+Stabilization.</strong><br> <em><a
+href="https://www.cmlab.csie.ntu.edu.tw/~nothinglo/">Yu-Lun Liu</a>, <a
+href="https://www.wslai.net/">Wei-Sheng Lai</a>, <a
+href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a>, <a
+href="https://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>, <a
+href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>.</em><br>
+ICCV 2021. [<a href="https://arxiv.org/abs/2102.06205">Paper</a>] [<a
+href="https://alex04072000.github.io/NeRViS/">Code</a>]</p></li>
+<li><p><strong>Neural Lumigraph Rendering.</strong><br> <em>Petr
+Kellnhofer, Lars Jebe, Andrew Jones, Ryan Spicer, Kari Pulli, Gordon
+Wetzstein.</em><br> CVPR 2021. [<a
+href="https://arxiv.org/abs/2103.11571">Paper</a>] [<a
+href="http://www.computationalimaging.org/publications/nlr/">Project</a>]
+[<a
+href="https://drive.google.com/file/d/1BBpIfrqwZNYmG1TiFljlCnwsmL2OUxNT/view?usp=sharing">Data</a>]</p></li>
+<li><p><strong>Neural Re-Rendering of Humans from a Single
+Image.</strong><br> <em>Kripasindhu Sarkar, Dushyant Mehta, Weipeng Xu,
+Vladislav Golyanik, Christian Theobalt.</em><br> ECCV 2020. [<a
+href="https://arxiv.org/abs/2101.04104">Paper</a>]</p></li>
+<li><p><strong>Neural Rerendering in the Wild.</strong><br> <em>Moustafa
+Meshry, Dan B Goldman, Sameh Khamis, Hugues Hoppe, Rohit Pandey, Noah
+Snavely, Ricardo Martin-Brualla.</em><br> CVPR 2019. [<a
+href="https://arxiv.org/abs/1904.04290">Paper</a>]</p></li>
+<li><p><strong>Revealing Scenes by Inverting Structure from Motion
+Reconstructions.</strong><br> <em>Francesco Pittaluga, Sanjeev J.
+Koppal, Sing Bing Kang, Sudipta N. Sinha.</em><br> CVPR 2019. [<a
+href="https://arxiv.org/abs/1904.03303">Paper</a>]</p></li>
 </ul>
 <h2 id="datasets">Datasets</h2>
 <p>Summary of popular 3D-aware image synthesis datasets.</p>
@@ -289,1110 +1410,18 @@ major categories and sorted by their popularity.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="d-control-of-2d-generative-models">3D Control of 2D Generative
-Models</h2>
-<h3 id="d-control-latent-directions">3D Control Latent Directions</h3>
-<ul>
-<li><p><strong>On the “steerability” of generative adversarial
-networks.</strong><br> <em>Ali Jahanian, Lucy Chai, Phillip
-Isola.</em><br> ICLR 2020. [<a
-href="https://arxiv.org/abs/1907.07171">PDF</a>] [<a
-href="https://ali-design.github.io/gan_steerability/">Project</a>]</p></li>
-<li><p><strong>Unsupervised Discovery of Interpretable Directions in the
-GAN Latent Space.</strong><br> <em>Andrey Voynov, Artem
-Babenko.</em><br> ICML 2020. [<a
-href="https://arxiv.org/abs/2002.03754">PDF</a>] [<a
-href="https://github.com/anvoynov/GANLatentDiscovery">Github</a>]</p></li>
-<li><p><strong>Interpreting the Latent Space of GANs for Semantic Face
-Editing.</strong><br> <em><a href="http://shenyujun.github.io/">Yujun
-Shen</a>, <a href="http://www.jasongt.com/">Jinjin Gu</a>, <a
-href="http://www.ie.cuhk.edu.hk/people/xotang.shtml">Xiaoou Tang</a>, <a
-href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>.</em><br> CVPR 2020.
-[<a href="https://arxiv.org/abs/1907.10786">PDF</a>] [<a
-href="https://genforce.github.io/interfacegan/">Project</a>] [<a
-href="https://github.com/genforce/interfacegan">Github</a>]</p></li>
-<li><p><strong>GANSpace: Discovering Interpretable GAN
-Controls.</strong><br> <em>Erik Härkönen, Aaron Hertzmann, Jaakko
-Lehtinen, Sylvain Paris.</em><br> NeurIPS 2020. [<a
-href="https://arxiv.org/abs/2004.02546">PDF</a>] [<a
-href="https://github.com/harskish/ganspace">Github</a>]</p></li>
-<li><p><strong>SeFa: Closed-Form Factorization of Latent Semantics in
-GANs.</strong><br> <em>Yujun Shen, Bolei Zhou.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2007.06600">PDF</a>] [<a
-href="https://github.com/genforce/sefa">Github</a>] [<a
-href="https://genforce.github.io/sefa/">Project</a>]</p></li>
-</ul>
-<h3 id="d-parameters-as-controls">3D Parameters as Controls</h3>
-<ul>
-<li><p><strong>StyleRig: Rigging StyleGAN for 3D Control over Portrait
-Images.</strong><br> <em>Ayush Tewari, Mohamed Elgharib, Gaurav Bharaj,
-Florian Bernard, Hans-Peter Seidel, Patrick Pérez, Michael Zollhöfer,
-Christian Theobalt.</em><br> CVPR 2020 (oral). [<a
-href="https://arxiv.org/abs/2004.00121">PDF</a>] [<a
-href="https://gvv.mpi-inf.mpg.de/projects/StyleRig/">Project</a>]</p></li>
-<li><p><strong>DiscoFaceGAN: Disentangled and Controllable Face Image
-Generation via 3D Imitative-Contrastive Learning.</strong><br> <em>Yu
-Deng, Jiaolong Yang, Dong Chen, Fang Wen, Xin Tong.</em><br> CVPR 2020.
-[<a href="https://arxiv.org/pdf/2004.11660.pdf">PDF</a>] [<a
-href="https://github.com/microsoft/DiscoFaceGAN">Github</a>]</p></li>
-<li><p><strong>PIE: Portrait Image Embedding for Semantic
-Control.</strong><br> <em><a
-href="http://people.mpi-inf.mpg.de/~atewari/">A. Tewari</a>, M.
-Elgharib, M. BR, F. Bernard, H-P. Seidel, P. P‌érez, M. Zollhöfer,
-C.Theobalt.</em><br> SIGGRAPH Asia 2020. [<a
-href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">PDF</a>]
-[<a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">Project</a>]</p></li>
-<li><p><strong>CONFIG: Controllable Neural Face Image
-Generation.</strong><br> <em>Marek Kowalski, Stephan J. Garbin, Virginia
-Estellers, Tadas Baltrušaitis, Matthew Johnson, Jamie Shotton.</em><br>
-ECCV 2020. [<a href="https://arxiv.org/abs/2005.02671">PDF</a>] [<a
-href="https://github.com/microsoft/ConfigNet">Github</a>]</p></li>
-<li><p><strong>GAN-Control: Explicitly Controllable GANs.</strong><br>
-<em>Alon Shoshan, Nadav Bhonker, Igor Kviatkovsky, Gerard
-Medioni.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2101.02477">PDF</a>] [<a
-href="https://alonshoshan10.github.io/gan_control/">Project</a>]</p></li>
-<li><p><strong>3D-FM GAN: Towards 3D-Controllable Face
-Manipulation.</strong><br> <em><a
-href="https://lychenyoko.github.io/">Yuchen Liu</a>, Zhixin Shu, Yijun
-Li, Zhe Lin, Richard Zhang, and Sun-Yuan Kung.</em><br> ECCV 2022. [<a
-href="https://arxiv.org/abs/2208.11257">PDF</a>] [<a
-href="https://lychenyoko.github.io/3D-FM-GAN-Webpage/">Project</a>]</p></li>
-</ul>
-<h3 id="d-prior-knowledge-as-constraints">3D Prior Knowledge as
-Constraints</h3>
-<ul>
-<li><p><strong>Generative Image Modeling using Style and Structure
-Adversarial Networks.</strong><br> <em>Xiaolong Wang, Abhinav
-Gupta.</em><br> ECCV 2016. [<a
-href="https://arxiv.org/abs/1603.05631">PDF</a>]</p></li>
-<li><p><strong>3D Shape Induction from 2D Views of Multiple
-Objects.</strong><br> <em>Matheus Gadelha, Subhransu Maji, Rui
-Wang.</em><br> 3DV 2017. [<a
-href="https://arxiv.org/abs/1612.05872">PDF</a>] [<a
-href="http://mgadelha.me/prgan/index.html">Project</a>]</p></li>
-<li><p><strong>Visual Object Networks: Image Generation with
-Disentangled 3D Representation.</strong><br> <em>Jun-Yan Zhu, Zhoutong
-Zhang, Chengkai Zhang, Jiajun Wu, Antonio Torralba, Joshua B. Tenenbaum,
-William T. Freeman.</em><br> NeurIPS 2018. [<a
-href="https://arxiv.org/abs/1812.02725">PDF</a>] [<a
-href="http://von.csail.mit.edu/">Project</a>] [<a
-href="https://github.com/junyanz/VON">Github</a>]</p></li>
-<li><p><strong>RGBD-GAN: Unsupervised 3D Representation Learning From
-Natural Image Datasets via RGBD Image Synthesis.</strong><br>
-<em>Atsuhiro Noguchi, Tatsuya Harada.</em><br> ICLR 2020. [<a
-href="https://arxiv.org/abs/1909.12573">PDF</a>] [<a
-href="https://github.com/nogu-atsu/RGBD-GAN">Github</a>]</p></li>
-<li><p><strong>NGP: Towards a Neural Graphics Pipeline for Controllable
-Image Generation.</strong><br> <em>Xuelin Chen, Daniel Cohen-Or, Baoquan
-Chen, Niloy J. Mitra.</em><br> Eurographics 2021. [<a
-href="https://arxiv.org/abs/2006.10569">PDF</a>] [<a
-href="http://geometry.cs.ucl.ac.uk/projects/2021/ngp">Github</a>]</p></li>
-<li><p><strong>Lifting 2D StyleGAN for 3D-Aware Face
-Generation.</strong><br> <em><a
-href="https://seasonsh.github.io/">Yichun Shi</a>, Divyansh Aggarwal, <a
-href="http://www.cse.msu.edu/~jain/">Anil K. Jain</a>.</em><br> CVPR
-2021. [<a href="https://arxiv.org/abs/2011.13126">PDF</a>]</p></li>
-<li><p><strong>3D-Aware Indoor Scene Synthesis with Depth
-Priors.</strong><br> <em>Zifan Shi, Yujun Shen, Jiapeng Zhu, Dit-Yan
-Yeung, Qifeng Chen.</em><br> ECCV 2022 (oral). [<a
-href="https://arxiv.org/abs/2202.08553">PDF</a>] [<a
-href="https://vivianszf.github.io/depthgan/">Project</a>] [<a
-href="https://github.com/vivianszf/depthgan">Github</a>]</p></li>
-</ul>
-<h2 id="d-novel-view-synthesis-from-multiple-views">3D Novel View
-Synthesis from Multiple Views</h2>
-<h3 id="neural-scene-representation">Neural Scene Representation</h3>
-<ul>
-<li><p><strong>DeepVoxels: Learning Persistent 3D Feature
-Embeddings.</strong><br> <em>Vincent Sitzmann, Justus Thies, Felix
-Heide, Matthias Nießner, Gordon Wetzstein, Michael Zollhöfer.</em><br>
-CVPR 2019 (Oral). [<a
-href="http://vsitzmann.github.io/deepvoxels/">Project</a>] [<a
-href="https://arxiv.org/abs/1812.01024">PDF</a>] [<a
-href="https://github.com/vsitzmann/deepvoxels">Code</a>]</p></li>
-<li><p><strong>Scene Representation Networks: Continuous
-3D-Structure-Aware Neural Scene Representations.</strong><br> <em><a
-href="https://vsitzmann.github.io/">Vincent Sitzmann</a>, Michael
-Zollhöfer, Gordon Wetzstein.</em><br> NeurIPS 2019 (Oral, Honorable
-Mention “Outstanding New Directions”). [<a
-href="http://arxiv.org/abs/1906.01618">PDF</a>] [<a
-href="https://github.com/vsitzmann/scene-representation-networks">Project</a>]
-[<a
-href="https://github.com/vsitzmann/scene-representation-networks">Github</a>]
-[<a
-href="https://drive.google.com/drive/folders/1OkYgeRcIcLOFu1ft5mRODWNQaPJ0ps90?usp=sharing">Dataset</a>]</p></li>
-<li><p><strong>LLFF: Local Light Field Fusion: Practical View Synthesis
-with Prescriptive Sampling Guidelines.</strong><br> <em><a
-href="http://people.eecs.berkeley.edu/~bmild/">Ben Mildenhall</a>,
-Pratul Srinivasan, Rodrigo Ortiz-Cayon, Nima Khademi Kalantari, Ravi
-Ramamoorthi, Ren Ng, Abhishek Kar.</em><br> SIGGRAPH 2019. [<a
-href="https://arxiv.org/abs/1905.00889">PDF</a>] [<a
-href="https://people.eecs.berkeley.edu/~bmild/llff/">Project</a>] [<a
-href="https://github.com/Fyusion/LLFF">Github</a>]</p></li>
-<li><p><strong>Differentiable Volumetric Rendering (DVR): Learning
-Implicit 3D Representations without 3D Supervision.</strong><br>
-<em>Michael Niemeyer, Lars Mescheder, Michael Oechsle, Andreas
-Geiger.</em><br> CVPR 2020. [<a
-href="http://www.cvlibs.net/publications/Niemeyer2020CVPR.pdf">PDF</a>]
-[<a
-href="https://github.com/autonomousvision/differentiable_volumetric_rendering">Github</a>]</p></li>
-<li><p><strong>NeRF: Representing Scenes as Neural Radiance Fields for
-View Synthesis.</strong><br> <em><a
-href="http://people.eecs.berkeley.edu/~bmild/">Ben Mildenhall</a>, <a
-href="https://people.eecs.berkeley.edu/~pratul/">Pratul P.
-Srinivasan</a>, <a href="http://www.matthewtancik.com/">Matthew
-Tancik</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
-href="http://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>, <a
-href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren
-Ng</a>.</em><br> ECCV 2020. [<a
-href="https://arxiv.org/abs/2003.08934">PDF</a>] [<a
-href="http://tancik.com/nerf">Project</a>] [<a
-href="https://github.com/bmild/nerf">Gtihub-Tensorflow</a>] [<a
-href="https://github.com/krrish94/nerf-pytorch">krrish94-PyTorch</a>]
-[<a
-href="https://github.com/yenchenlin/nerf-pytorch">yenchenlin-PyTorch</a>]</p></li>
-<li><p><strong>Mip-NeRF: A Multiscale Representation for Anti-Aliasing
-Neural Radiance Fields.</strong><br> <em><a
-href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
-href="https://bmild.github.io/">Ben Mildenhall</a>, <a
-href="https://www.matthewtancik.com/">Matthew Tancik</a>, <a
-href="https://phogzone.com/cv.html">Peter Hedman</a>, <a
-href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a
-href="https://pratulsrinivasan.github.io/">Pratul P.
-Srinivasan</a>.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2103.13415">PDF</a>] [<a
-href="http://jonbarron.info/mipnerf">Project</a>]</p></li>
-<li><p><strong>Light Field Networks (LFNS): Neural Scene Representations
-with Single-Evaluation Rendering.</strong><br> <em>Vincent Sitzmann,
-Semon Rezchikov, William T. Freeman, Joshua B. Tenenbaum, Fredo
-Durand.</em><br> NeurIPS 2021. [<a
-href="https://arxiv.org/abs/2106.02634">PDF</a>] [<a
-href="https://vsitzmann.github.io/lfns/">Project</a>]</p></li>
-<li><p><strong>Scene Representation Transformer (SRT): Geometry-Free
-Novel View Synthesis Through Set-Latent Scene
-Representations.</strong><br> <em>Mehdi S. M. Sajjadi, Henning Meyer,
-Etienne Pot, Urs Bergmann, Klaus Greff, Noha Radwan, Suhani Vora, Mario
-Lucic, Daniel Duckworth, Alexey Dosovitskiy, Jakob Uszkoreit, Thomas
-Funkhouser, Andrea Tagliasacchi.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2111.13152">PDF</a>]</p></li>
-</ul>
-<h3 id="speed-up">Speed up</h3>
-<ul>
-<li><p><strong>NSVF: Neural Sparse Voxel Fields.</strong><br> <em><a
-href="https://lingjie0206.github.io/">Lingjie Liu</a>, Jiatao Gu, Kyaw
-Zaw Lin, Tat-Seng Chua, Christian Theobalt.</em><br> NeurIPS 2020. [<a
-href="https://arxiv.org/abs/2007.11571">PDF</a>] [<a
-href="https://lingjie0206.github.io/papers/NSVF/">Project</a>] [<a
-href="https://github.com/facebookresearch/NSVF">Code</a>]</p></li>
-<li><p><strong>AutoInt: Automatic Integration for Fast Neural Volume
-Rendering.</strong><br> <em>David B. Lindell, Julien N. P. Martel,
-Gordon Wetzstein.</em><br> CVPR 2021 (oral). [<a
-href="https://arxiv.org/abs/2012.01714">PDF</a>] [<a
-href="http://www.computationalimaging.org/publications/automatic-integration/">Project</a>]</p></li>
-<li><p><strong>KiloNeRF: Speeding up Neural Radiance Fields with
-Thousands of Tiny MLPs.</strong><br> <em>Christian Reiser, Songyou Peng,
-Yiyi Liao, Andreas Geiger.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2103.13744">PDF</a>] [<a
-href="https://github.com/creiser/kilonerf">Github</a>]</p></li>
-<li><p><strong>FastNeRF: High-Fidelity Neural Rendering at
-200FPS.</strong><br> <em>Stephan J. Garbin, Marek Kowalski, Matthew
-Johnson, Jamie Shotton, Julien Valentin.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2103.10380">PDF</a>]</p></li>
-<li><p><strong>PlenOctrees for Real-time Rendering of Neural Radiance
-Fields.</strong><br> <em><a href="https://alexyu.net/">Alex Yu</a>, <a
-href="https://www.liruilong.cn/">Ruilong Li</a>, <a
-href="https://www.matthewtancik.com/">Matthew Tancik</a>, <a
-href="https://www.hao-li.com/">Hao Li</a>, <a
-href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren
-Ng</a>, <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo
-Kanazawa</a>.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2103.14024">PDF</a>] [<a
-href="https://alexyu.net/plenoctrees/">Project</a>] [<a
-href="https://github.com/sxyu/plenoctree">Github</a>]</p></li>
-<li><p><strong>Baking Neural Radiance Fields for Real-Time View
-Synthesis.</strong><br> <em><a href="https://phogzone.com/">Peter
-Hedman</a>, <a href="https://pratulsrinivasan.github.io/">Pratul P.
-Srinivasan</a>, <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-<a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
-href="https://www.pauldebevec.com/">Paul Debevec</a>.</em><br> ICCV 2021
-(oral). [<a href="https://arxiv.org/abs/2103.14645">PDF</a>] [<a
-href="https://nerf.live/">Project</a>]</p></li>
-<li><p><strong>DIVeR: Real-time and Accurate Neural Radiance Fields with
-Deterministic Integration for Volume Rendering.</strong><br> <em><a
-href="https://lwwu2.github.io/">Liwen Wu</a>, <a
-href="https://jyl.kr/">Jae Yong Lee</a>, <a
-href="https://anandbhattad.github.io/">Anand Bhattad</a>, <a
-href="https://yxw.web.illinois.edu/">Yuxiong Wang</a>, <a
-href="http://luthuli.cs.uiuc.edu/~daf/">David A. Forsyth</a>.</em><br>
-CVPR 2022. [<a href="https://arxiv.org/abs/2111.10427">PDF</a>] [<a
-href="https://lwwu2.github.io/diver/">Project</a>] [<a
-href="https://github.com/lwwu2/diver">Github</a>]</p></li>
-<li><p><strong>Instant Neural Graphics Primitives with a Multiresolution
-Hash Encoding.</strong><br> <em><a href="https://tom94.net/">Thomas
-Müller</a>, <a href="https://research.nvidia.com/person/alex-evans">Alex
-Evans</a>, <a
-href="https://research.nvidia.com/person/christoph-schied">Christoph
-Schied</a>, <a
-href="https://research.nvidia.com/person/alex-keller">Alexander
-Keller</a>.</em><br> ACM Transactions on Graphics (SIGGRAPH) 2022. [<a
-href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf">PDF</a>]
-[<a href="https://nvlabs.github.io/instant-ngp">Project</a>] [<a
-href="https://github.com/NVlabs/instant-ngp">Github</a>]</p></li>
-</ul>
-<h3 id="from-constrained-environmental-conditions-to-in-the-wild">From
-Constrained Environmental Conditions to In-the-wild</h3>
-<p><strong>Few images</strong></p>
-<ul>
-<li><p><strong>GRF: Learning a General Radiance Field for 3D
-Representation and Rendering.</strong><br> <em>Alex Trevithick, Bo
-Yang.</em><br> ICCV 2021. [<a
-href="https://openaccess.thecvf.com/content/ICCV2021/html/Trevithick_GRF_Learning_a_General_Radiance_Field_for_3D_Representation_and_ICCV_2021_paper.html">PDF</a>]</p></li>
-<li><p><strong>pixelNeRF: Neural Radiance Fields from One or Few
-Images.</strong><br> <em><a href="https://alexyu.net/">Alex Yu</a>,
-Vickie Ye, Matthew Tancik, Angjoo Kanazawa.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2012.02190">PDF</a>] [<a
-href="https://alexyu.net/pixelnerf">Project</a>]</p></li>
-<li><p><strong>IBRNet: Learning Multi-View Image-Based
-Rendering.</strong><br> <em>Qianqian Wang, Zhicheng Wang, Kyle Genova,
-Pratul Srinivasan, Howard Zhou, Jonathan T. Barron, Ricardo
-Martin-Brualla, Noah Snavely, Thomas Funkhouser.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2102.13090">PDF</a>] [<a
-href="https://ibrnet.github.io/">Project</a>]</p></li>
-<li><p><strong>MVSNeRF: Fast Generalizable Radiance Field Reconstruction
-from Multi-View Stereo.</strong><br> <em><a
-href="https://apchenstu.github.io/">Anpei Chen</a>, <a
-href="http://cseweb.ucsd.edu/~zex014/">Zexiang Xu</a>, Fuqiang Zhao,
-Xiaoshuai Zhang, <a href="https://www.fbxiang.com/">Fanbo Xiang</a>, <a
-href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a>, <a
-href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>.</em><br> ICCV 2021.
-[<a href="https://arxiv.org/abs/2103.15595">PDF</a>] [<a
-href="https://apchenstu.github.io/mvsnerf/">Project</a>] [<a
-href="https://github.com/apchenstu/mvsnerf">Github</a>]</p></li>
-<li><p><strong>CodeNeRF: Disentangled Neural Radiance Fields for Object
-Categories.</strong><br> <em>Wonbong Jang, Lourdes Agapito.</em><br>
-ICCV 2021. [<a href="https://arxiv.org/abs/2109.01750">PDF</a>] [<a
-href="https://sites.google.com/view/wbjang/home/codenerf">Project</a>]
-[<a href="https://github.com/wayne1123/code-nerf">Github</a>]</p></li>
-<li><p><strong>NeRF-VAE: A Geometry Aware 3D Scene Generative
-Model.</strong><br> <em>Adam R. Kosiorek, Heiko Strathmann, Daniel
-Zoran, Pol Moreno, Rosalia Schneider, Soňa Mokrá, Danilo J.
-Rezende.</em><br> ICML 2021. [<a
-href="https://arxiv.org/abs/2104.00587">PDF</a>]</p></li>
-</ul>
-<p><strong>Pose-free</strong></p>
-<ul>
-<li><p><strong>Self-Calibrating Neural Radiance Fields.</strong><br>
-<em>Yoonwoo Jeong, Seokjun Ahn, Christopher Choy, Animashree Anandkumar,
-Minsu Cho, Jaesik Park.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2108.13826">PDF</a>]</p></li>
-<li><p><strong>BARF: Bundle-Adjusting Neural Radiance
-Fields.</strong><br> <em><a
-href="https://chenhsuanlin.bitbucket.io/">Chen-Hsuan Lin</a>, <a
-href="http://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>, Antonio
-Torralba, Simon Lucey.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2104.06405">PDF</a>] [<a
-href="https://github.com/chenhsuanlin/bundle-adjusting-NeRF">Github</a>]</p></li>
-<li><p><strong>NeRF–: Neural Radiance Fields Without Known Camera
-Parameters.</strong><br> <em><a
-href="https://scholar.google.com/citations?user=zCBKqa8AAAAJ&amp;hl=en">Zirui
-Wang</a>, <a href="http://elliottwu.com">Shangzhe Wu</a>, <a
-href="https://weidixie.github.io/weidi-personal-webpage/">Weidi Xie</a>,
-<a href="https://sites.google.com/site/drminchen/home">Min Chen</a>, <a
-href="https://eng.ox.ac.uk/people/victor-prisacariu/">Victor Adrian
-Prisacariu</a>.</em><br> arxiv 2021. [<a
-href="https://arxiv.org/abs/2102.07064">PDF</a>] [<a
-href="http://nerfmm.active.vision/">Project</a>] [<a
-href="https://github.com/ActiveVisionLab/nerfmm">Github</a>]</p></li>
-</ul>
-<p><strong>Varying appearance</strong></p>
-<ul>
-<li><p><strong>NeRF in the Wild: Neural Radiance Fields for
-Unconstrained Photo Collections.</strong><br> <em><a
-href="http://www.ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>,
-<a
-href="https://scholar.google.com/citations?user=g98QcZUAAAAJ&amp;hl=en">Noha
-Radwan</a>, <a href="https://research.google/people/105804/">Mehdi S. M.
-Sajjadi</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>,
-<a
-href="https://scholar.google.com/citations?user=FXNJRDoAAAAJ&amp;hl=en">Alexey
-Dosovitskiy</a>, <a
-href="http://www.stronglyconvex.com/about.html">Daniel
-Duckworth</a>.</em><br> CVPR 2021 (oral). [<a
-href="https://arxiv.org/abs/2008.02268">PDF</a>] [<a
-href="https://nerf-w.github.io/">Github</a>]</p></li>
-<li><p><strong>NeRFReN: Neural Radiance Fields with
-Reflections.</strong><br> <em>Yuan-Chen Guo, Di Kang, Linchao Bao, Yu
-He, Song-Hai Zhang.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2111.15234">PDF</a>]
-[[Project](https://bennyguo.github.io/nerfren/]</p></li>
-</ul>
-<p><strong>Large-scale scene</strong></p>
-<ul>
-<li><p><strong>Grid-guided Neural Radiance Fields for Large Urban
-Scenes.</strong><br> <em>Linning Xu, Yuanbo Xiangli, Sida Peng, Xingang
-Pan, Nanxuan Zhao, Christian Theobalt, Bo Dai, Dahua Lin.</em><br> CVPR
-2023. [<a href="https://arxiv.org/abs/2303.14001">PDF</a>] [<a
-href="https://city-super.github.io/gridnerf/">Project</a>]</p></li>
-<li><p><strong>Shadow Neural Radiance Fields for Multi-view Satellite
-Photogrammetry.</strong><br> <em>Dawa Derksen, Dario Izzo.</em><br> CVPR
-2021. [<a href="https://arxiv.org/abs/2104.09877">PDF</a>]</p></li>
-<li><p><strong>Block-NeRF: Scalable Large Scene Neural View
-Synthesis.</strong><br> <em>Matthew Tancik, Vincent Casser, Xinchen Yan,
-Sabeek Pradhan, Ben Mildenhall, Pratul P. Srinivasan, Jonathan T.
-Barron, Henrik Kretzschmar.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2202.05263">PDF</a>] [<a
-href="https://waymo.com/research/block-nerf/">Project</a>]</p></li>
-<li><p><strong>Urban Radiance Fields.</strong><br> <em><a
-href="http://www.krematas.com/">Konstantinos Rematas</a>, Andrew Liu,
-Pratul P. Srinivasan, Jonathan T. Barron, Andrea Tagliasacchi, Thomas
-Funkhouser, Vittorio Ferrari.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2111.14643">PDF</a>] [<a
-href="https://urban-radiance-fields.github.io/">Project</a>]</p></li>
-<li><p><strong>Mega-NERF: Scalable Construction of Large-Scale NeRFs for
-Virtual Fly-Throughs.</strong><br> <em>Haithem Turki, Deva Ramanan,
-Mahadev Satyanarayanan.</em><br> CVPR 2022. [<a
-href="https://openaccess.thecvf.com/content/CVPR2022/html/Turki_Mega-NERF_Scalable_Construction_of_Large-Scale_NeRFs_for_Virtual_Fly-Throughs_CVPR_2022_paper.html">PDF</a>]</p></li>
-<li><p><strong>BungeeNeRF: Progressive Neural Radiance Field for Extreme
-Multi-scale Scene Rendering.</strong><br> <em>Yuanbo Xiangli, Linning
-Xu, Xingang Pan, Nanxuan Zhao, Anyi Rao, Christian Theobalt, Bo Dai,
-Dahua Lin.</em><br> ECCV 2022. [<a
-href="https://arxiv.org/abs/2112.05504">PDF</a>] [<a
-href="https://city-super.github.io/citynerf">Project</a>]</p></li>
-<li><p><strong>S3-NeRF: Neural Reflectance Field from Shading and Shadow
-under a Single Viewpoint.</strong><br> <em><a
-href="https://ywq.github.io/">Wenqi Yang</a>, <a
-href="https://guanyingc.github.io/">Guanying Chen</a>, <a
-href="http://chaofengc.github.io/">Chaofeng Chen</a>, <a
-href="https://zfchenunique.github.io/">Zhenfang Chen</a>, <a
-href="http://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong</a>.</em><br>
-NeurIPS 2022. [<a href="https://arxiv.org/abs/2210.08936">PDF</a>] [<a
-href="https://ywq.github.io/s3nerf">Project</a>]</p></li>
-</ul>
-<p><strong>Dynamic scene</strong></p>
-<ul>
-<li><p><strong>NeRFPlayer: A Streamable Dynamic Scene Representation
-with Decomposed Neural Radiance Fields.</strong><br> <em>Liangchen Song,
-Anpei Chen, Zhong Li, Zhang Chen, Lele Chen, Junsong Yuan, Yi Xu,
-Andreas Geiger.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2210.15947">PDF</a>] [<a
-href="https://lsongx.github.io/projects/nerfplayer.html">Project</a>]</p></li>
-<li><p><strong>D-NeRF: Neural Radiance Fields for Dynamic
-Scenes.</strong><br> <em><a
-href="https://www.albertpumarola.com/">Albert Pumarola</a>, <a
-href="https://www.iri.upc.edu/people/ecorona/">Enric Corona</a>, <a
-href="http://virtualhumans.mpi-inf.mpg.de/">Gerard Pons-Moll</a>, <a
-href="http://www.iri.upc.edu/people/fmoreno/">Francesc
-Moreno-Noguer</a>.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2011.13961">PDF</a>] [<a
-href="https://www.albertpumarola.com/research/D-NeRF/index.html">Project</a>]
-[<a href="https://github.com/albertpumarola/D-NeRF">Github</a>] [<a
-href="https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip?dl=0">Data</a>]</p></li>
-<li><p><strong>Dynamic Neural Radiance Fields for Monocular 4D Facial
-Avatar Reconstruction.</strong><br> <em>Guy Gafni, Justus Thies, Michael
-Zollhöfer, Matthias Nießner.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2012.03065">PDF</a>] [<a
-href="https://gafniguy.github.io/4D-Facial-Avatars/">Project</a>] [<a
-href="https://youtu.be/m7oROLdQnjk">Video</a>]</p></li>
-<li><p><strong>NSFF: Neural Scene Flow Fields for Space-Time View
-Synthesis of Dynamic Scenes.</strong><br> <em><a
-href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a>, <a
-href="https://sniklaus.com/welcome">Simon Niklaus</a>, <a
-href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>, <a
-href="https://research.adobe.com/person/oliver-wang/">Oliver
-Wang</a>.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2011.13084">PDF</a>] [<a
-href="http://www.cs.cornell.edu/~zl548/NSFF">Project</a>] [<a
-href="https://github.com/zhengqili/Neural-Scene-Flow-Fields">Github</a>]</p></li>
-<li><p><strong>Space-time Neural Irradiance Fields for Free-Viewpoint
-Video.</strong><br> <em><a
-href="https://www.cs.cornell.edu/~wenqixian/">Wenqi Xian</a>, <a
-href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>, <a
-href="https://johanneskopf.de/">Johannes Kopf</a>, <a
-href="https://changilkim.com/">Changil Kim</a>.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2011.12950">PDF</a>] [<a
-href="https://video-nerf.github.io/">Project</a>]</p></li>
-<li><p><strong>Non-Rigid Neural Radiance Fields: Reconstruction and
-Novel View Synthesis of a Deforming Scene from Monocular
-Video.</strong><br> <em>Edgar Tretschk, Ayush Tewari, Vladislav
-Golyanik, Michael Zollhöfer, Christoph Lassner, Christian
-Theobalt.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2012.12247">PDF</a>] [<a
-href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">Project</a>]
-[<a
-href="https://github.com/facebookresearch/nonrigid_nerf">Github</a>]</p></li>
-<li><p><strong>NeRFlow: Neural Radiance Flow for 4D View Synthesis and
-Video Processing.</strong><br> <em>Yilun Du, Yinan Zhang, Hong-Xing Yu,
-Joshua B. Tenenbaum, Jiajun Wu.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2012.09790">PDF</a>] [<a
-href="https://yilundu.github.io/nerflow/">Project</a>]</p></li>
-<li><p><strong>Nerfies: Deformable Neural Radiance Fields.</strong><br>
-<em><a href="https://keunhong.com/">Keunhong Park</a>, <a
-href="https://utkarshsinha.com/">Utkarsh Sinha</a>, <a
-href="https://jonbarron.info/">Jonathan T. Barron</a>, <a
-href="http://sofienbouaziz.com/">Sofien Bouaziz</a>, <a
-href="https://www.danbgoldman.com/">Dan B Goldman</a>, <a
-href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>, <a
-href="http://www.ricardomartinbrualla.com/">Ricardo-Martin
-Brualla</a>.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2011.12948">PDF</a>] [<a
-href="https://nerfies.github.io/">Project</a>] [<a
-href="https://github.com/google/nerfies">Github</a>]</p></li>
-<li><p><strong>Fourier PlenOctrees for Dynamic Radiance Field Rendering
-in Real-time.</strong><br> <em><a
-href="https://aoliao12138.github.io/">Liao Wang</a>, <a
-href="https://jiakai-zhang.github.io/">Jiakai Zhang</a>, Xinhang Liu,
-Fuqiang Zhao, Yanshun Zhang, Yingliang Zhang, Minye Wu, Lan Xu, Jingyi
-Yu.</em><br> CVPR 2022 (Oral). [<a
-href="https://arxiv.org/abs/2202.08614">PDF</a>] [<a
-href="https://aoliao12138.github.io/FPO/">Project</a>]</p></li>
-<li><p><strong>CoNeRF: Controllable Neural Radiance Fields.</strong><br>
-<em>Kacper Kania, Kwang Moo Yi, Marek Kowalski, Tomasz Trzciński, Andrea
-Taliasacchi.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2112.01983">PDF</a>] [<a
-href="https://conerf.github.io/">Project</a>]</p></li>
-<li><p><strong>Generative Deformable Radiance Fields for Disentangled
-Image Synthesis of Topology-Varying Objects.</strong><br> <em>Ziyu Wang,
-Yu Deng, Jiaolong Yang, Jingyi Yu, Xin Tong.</em><br> Pacific Graphics
-&amp; CGF 2022. [<a href="https://arxiv.org/abs/2209.04183">PDF</a>] [<a
-href="https://ziyuwang98.github.io/GDRF/">Github</a>]</p></li>
-<li><p><strong>LoRD: Local 4D Implicit Representation for High-Fidelity
-Dynamic Human Modeling.</strong><br> <em>Boyan Jiang, Xinlin Ren,
-Mingsong Dou, Xiangyang Xue, Yanwei Fu, Yinda Zhang.</em><br> ECCV 2022.
-[<a href="https://arxiv.org/abs/2208.08622">PDF</a>] [<a
-href="https://boyanjiang.github.io/LoRD/">Github</a>]</p></li>
-<li><p><strong>Neural Surface Reconstruction of Dynamic Scenes with
-Monocular RGB-D Camera.</strong><br> <em><a
-href="https://rainbowrui.github.io/">Hongrui Cai</a>, <a
-href="https://github.com/WanquanF">Wanquan Feng</a>, <a
-href="https://scholar.google.com/citations?hl=en&amp;user=5G-2EFcAAAAJ">Xuetao
-Feng</a>, <a href="">Yan Wang</a>, <a
-href="http://staff.ustc.edu.cn/~juyong/">Juyong Zhang</a>.</em><br>
-NeurIPS 2022. [<a href="https://arxiv.org/abs/2206.15258">PDF</a>] [<a
-href="https://ustc3dv.github.io/ndr/">Project</a>] [<a
-href="https://github.com/USTC3DV/NDR-code">Github</a>]</p></li>
-</ul>
-<h2 id="d-generative-models-from-single-views">3D Generative Models from
-Single Views</h2>
-<h3 id="unconditional-3d-generative-models">Unconditional 3D Generative
-Models</h3>
-<ul>
-<li><p><strong>Live 3D Portrait: Real-Time Radiance Fields for
-Single-Image Portrait View Synthesis.</strong><br> <em>Alex Trevithick,
-Matthew Chan, Michael Stengel, Eric R. Chan, Chao Liu, Zhiding Yu, Sameh
-Khamis, Manmohan Chandraker, Ravi Ramamoorthi, Koki Nagano.</em><br>
-SIGGRAPH 2023 (ACM Transactions on Graphics). [<a
-href="https://research.nvidia.com/labs/nxp/lp3d//media/paper.pdf">PDF</a>]
-[<a href="https://research.nvidia.com/labs/nxp/lp3d//">Project</a>] [<a
-href="">Github</a>]</p></li>
-<li><p><strong>HoloGAN: Unsupervised learning of 3D representations from
-natural images.</strong><br> <em><a
-href="https://monkeyoverflow.com/about/">Thu Nguyen-Phuoc</a>, <a
-href="https://lambdalabs.com/blog/author/chuan/">Chuan Li</a>, Lucas
-Theis, <a href="https://richardt.name/">Christian Richardt</a>, <a
-href="http://yongliangyang.net/">Yong-liang Yang</a>.</em><br> ICCV
-2019. [<a href="https://arxiv.org/abs/1904.01326">PDF</a>]
-[[Project](https://www.monkeyoverflow.com/hologan-unsupervised-learning-of-3d-representations-from-natural-images/]
-[<a
-href="https://github.com/thunguyenphuoc/HoloGAN">Github</a>]</p></li>
-<li><p><strong>BlockGAN: Learning 3D Object-aware Scene Representations
-from Unlabelled Images.</strong><br> <em>Thu Nguyen-Phuoc, Christian
-Richardt, Long Mai, Yong-Liang Yang, Niloy Mitra.</em><br> NeurIPS 2020.
-[<a href="https://arxiv.org/abs/2002.08988">PDF</a>] [<a
-href="https://www.monkeyoverflow.com/#/blockgan/">Project</a>] [<a
-href="https://github.com/thunguyenphuoc/BlockGAN">Github</a>]</p></li>
-<li><p><strong>GRAF: Generative Radiance Fields for 3D-Aware Image
-Synthesis.</strong><br> <em><a
-href="https://katjaschwarz.github.io/">Katja Schwarz</a>, <a
-href="https://yiyiliao.github.io/">Yiyi Liao</a>, <a
-href="https://m-niemeyer.github.io/">Michael Niemeyer</a>, <a
-href="http://www.cvlibs.net/">Andreas Geiger</a>.</em><br> NeurIPS 2020.
-[<a href="https://arxiv.org/abs/2007.02442">PDF</a>] [<a
-href="https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips">Project</a>]
-[<a href="https://github.com/autonomousvision/graf">Github</a>]</p></li>
-<li><p><strong>pi-GAN: Periodic Implicit Generative Adversarial Networks
-for 3D-Aware Image Synthesis.</strong><br> <em><a
-href="https://ericryanchan.github.io/">Eric R. Chan</a>, <a
-href="https://marcoamonteiro.github.io/pi-GAN-website/">Marco
-Monteiro</a>, <a href="https://kellnhofer.xyz/">Petr Kellnhofer</a>, <a
-href="https://jiajunwu.com/">Jiajun Wu</a>, <a
-href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>.</em><br>
-CVPR 2021. [<a href="https://arxiv.org/abs/2012.00926">PDF</a>] [<a
-href="https://marcoamonteiro.github.io/pi-GAN-website/">Project</a>] [<a
-href="https://github.com/lucidrains/pi-GAN-pytorch">Github</a>]</p></li>
-<li><p><strong>GIRAFFE: Representing Scenes as Compositional Generative
-Neural Feature Fields.</strong><br> <em>Michael Niemeyer, Andreas
-Geiger.</em><br> CVPR 2021 (Best Paper). [<a
-href="https://arxiv.org/abs/2011.12100">PDF</a>] [<a
-href="https://m-niemeyer.github.io/project-pages/giraffe/index.html">Project</a>]
-[<a
-href="https://github.com/autonomousvision/giraffe">Github</a>]</p></li>
-<li><p><strong>A Shading-Guided Generative Implicit Model for
-Shape-Accurate 3D-Aware Image Synthesis.</strong><br> <em>Xingang Pan,
-Xudong Xu, Chen Change Loy, Christian Theobalt, Bo Dai.</em><br> NeurIPS
-2021. [<a href="https://arxiv.org/abs/2110.15678">PDF</a>]</p></li>
-<li><p><strong>BallGAN: 3D-aware Image Synthesis with a Spherical
-Background.</strong><br> <em>Minjung Shin, Yunji Seo, Jeongmin Bae,
-Young Sun Choi, Hyunsu Kim, Hyeran Byun, Youngjung Uh.</em><br> arxiv
-2023. [<a href="https://arxiv.org/abs/2301.09091">PDF</a>] [<a
-href="https://minjung-s.github.io/ballgan/">Project</a>] [<a
-href="https://github.com/minjung-s/BallGAN">Github</a>]</p></li>
-</ul>
-<p><strong>Mimic3D: Thriving 3D-Aware GANs via 3D-to-2D
-Imitation.</strong><br> <em>Xingyu Chen, Yu Deng, Baoyuan Wang.</em><br>
-arxiv 2022. [<a href="https://arxiv.org/abs/2303.09036">PDF</a>] [<a
-href="https://seanchenxy.github.io/Mimic3DWeb/">Project</a>]</p>
-<ul>
-<li><p><strong>GRAM-HD: 3D-Consistent Image Generation at High
-Resolution with Generative Radiance Manifolds.</strong><br> <em>Jianfeng
-Xiang, Jiaolong Yang, Yu Deng, Xin Tong.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2206.07255">PDF</a>] [<a
-href="https://jeffreyxiang.github.io/GRAM-HD/">Project</a>]</p></li>
-<li><p><strong>CIPS-3D: A 3D-Aware Generator of GANs Based on
-Conditionally-Independent Pixel Synthesis.</strong><br> <em>Peng Zhou,
-Lingxi Xie, Bingbing Ni, Qi Tian.</em><br> arxiv 2021. [<a
-href="https://arxiv.org/pdf/2110.09788.pdf">PDF</a>] [<a
-href="https://github.com/PeterouZh/CIPS-3D">Github</a>]</p></li>
-<li><p><strong>EG3D: Efficient Geometry-aware 3D Generative Adversarial
-Networks.</strong><br> <em><a
-href="https://ericryanchan.github.io/">Eric R. Chan</a>, <a
-href="https://connorzlin.com/">Connor Z. Lin</a>, <a
-href="https://matthew-a-chan.github.io/">Matthew A. Chan</a>, <a
-href="https://luminohope.org/">Koki Nagano</a>, <a
-href="https://cs.stanford.edu/~bxpan/">Boxiao Pan</a>, <a
-href="https://research.nvidia.com/person/shalini-gupta">Shalini De
-Mello</a>, <a href="https://oraziogallo.github.io/">Orazio Gallo</a>, <a
-href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a>,
-<a href="https://research.nvidia.com/person/jonathan-tremblay">Jonathan
-Tremblay</a>, <a href="https://www.samehkhamis.com/">Sameh Khamis</a>,
-<a href="https://research.nvidia.com/person/tero-karras">Tero
-Karras</a>, <a href="https://stanford.edu/~gordonwz/">Gordon
-Wetzstein</a>.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2112.07945">PDF</a>] [<a
-href="https://matthew-a-chan.github.io/EG3D">Project</a>]</p></li>
-<li><p><strong>StylizedNeRF: Consistent 3D Scene Stylization as Stylized
-NeRF via 2D-3D Mutual Learning.</strong><br> <em>Yi-Hua Huang, Yue He,
-Yu-Jie Yuan, Yu-Kun Lai, Lin Gao.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2205.12183">PDF</a>]</p></li>
-<li><p><strong>Multi-View Consistent Generative Adversarial Networks for
-3D-aware Image Synthesis.</strong><br> <em>Xuanmeng Zhang, Zhedong
-Zheng, Daiheng Gao, Bang Zhang, Pan Pan, Yi Yang.</em><br> CVPR 2022.
-[<a href="https://arxiv.org/abs/2204.06307">PDF</a>] [<a
-href="https://github.com/Xuanmeng-Zhang/MVCGAN">Github</a>]</p></li>
-<li><p><strong>Disentangled3D: Learning a 3D Generative Model with
-Disentangled Geometry and Appearance from Monocular Images.</strong><br>
-<em><a href="https://ayushtewari.com/">Ayush Tewari</a>, Mallikarjun B
-R, Xingang Pan, Ohad Fried, Maneesh Agrawala, Christian
-Theobalt.</em><br> CVPR 2022. [<a
-href="https://people.mpi-inf.mpg.de/~atewari/projects/D3D/data/paper.pdf">PDF</a>]
-[<a
-href="https://people.mpi-inf.mpg.de/~atewari/projects/D3D/">Project</a>]</p></li>
-<li><p><strong>GIRAFFE HD: A High-Resolution 3D-aware Generative
-Model.</strong><br> <em>Yang Xue, Yuheng Li, Krishna Kumar Singh, Yong
-Jae Lee.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2203.14954">PDF</a>]</p></li>
-<li><p><strong>StyleSDF: High-Resolution 3D-Consistent Image and
-Geometry Generation.</strong><br> <em><a
-href="https://homes.cs.washington.edu/~royorel/">Roy Or-El</a>, <a
-href="https://roxanneluo.github.io/">Xuan Luo</a>, Mengyi Shan, Eli
-Shechtman, Jeong Joon Park, Ira Kemelmacher-Shlizerman.</em><br> CVPR
-2022. [<a href="https://arxiv.org/abs/2112.11427">PDF</a>] [<a
-href="https://stylesdf.github.io/">Project</a>] [<a
-href="https://github.com/royorel/StyleSDF">Github</a>]</p></li>
-<li><p><strong>FENeRF: Face Editing in Neural Radiance
-Fields.</strong><br> <em>Jingxiang Sun, Xuan Wang, Yong Zhang, Xiaoyu
-Li, Qi Zhang, Yebin Liu, Jue Wang.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2111.15490">PDF</a>]</p></li>
-<li><p><strong>LOLNeRF: Learn from One Look.</strong><br> <em><a
-href="https://vision.cs.ubc.ca/team/">Daniel Rebain</a>, Mark Matthews,
-Kwang Moo Yi, Dmitry Lagun, Andrea Tagliasacchi.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2111.09996">PDF</a>] [<a
-href="https://ubc-vision.github.io/lolnerf/">Project</a>]</p></li>
-<li><p><strong>GRAM: Generative Radiance Manifolds for 3D-Aware Image
-Generation.</strong><br> <em><a href="https://yudeng.github.io/">Yu
-Deng</a>, <a href="https://jlyang.org/">Jiaolong Yang</a>, <a
-href="http://www.xtong.info/">Jianfeng Xiang</a>, <a href="">Xin
-Tong</a>.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2112.08867">PDF</a>] [<a
-href="https://yudeng.github.io/GRAM/">Project</a>] [<a
-href="https://yudeng.github.io/GRAM/">Github</a>]</p></li>
-<li><p><strong>VolumeGAN: 3D-aware Image Synthesis via Learning
-Structural and Textural Representations.</strong><br> <em>Yinghao Xu,
-Sida Peng, Ceyuan Yang, Yujun Shen, Bolei Zhou.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2112.10759">PDF</a>] [<a
-href="https://genforce.github.io/volumegan/">Project</a>] [<a
-href="https://github.com/genforce/VolumeGAN">Github</a>]</p></li>
-<li><p><strong>MOST-GAN: 3D Morphable StyleGAN for Disentangled Face
-Image Manipulation.</strong><br> <em>Safa C. Medin, Bernhard Egger,
-Anoop Cherian, Ye Wang, Joshua B. Tenenbaum, Xiaoming Liu, Tim K.
-Marks.</em><br> AAAI 2022. [<a
-href="https://arxiv.org/abs/2111.01048">PDF</a>]</p></li>
-<li><p><strong>Generating Videos with Dynamics-aware Implicit Generative
-Adversarial Networks.</strong><br> <em>Sihyun Yu, Jihoon Tack, Sangwoo
-Mo, Hyunsu Kim, Junho Kim, Jung-Woo Ha, Jinwoo Shin.</em><br> ICLR 2022.
-[<a href="https://openreview.net/forum?id=Czsdv-S4-w9">PDF</a>] [<a
-href="https://sihyun-yu.github.io/digan/">Project</a>] [<a
-href="https://github.com/sihyun-yu/digan">Github</a>]</p></li>
-<li><p><strong>StyleNeRF: A Style-based 3D-Aware Generator for
-High-resolution Image Synthesis.</strong><br> <em><a
-href="http://jiataogu.me/">Jiatao Gu</a>, <a
-href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a
-href="https://totoro97.github.io/about.html">Peng Wang</a>, <a
-href="http://people.mpi-inf.mpg.de/~theobalt/">Christian
-Theobalt</a>.</em><br> ICLR 2022. [<a
-href="https://arxiv.org/abs/2110.08985">PDF</a>] [<a
-href="http://jiataogu.me/style_nerf/">Project</a>]</p></li>
-<li><p><strong>Injecting 3D Perception of Controllable NeRF-GAN into
-StyleGAN for Editable Portrait Image Synthesis.</strong><br>
-<em>Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, Donghyeon Kim, David Han,
-Hanseok Ko.</em><br> ECCV 2022. [<a
-href="https://arxiv.org/abs/2207.10257">PDF</a>] [<a
-href="https://jgkwak95.github.io/surfgan/">Project</a>] [<a
-href="https://github.com/jgkwak95/SURF-GAN">Github</a>]</p></li>
-<li><p><strong>Generative Multiplane Images: Making a 2D GAN
-3D-Aware.</strong><br> <em><a href="https://xiaoming-zhao.com/">Xiaoming
-Zhao</a>, <a href="https://fangchangma.github.io/">Fangchang Ma</a>, <a
-href="https://scholar.google.com/citations?user=bckYvFkAAAAJ&amp;hl=en">David
-Güera</a>, <a href="https://jrenzhile.com/">Zhile Ren</a>, <a
-href="https://www.alexander-schwing.de/">Alexander G. Schwing</a>, <a
-href="https://www.colburn.org/">Alex Colburn</a>.</em><br> ECCV 2022.
-[<a href="https://arxiv.org/abs/2207.10642">PDF</a>] [<a
-href="https://xiaoming-zhao.github.io/projects/gmpi/">Project</a>] [<a
-href="https://github.com/apple/ml-gmpi">Github</a>]</p></li>
-<li><p><strong>3D-FM GAN: Towards 3D-Controllable Face
-Manipulation.</strong><br> <em><a
-href="https://lychenyoko.github.io/">Yuchen Liu</a>, Zhixin Shu, Yijun
-Li, Zhe Lin, Richard Zhang, and Sun-Yuan Kung.</em><br> ECCV 2022. [<a
-href="https://arxiv.org/abs/2208.11257">PDF</a>] [<a
-href="https://lychenyoko.github.io/3D-FM-GAN-Webpage/">Project</a>]</p></li>
-<li><p><strong>VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel
-Grids.</strong><br> <em>Katja Schwarz, Axel Sauer, Michael Niemeyer,
-Yiyi Liao, Andreas Geiger.</em><br> NeurIPS 2022. [<a
-href="https://arxiv.org/pdf/2206.07695.pdf">PDF</a>] [<a
-href="https://github.com/autonomousvision/voxgraf">Github</a>]</p></li>
-<li><p><strong>GeoD: Improving 3D-aware Image Synthesis with A
-Geometry-aware Discriminator.</strong><br> <em>Zifan Shi, Yinghao Xu,
-Yujun Shen, Deli Zhao, Qifeng Chen, Dit-Yan Yeung.</em><br> NeurIPS
-2022. [<a href="https://arxiv.org/abs/2209.15637">PDF</a>] [<a
-href="https://vivianszf.github.io/geod">Project</a>]</p></li>
-<li><p><strong>EpiGRAF: Rethinking training of 3D GANs.</strong><br>
-<em><a href="https://universome.github.io/">Ivan Skorokhodov</a>, <a
-href="http://www.stulyakov.com/">Sergey Tulyakov</a>, <a
-href="https://sites.google.com/view/yiqun-wang/home">Yiqun Wang</a>, <a
-href="https://peterwonka.net/">Peter Wonka</a>.</em><br> NeurIPS 2022.
-[<a href="https://arxiv.org/abs/2206.10535">PDF</a>] [<a
-href="https://universome.github.io/epigraf">Project</a>] [<a
-href="https://github.com/universome/epigraf">Github</a>]</p></li>
-<li><p><strong>VoxGRAF: Fast 3D-Aware Image Synthesis with Sparse Voxel
-Grids.</strong><br> <em>Schwarz, Katja, Sauer, Axel, Niemeyer, Michael,
-Liao, Yiyi, and Geiger, Andreas.</em><br> NeurIPS 2022. [<a
-href="https://arxiv.org/pdf/2206.07695.pdf">PDF</a>] [<a
-href="https://katjaschwarz.github.io/voxgraf">Project</a>]</p></li>
-</ul>
-<h3 id="conditional-3d-generative-models">Conditional 3D Generative
-Models</h3>
-<ul>
-<li><p><strong>Sem2NeRF: Converting Single-View Semantic Masks to Neural
-Radiance Fields.</strong><br> <em><a
-href="https://donydchen.github.io/">Yuedong Chen</a>, <a
-href="https://wuqianyi.top/">Qianyi Wu</a>, <a
-href="https://www.chuanxiaz.com/">Chuanxia Zheng</a>, <a
-href="https://personal.ntu.edu.sg/astjcham/">Tat-Jen Cham</a>, <a
-href="https://jianfei-cai.github.io/">Jianfei Cai</a>.</em><br> ECCV
-2022. [<a href="https://arxiv.org/abs/2203.10821">PDF</a>] [<a
-href="https://donydchen.github.io/sem2nerf">Project</a>]</p></li>
-<li><p><strong>IDE-3D: Interactive Disentangled Editing for
-High-Resolution 3D-aware Portrait Synthesis.</strong><br> <em><a
-href="https://github.com/MrTornado24">Jingxiang Sun</a>, <a
-href="https://mrtornado24.github.io/IDE-3D/">Xuan Wang</a>, <a
-href="https://seasonsh.github.io/">Yichun Shi</a>, <a
-href="https://lizhenwangt.github.io/">Lizhen Wang</a>, <a
-href="https://juewang725.github.io/">Jue Wang</a>, <a
-href="https://liuyebin.com/">Yebin Liu</a>.</em><br> SIGGRAPH Asia 2022.
-[<a href="https://arxiv.org/abs/2205.15517">PDF</a>] [<a
-href="https://mrtornado24.github.io/IDE-3D/">Project</a>] [<a
-href="https://github.com/MrTornado24/IDE-3D">Github</a>]</p></li>
-<li><p><strong>NeRFFaceEditing: Disentangled Face Editing in Neural
-Radiance Fields.</strong><br> <em>Kaiwen Jiang, <a
-href="http://people.geometrylearning.com/csy/">Shu-Yu Chen</a>, <a
-href="http://people.geometrylearning.com/lfl/">Feng-Lin Liu</a>, <a
-href="http://sweb.cityu.edu.hk/hongbofu/">Hongbo Fu</a>, <a
-href="http://www.geometrylearning.com/cn/">Lin Gao</a>.</em><br>
-SIGGRAPH Asia 2022. [<a
-href="http://geometrylearning.com/NeRFFaceEditing/">Project</a>]</p></li>
-<li><p><strong>GANcraft: Unsupervised 3D Neural Rendering of Minecraft
-Worlds.</strong><br> <em>Zekun Hao, Arun Mallya, Serge Belongie, Ming-Yu
-Liu.</em><br> ICCV 2021. [<a
-href="https://arxiv.org/abs/2104.07659">PDF</a>] [<a
-href="https://nvlabs.github.io/GANcraft/">Project</a>]</p></li>
-</ul>
-<h2 id="d-aware-generative-model-on-imagenet">3D-Aware Generative Model
-on ImageNet</h2>
-<ul>
-<li><p><strong>3D Generation on ImageNet.</strong><br> <em>Ivan
-Skorokhodov, Aliaksandr Siarohin, Yinghao Xu, Jian Ren, Hsin-Ying Lee,
-Peter Wonka, Sergey Tulyakov.</em><br> ICLR 2023 (Oral). [<a
-href="https://openreview.net/forum?id=U2WjB9xxZ9q">PDF</a>] [<a
-href="https://u2wjb9xxz9q.github.io/">Project</a>] [<a
-href="https://justimyhxu.github.io/pub.html">Github</a>]</p></li>
-<li><p><strong>VQ3D: Learning a 3D-Aware Generative Model on
-ImageNet.</strong><br> <em>Kyle Sargent, Jing Yu Koh, Han Zhang, Huiwen
-Chang, Charles Herrmann, Pratul Srinivasan, Jiajun Wu, Deqing
-Sun.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2302.06833">PDF</a>] [<a
-href="http://kylesargent.github.io/vq3d">Project</a>]</p></li>
-</ul>
-<h2 id="d-aware-diffusion-models">3D-aware Diffusion Models</h2>
-<ul>
-<li><p><strong>3DShape2VecSet: A 3D Shape Representation for Neural
-Fields and Generative Diffusion Models.</strong><br> <em><a
-href="https://1zb.github.io/">Biao Zhang</a>, <a
-href="https://tangjiapeng.github.io/">Jiapeng Tang</a>, <a
-href="https://www.niessnerlab.org/">Matthias Niessner</a>, <a
-href="http://peterwonka.net/">Peter Wonka</a>.</em><br> SIGGRAPH 2023.
-[<a href="https://arxiv.org/abs/2301.11445">PDF</a>] [<a
-href="https://1zb.github.io/3DShape2VecSet/">Project</a>] [<a
-href="https://github.com/1zb/3DShape2VecSet">Github</a>]</p></li>
-<li><p><strong>NeuralField-LDM: Scene Generation with Hierarchical
-Latent Diffusion Models.</strong><br> <em>Seung Wook Kim, Bradley Brown,
-Kangxue Yin, Karsten Kreis, Katja Schwarz, Daiqing Li, Robin Rombach,
-Antonio Torralba, Sanja Fidler.</em><br> CVPR 2023. [<a
-href="https://arxiv.org/abs/2304.09787">PDF</a>]</p></li>
-<li><p><strong>Rodin: A Generative Model for Sculpting 3D Digital
-Avatars Using Diffusion.</strong><br> <em>Tengfei Wang, Bo Zhang, Ting
-Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong
-Chen, Fang Wen, Qifeng Chen, Baining Guo.</em><br> CVPR 2023. [<a
-href="https://arxiv.org/abs/2212.06135">PDF</a>] [<a
-href="https://3d-avatar-diffusion.microsoft.com/">Project</a>]</p></li>
-<li><p><strong>DiffRF: Rendering-guided 3D Radiance Field
-Diffusion.</strong><br> <em><a
-href="https://niessnerlab.org/members/norman_mueller/profile.html">Norman
-Müller</a>, <a
-href="https://niessnerlab.org/members/yawar_siddiqui/profile.html">Yawar
-Siddiqui</a>, <a
-href="https://scholar.google.com/citations?user=vW1gaVEAAAAJ">Lorenzo
-Porzi</a>, <a
-href="https://scholar.google.com/citations?hl=de&amp;user=484sccEAAAAJ">Samuel
-Rota Bulò</a>, <a
-href="https://scholar.google.com/citations?user=CxbDDRMAAAAJ&amp;hl=en">Peter
-Kontschieder</a>, <a
-href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias
-Nießner</a>.</em><br> CVPR 2023 (Highlight). [<a
-href="https://arxiv.org/abs/2212.01206">PDF</a>] [<a
-href="https://sirwyver.github.io/DiffRF/">Project</a>]</p></li>
-<li><p><strong>RenderDiffusion: Image Diffusion for 3D Reconstruction,
-Inpainting and Generation.</strong><br> <em>Titas Anciukevičius, Zexiang
-Xu, Matthew Fisher, Paul Henderson, Hakan Bilen, Niloy J. Mitra, Paul
-Guerrero.</em><br> CVPR 2023. [<a
-href="https://arxiv.org/abs/2211.09869">PDF</a>] [<a
-href="https://holodiffusion.github.io/">Project</a>]</p></li>
-<li><p><strong>SparseFusion: Distilling View-conditioned Diffusion for
-3D Reconstruction.</strong><br> <em><a
-href="https://www.zhiz.dev/">Zhizhuo Zhou</a>, <a
-href="https://shubhtuls.github.io/">Shubham Tulsiani</a>.</em><br> CVPR
-2023. [<a href="https://arxiv.org/abs/2212.00792">PDF</a>] [<a
-href="https://sparsefusion.github.io/">Project</a>] [<a
-href="https://github.com/zhizdev/sparsefusion">Github</a>]</p></li>
-<li><p><strong>HoloDiffusion: Training a 3D Diffusion Model using 2D
-Images.</strong><br> <em>Animesh Karnewar, Andrea Vedaldi, David
-Novotny, Niloy Mitra.</em><br> CVPR 2023. [<a
-href="https://arxiv.org/abs/2303.16509">PDF</a>] [<a
-href="https://3d-diffusion.github.io/">Project</a>]</p></li>
-<li><p><strong>3DiM: Novel View Synthesis with Diffusion
-Models.</strong><br> <em>Daniel Watson, William Chan, Ricardo
-Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad
-Norouzi.</em><br> ICLR 2023. [<a
-href="https://arxiv.org/abs/2210.04628">PDF</a>] [<a
-href="https://3d-diffusion.github.io/">Project</a>]</p></li>
-<li><p><strong>Learning a Diffusion Prior for NeRFs.</strong><br>
-<em>Guandao Yang, Abhijit Kundu, Leonidas J. Guibas, Jonathan T. Barron,
-Ben Poole.</em><br> arXiv 2023. [<a
-href="https://arxiv.org/abs/2304.14473">PDF</a>]</p></li>
-<li><p><strong>Adding 3D Geometry Control to Diffusion
-Models.</strong><br> <em><a href="https://wufeim.github.io/">Wufei
-Ma</a>, <a href="https://qihao067.github.io/">Qihao Liu</a>, <a
-href="https://jiahaoplus.github.io/">Jiahao Wang</a>, Angtian Wang, <a
-href="https://www.cs.jhu.edu/~yyliu/">Yaoyao Liu</a>, <a
-href="https://adamkortylewski.com/">Adam Kortylewski</a>, <a
-href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>.</em><br> arXiv
-2023. [<a href="https://arxiv.org/abs/2306.08103">PDF</a>]</p></li>
-<li><p><strong>HyperDiffusion: Generating Implicit Neural Fields with
-Weight-Space Diffusion.</strong><br> <em><a
-href="https://ziyaerkoc.com/">Ziya Erkoç</a>, <a
-href="https://fangchangma.github.io/">Fangchang Ma</a>, <a
-href="http://shanqi.github.io/">Qi Shan</a>, <a
-href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias
-Nießner</a>, <a href="https://www.3dunderstanding.org/team.html">Angela
-Dai</a>.</em><br> arXiv 2023. [<a
-href="https://arxiv.org/abs/2303.17015">PDF</a>] [<a
-href="https://ziyaerkoc.com/hyperdiffusion/">Project</a>]</p></li>
-<li><p><strong>Generative Novel View Synthesis with 3D-Aware Diffusion
-Models.</strong><br> <em>Eric R. Chan, Koki Nagano, Matthew A. Chan,
-Alexander W. Bergman, Jeong Joon Park, Axel Levy, Miika Aittala, Shalini
-De Mello, Tero Karras, Gordon Wetzstein.</em><br> arXiv 2023. [<a
-href="https://arxiv.org/abs/2304.02602">PDF</a>] [<a
-href="https://nvlabs.github.io/genvs/">Project</a>] [<a
-href="https://github.com/NVlabs/genvs">Github</a>]</p></li>
-<li><p><strong>3D-aware Image Generation using 2D Diffusion
-Models.</strong><br> <em><a
-href="https://jeffreyxiang.github.io/">Jianfeng Xiang</a>, Jiaolong
-Yang, Binbin Huang, Xin Tong.</em><br> arXiv 2023. [<a
-href="https://arxiv.org/abs/2303.17905">PDF</a>] [<a
-href="https://jeffreyxiang.github.io/ivid/">Project</a>] [<a
-href="https://github.com/JeffreyXiang/ivid">Github</a>]</p></li>
-<li><p><strong>GAUDI: A Neural Architect for Immersive 3D Scene
-Generation.</strong><br> <em>Miguel Angel Bautista, Pengsheng Guo,
-Samira Abnar, Walter Talbott, Alexander Toshev, Zhuoyuan Chen, Laurent
-Dinh, Shuangfei Zhai, Hanlin Goh, Daniel Ulbricht, Afshin Dehghan, Josh
-Susskind.</em><br> arXiv 2022. [<a
-href="https://arxiv.org/abs/2212.01381">PDF</a>] [<a
-href="https://github.com/apple/ml-gaudi">Project</a>]</p></li>
-<li><p><strong>LatentSwap3D: Semantic Edits on 3D Image
-GANs.</strong><br> <em>Enis Simsar, Alessio Tonioni, Evin Pınar Örnek,
-Federico Tombari.</em><br> arXiv 2022. [<a
-href="https://arxiv.org/abs/2212.01381">PDF</a>]</p></li>
-<li><p><strong>3D-LDM: Neural Implicit 3D Shape Generation with Latent
-Diffusion Models.</strong><br> <em>Gimin Nam, Mariem Khlifi, Andrew
-Rodriguez, Alberto Tono, Linqi Zhou, Paul Guerrero.</em><br> arXiv 2022.
-[<a href="https://arxiv.org/abs/2212.00842">PDF</a>]</p></li>
-</ul>
-<h2 id="d-aware-video-synthesis">3D-aware Video Synthesis</h2>
-<ul>
-<li><p><strong>Streaming Radiance Fields for 3D Video
-Synthesis.</strong><br> <em>Lingzhi Li, Zhen Shen, Zhongshu Wang, Li
-Shen, Ping Tan.</em><br> NeurIPS 2022. [<a
-href="https://arxiv.org/abs/2210.14831">PDF</a>]</p></li>
-<li><p><strong>3D-Aware Video Generation.</strong><br> <em><a
-href="https://sherwinbahmani.github.io/">Sherwin Bahmani</a>, <a
-href="https://jjparkcv.github.io/">Jeong Joon Park</a>, <a
-href="https://paschalidoud.github.io/">Despoina Paschalidou</a>, <a
-href="https://scholar.google.com/citations?user=9zJkeEMAAAAJ&amp;hl=en/">Hao
-Tang</a>, <a href="https://stanford.edu/~gordonwz/">Gordon
-Wetzstein</a>, <a
-href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a>,
-<a
-href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html/">Luc
-Van Gool</a>, <a
-href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjAxNjc4.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html/">Radu
-Timofte</a>.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2206.14797">PDF</a>] [<a
-href="https://sherwinbahmani.github.io/3dvidgen/">Project</a>] [<a
-href="https://github.com/sherwinbahmani/3dvideogeneration/">Github</a>]</p></li>
-</ul>
-<p><br>The following papers are not directly related to 3D-aware image
-synthesis. But it would be beneficial to pay attention to those works.
-For example, the inverse rendering papers are not classified as 3D-aware
-image synthesis methods in this survey as they are not deliberately
-designed for this purpose. But with the inferred underlying intrinsic
-components of a scene, photorealistic images can be rendered. 3D shape
-reconstruction methods model geometry only with no appearance
-information, meaning them not able to render images with photorealistic
-textures. But these representations can also be used for the 3D-aware
-image synthesis task. They can be introduced as the geometric
-representation along with a textural representation (e.g., Texture
-Field) for 3D image synthesis.</p>
-<h2 id="d-representations">3D Representations</h2>
-<ul>
-<li><p><strong>K-Planes: Explicit Radiance Fields in Space, Time, and
-Appearance.</strong><br> <em><a
-href="https://people.eecs.berkeley.edu/~sfk/">Sara Fridovich-Keil</a>,
-<a
-href="https://www.iit.it/web/iit-mit-usa/people-details/-/people/giacomo-meanti">Giacomo
-Meanti</a>, <a href="https://frederikwarburg.github.io/">Frederik
-Warburg</a>, <a
-href="https://people.eecs.berkeley.edu/~brecht/">Benjamin Recht</a>, <a
-href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo
-Kanazawa</a>.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2301.10241">PDF</a>] [<a
-href="https://sarafridov.github.io/K-Planes/">Project</a>] [<a
-href="https://github.com/sarafridov/K-Planes">Github</a>]</p></li>
-<li><p><strong>HexPlane: A Fast Representation for Dynamic
-Scenes.</strong><br> <em><a href="https://caoang327.github.io/">Ang
-Cao</a>, <a href="https://web.eecs.umich.edu/~justincj">Justin
-Johnson</a>.</em><br> arxiv 2022. [<a
-href="https://arxiv.org/abs/2301.09632">PDF</a>] [<a
-href="https://caoang327.github.io/HexPlane/">Project</a>] [<a
-href="https://caoang327.github.io/HexPlane/">Github</a>]</p></li>
-<li><p><strong>Neural Volumes: Learning Dynamic Renderable Volumes from
-Images.</strong><br> <em>Stephen Lombardi, Tomas Simon, Jason Saragih,
-Gabriel Schwartz, Andreas Lehrmann, Yaser Sheikh.</em><br> TOG 2019. [<a
-href="https://arxiv.org/abs/1906.07751">PDF</a>] [<a
-href="https://github.com/facebookresearch/neuralvolumes">Github</a>]</p></li>
-<li><p><strong>DeepSDF: Learning Continuous Signed Distance Functions
-for Shape Representation.</strong><br> <em>eong Joon Park, Peter
-Florence, Julian Straub, Richard Newcombe, Steven Lovegrove.</em><br>
-CVPR 2019. [<a
-href="http://openaccess.thecvf.com/content_CVPR_2019/html/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.html">PDF</a>]
-[<a
-href="https://github.com/facebookresearch/DeepSDF">Github</a>]</p></li>
-<li><p><strong>Occupancy Networks: Learning 3D Reconstruction in
-Function Space.</strong><br> <em>Lars Mescheder, Michael Oechsle,
-Michael Niemeyer, Sebastian Nowozin, Andreas Geiger.</em><br> CVPR 2019.
-[<a href="https://arxiv.org/abs/1812.03828">PDF</a>] [<a
-href="https://avg.is.mpg.de/publications/occupancy-networks">Project</a>]
-[<a
-href="http://avg.is.tuebingen.mpg.de/publications/occupancy-networks">Github</a>]</p></li>
-<li><p><strong>Geometry-Consistent Neural Shape Representation with
-Implicit Displacement Fields.</strong><br> <em><a
-href="https://yifita.github.io/">Wang Yifan</a>, Lukas Rahmann, <a
-href="https://igl.ethz.ch/people/sorkine/">Olga
-Sorkine-Hornung</a>.</em><br> ICLR 2022. [<a
-href="https://arxiv.org/abs/2106.05187">PDF</a>] [<a
-href="https://yifita.github.io/publication/idf/">Project</a>] [<a
-href="https://github.com/yifita/idf">Github</a>]</p></li>
-<li><p><strong>GIFS: Neural Implicit Function for General Shape
-Representation.</strong><br> <em>Jianglong Ye, Yuntao Chen, Naiyan Wang,
-Xiaolong Wang.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2204.07126">PDF</a>] [<a
-href="https://jianglongye.com/gifs">Project</a>]</p></li>
-</ul>
-<h2 id="neural-inverse-rendering-neural-de-rendering">Neural Inverse
-Rendering (Neural De-rendering)</h2>
-<p>The inverse rendering is to infer underlying intrinsic components of
-a scene from rendered 2D images. These properties include shape
-(surface, depth, normal), material (albedo, reflectivity, shininess),
-and lighting (direction, intensity), which can be further used to render
-photorealistic images.</p>
-<ul>
-<li><p><strong>InverseRenderNet: Learning Single Image Inverse
-Rendering.</strong><br> <em>Ye Yu, William A. P. Smith.</em><br> CVPR
-2019. [<a
-href="http://openaccess.thecvf.com/content_CVPR_2019/html/Yu_InverseRenderNet_Learning_Single_Image_Inverse_Rendering_CVPR_2019_paper.html">PDF</a>]
-[<a href="https://github.com/YeeU/InverseRenderNet">Github</a>] [<a
-href="http://opensurfaces.cs.cornell.edu/publications/intrinsic/#download">IIW
-Dataset</a>]</p></li>
-<li><p><strong>Learning to Predict 3D Objects with an
-Interpolation-based Differentiable Renderer.</strong><br> <em>Wenzheng
-Chen, Jun Gao, Huan Ling, Edward J. Smith, Jaakko Lehtinen, Alec
-Jacobson, Sanja Fidler.</em><br> NeurIPS 2019. [<a
-href="https://arxiv.org/abs/1908.01210">PDF</a>] [<a
-href="https://github.com/nv-tlabs/DIB-R">Github</a>]</p></li>
-<li><p><strong>DRWR: A Differentiable Renderer without Rendering for
-Unsupervised 3D Structure Learning from Silhouette Images.</strong><br>
-<em>Zhizhong Han, Chao Chen, Yu-Shen Liu, Matthias Zwicker.</em><br>
-ICML 2020. [<a href="https://arxiv.org/abs/2007.06127">PDF</a>]</p></li>
-<li><p><strong>Inverse Rendering for Complex Indoor Scenes: Shape,
-Spatially-Varying Lighting and SVBRDF From a Single Image.</strong><br>
-<em><a
-href="http://sites.google.com/a/eng.ucsd.edu/zhengqinli/">Zhengqin
-Li</a>, <a href="https://www.linkedin.com/in/mohammadshafiei/">Mohammad
-Shafiei</a>, <a href="http://cseweb.ucsd.edu/~ravir/">Ravi
-Ramamoorthi</a>, <a href="http://www.kalyans.org/">Kalyan
-Sunkavalli</a>, <a href="http://cseweb.ucsd.edu/~mkchandraker/">Manmohan
-Chandraker</a>.</em><br> CVPR 2020.[<a
-href="https://drive.google.com/file/d/18zG1kzVpL9XsEVBK95hbpnB-FMlChRXP/view?usp=sharing">PDF</a>]
-[<a
-href="http://cseweb.ucsd.edu/~viscomp/projects/CVPR20InverseIndoor/">Project</a>]
-[<a
-href="https://github.com/lzqsd/InverseRenderingOfIndoorScene">Github</a>]</p></li>
-<li><p><strong>Invertible Neural BRDF for Object Inverse
-Rendering.</strong><br> <em>Zhe Chen, Shohei Nobuhara, Ko
-Nishino.</em><br> ECCV 2020. [<a
-href="https://arxiv.org/abs/2008.04030">PDF</a>] [<a
-href="https://github.com/chenzhekl/iBRDF">Github</a>]</p></li>
-<li><p><strong>Polarimetric Multi-View Inverse Rendering.</strong><br>
-<em>Jinyu Zhao, Yusuke Monno, Masatoshi Okutomi.</em><br> ECCV 2020. [<a
-href="https://arxiv.org/abs/2007.08830">PDF</a>]</p></li>
-<li><p><strong>PhySG: Inverse Rendering with Spherical Gaussians for
-Physics-based Material Editing and Relighting.</strong><br> <em>Kai
-Zhang, Fujun Luan, Qianqian Wang, Kavita Bala, Noah Snavely.</em><br>
-CVPR 2021. [<a href="https://arxiv.org/abs/2104.00674">PDF</a>] [<a
-href="https://kai-46.github.io/PhySG-website/">Project</a>]</p></li>
-<li><p><strong>Unified Shape and SVBRDF Recovery using Differentiable
-Monte Carlo Rendering.</strong><br> <em><a
-href="https://www.cs.cornell.edu/~fujun/">Fujun Luan</a>, <a
-href="https://www.shuangz.com/">Shuang Zhao</a>, <a
-href="https://www.cs.cornell.edu/~kb/">Kavita Bala</a>, <a
-href="http://flycooler.com/">Zhao Dong</a>.</em><br> EGSR 2021. [<a
-href="https://www.cs.cornell.edu/~fujun/files/egsr2021/paper.pdf">PDF</a>]
-[<a href="https://luanfujun.github.io/InverseMeshSVBRDF/">Project</a>]
-[<a href="https://youtu.be/u9HqKGqvJhQ?t=8404">Video</a>]</p></li>
-<li><p><strong>NeRFactor: Neural Factorization of Shape and Reflectance
-Under an Unknown Illumination.</strong><br> <em><a
-href="http://people.csail.mit.edu/xiuming/">Xiuming Zhang</a>, <a
-href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>, <a
-href="https://boyangdeng.com/">Boyang Deng</a>, <a
-href="http://www.pauldebevec.com/">Paul Debevec</a>, <a
-href="http://billf.mit.edu/">William T. Freeman</a>, <a
-href="https://jonbarron.info/">Jonathan T. Barron</a>.</em><br> SIGGRAPH
-Asia 2021. [<a href="https://arxiv.org/abs/2106.01970">PDF</a>] [<a
-href="http://people.csail.mit.edu/xiuming/projects/nerfactor/">Project</a>]
-[<a href="https://github.com/google/nerfactor">Github</a>]</p></li>
-<li><p><strong>Extracting Triangular 3D Models, Materials, and Lighting
-From Images.</strong><br> <em><a
-href="https://research.nvidia.com/person/jacob-munkberg">Jacob
-Munkberg</a>, <a
-href="https://research.nvidia.com/person/jon-hasselgren">Jon
-Hasselgren</a>, <a href="http://www.cs.toronto.edu/~shenti11/">Tianchang
-Shen</a>, <a href="http://www.cs.toronto.edu/~jungao/">Jun Gao</a>, <a
-href="http://www.cs.toronto.edu/~wenzheng/">Wenzheng Chen</a>, <a
-href="https://research.nvidia.com/person/alex-evans">Alex Evans</a>, <a
-href="https://research.nvidia.com/person/thomas-mueller">Thomas
-Müller</a>, <a href="https://www.cs.toronto.edu/~fidler/">Sanja
-Fidler</a>.</em><br> CVPR 2022. [<a
-href="http://arxiv.org/abs/2111.12503">PDF</a>] [<a
-href="https://github.com/NVlabs/nvdiffrec">Github</a>] [<a
-href="https://nvlabs.github.io/nvdiffrec/">Project</a>]</p></li>
-<li><p><strong>Modeling Indirect Illumination for Inverse
-Rendering.</strong><br> <em>Yuanqing Zhang, Jiaming Sun, Xingyi He, Huan
-Fu, Rongfei Jia, Xiaowei Zhou.</em><br> CVPR 2022. [<a
-href="https://arxiv.org/abs/2204.06837">PDF</a>]</p></li>
-<li><p><strong>IRISformer: Dense Vision Transformers for Single-Image
-Inverse Rendering in Indoor Scenes.</strong><br> <em>Rui Zhu, Zhengqin
-Li, Janarbek Matai, Fatih Porikli, Manmohan Chandraker.</em><br> CVPR
-2022. [<a
-href="https://openaccess.thecvf.com/content/CVPR2022/html/Zhu_IRISformer_Dense_Vision_Transformers_for_Single-Image_Inverse_Rendering_in_Indoor_CVPR_2022_paper.html">PDF</a>]</p></li>
-<li><p><strong>De-rendering 3D Objects in the Wild.</strong><br> <em><a
-href="https://www.linkedin.com/in/felixwimbauer/">Felix Wimbauer</a>, <a
-href="https://elliottwu.com/">Shangzhe Wu</a>, <a
-href="https://chrirupp.github.io/">Christian Rupprecht</a>.</em><br>
-CVPR 2022. [<a href="https://arxiv.org/abs/2201.02279">PDF</a>] [<a
-href="https://www.robots.ox.ac.uk/~vgg/research/derender3d/">Project</a>]</p></li>
-<li><p><strong>GAN2X: Non-Lambertian Inverse Rendering of Image
-GANs.</strong><br> <em><a href="https://xingangpan.github.io/">Xingang
-Pan</a>, <a href="https://ayushtewari.com/">Ayush Tewari</a>, <a
-href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a
-href="http://www.mpi-inf.mpg.de/~theobalt/">Christian
-Theobalt</a>.</em><br> 3DV 2022. [<a
-href="https://arxiv.org/abs/2206.09244">PDF</a>] [<a
-href="https://people.mpi-inf.mpg.de/~xpan/GAN2X/">Project</a>]</p></li>
-</ul>
-<h2 id="neural-rerendering">Neural Rerendering</h2>
-<ul>
-<li><p><strong>Neural Rerendering in the Wild.</strong><br> <em>Moustafa
-Meshry, Dan B Goldman, Sameh Khamis, Hugues Hoppe, Rohit Pandey, Noah
-Snavely, Ricardo Martin-Brualla.</em><br> CVPR 2019. [<a
-href="https://arxiv.org/abs/1904.04290">PDF</a>]</p></li>
-<li><p><strong>Revealing Scenes by Inverting Structure from Motion
-Reconstructions.</strong><br> <em>Francesco Pittaluga, Sanjeev J.
-Koppal, Sing Bing Kang, Sudipta N. Sinha.</em><br> CVPR 2019. [<a
-href="https://arxiv.org/abs/1904.03303">PDF</a>]</p></li>
-<li><p><strong>Neural Re-Rendering of Humans from a Single
-Image.</strong><br> <em>Kripasindhu Sarkar, Dushyant Mehta, Weipeng Xu,
-Vladislav Golyanik, Christian Theobalt.</em><br> ECCV 2020. [<a
-href="https://arxiv.org/abs/2101.04104">PDF</a>]</p></li>
-<li><p><strong>Neural Lumigraph Rendering.</strong><br> <em>Petr
-Kellnhofer, Lars Jebe, Andrew Jones, Ryan Spicer, Kari Pulli, Gordon
-Wetzstein.</em><br> CVPR 2021. [<a
-href="https://arxiv.org/abs/2103.11571">PDF</a>] [<a
-href="http://www.computationalimaging.org/publications/nlr/">Project</a>]
-[<a
-href="https://drive.google.com/file/d/1BBpIfrqwZNYmG1TiFljlCnwsmL2OUxNT/view?usp=sharing">Data</a>]</p></li>
-<li><p><strong>Hybrid Neural Fusion for Full-frame Video
-Stabilization.</strong><br> <em><a
-href="https://www.cmlab.csie.ntu.edu.tw/~nothinglo/">Yu-Lun Liu</a>, <a
-href="https://www.wslai.net/">Wei-Sheng Lai</a>, <a
-href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a>, <a
-href="https://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>, <a
-href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>.</em><br>
-ICCV 2021. [<a href="https://arxiv.org/abs/2102.06205">PDF</a>] [<a
-href="https://alex04072000.github.io/NeRViS/">Github</a>]</p></li>
-</ul>
-<p><img src="https://visitor-badge.glitch.me/badge?style=flat-square&amp;page_id=weihaox/awesome-3d-aware-synthesis" alt="visitors" />
-<br>Visitors since Nov. 2022</p>
-<div id="footer">
-<div id="footer-text">
-<p>Page generated 2022-10-25, by
-<a href="http://jemdoc.jaboc.net/">jemdoc</a>.</p>
-</div>
-</div>
+<h2 id="citation">Citation</h2>
+<p>If this repository benefits your research, please consider citing our
+paper.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">@inproceedings</span>{<span class="ot">xia2023survey</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={A Survey on Deep Generative 3D-aware Image Synthesis},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span>={Xia, Weihao and Xue, Jing-Hao},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">booktitle</span>={ACM Computing Surveys (CSUR)},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>={2023}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<h2 id="license">License</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This
+work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+Commons Attribution 4.0 International License</a>.</p>
