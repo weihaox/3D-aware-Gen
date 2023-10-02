@@ -29,7 +29,7 @@
     <a href='https://weihaox.github.io/3D-aware-Gen/' style='padding-left: 0.5rem;'>
       <img src='https://img.shields.io/badge/Project-Page-blue?style=flat&logo=Google%20chrome&logoColor=blue' alt='Project Page'>
     </a>
-    <a href='' style='padding-left: 0.5rem;'>
+    <a href='https://dl.acm.org/doi/10.1145/3626193' style='padding-left: 0.5rem;'>
       <img src='https://img.shields.io/badge/CSUR-Paper-red?style=flat&logoColor=red' alt='CSUR Paper'>
     </a>
   </p>
@@ -39,7 +39,7 @@
 Introduction
 ------------
 
-This homepage lists some representative papers/codes/datasets all about deep **[3D-aware image synthesis](https://weihaox.github.io/3D-aware-Gen)**. Besides the deep generative 3D-aware models (GANs and Diffusion Models) discussed in the [survey](https://arxiv.org/abs/2210.14267), this project additionally covers novel view synthesis studies, especially those based on [implicit neural representations](https://github.com/weihaox/awesome-neural-rendering#implicit-neural-representation-and-rendering) such as NeRF. 
+This project lists representative papers/codes/datasets about deep **[3D-aware image synthesis](https://weihaox.github.io/3D-aware-Gen)**. Besides **3D-aware Generative Models** (GANs and Diffusion Models) discussed in this [survey](https://arxiv.org/abs/2210.14267), this project additionally covers novel view synthesis studies, especially those based on [implicit neural representations](https://github.com/weihaox/awesome-neural-rendering#implicit-neural-representation-and-rendering) such as NeRF. 
 
 We aim to constantly update the latest relevant papers and help the community track this topic. Please feel free to join us and [contribute](https://github.com/weihaox/3D-aware-Gen/blob/main/CONTRIBUTING.md) to the project. Please do not hesitate to reach out if you have any questions or suggestions.
 
@@ -274,6 +274,10 @@ SIGGRAPH Asia 2022. [[Paper](https://arxiv.org/abs/2211.07968)] [[Project](http:
 ICCV 2021. [[Paper](https://arxiv.org/abs/2104.07659)] [[Project](https://nvlabs.github.io/GANcraft/)] [[Code](https://github.com/NVlabs/imaginaire)]
 
 ## 3D-aware Diffusion Models for a Single Image Category
+
+* **Single-Stage Diffusion NeRF: A Unified Approach to 3D Generation and Reconstruction.**<br>
+*Hansheng Chen, Jiatao Gu, Anpei Chen, Wei Tian, Zhuowen Tu, Lingjie Liu, Hao Su.*<br> 
+ICCV 2023. [[PDF](http://arxiv.org/abs/2304.06714)] [[Project](https://lakonik.github.io/ssdnerf)] [[Code](https://github.com/Lakonik/SSDNeRF)]
 
 * **3D-aware Image Generation using 2D Diffusion Models.**<br>
 *[Jianfeng Xiang](https://jeffreyxiang.github.io/), Jiaolong Yang, Binbin Huang, Xin Tong.*<br> 
