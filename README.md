@@ -257,6 +257,10 @@ ICCV 2019. [[Paper](https://arxiv.org/abs/1904.01326)] [[Project](https://www.mo
 
 ### Conditional 3D Generative Models
 
+* **3D-aware Conditional Image Synthesis.**<br>
+*[Kangle Deng](https://dunbar12138.github.io/), [Gengshan Yang](https://gengshan-y.github.io/), [Deva Ramanan](https://www.cs.cmu.edu/~deva/), [Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/).*<br>
+CVPR 2023. [[Paper](https://arxiv.org/abs/2302.08509)] [[Project](https://www.cs.cmu.edu/~pix2pix3D/)] [[Code](https://github.com/dunbar12138/pix2pix3D)]
+
 * **Sem2NeRF: Converting Single-View Semantic Masks to Neural Radiance Fields.**<br>
 *[Yuedong Chen](https://donydchen.github.io/), [Qianyi Wu](https://wuqianyi.top/), [Chuanxia Zheng](https://www.chuanxiaz.com/), [Tat-Jen Cham](https://personal.ntu.edu.sg/astjcham/), [Jianfei Cai](https://jianfei-cai.github.io/).*<br>
 ECCV 2022. [[Paper](https://arxiv.org/abs/2203.10821)] [[Project](https://donydchen.github.io/sem2nerf)] [[Code](https://github.com/donydchen/sem2nerf)]
